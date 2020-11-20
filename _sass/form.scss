@@ -36,15 +36,13 @@
 
 .mktoForm .select-container:after {
     content: "";
+    width: 16px;
+    height: 10px;
     position: absolute;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 4px;
-    margin-left: 5px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    top: 55px;
-    left: 220px
+    top: 17px;
+    right: 45px;
+    pointer-events: none;
+    background: url(https://lp-site.s3.amazonaws.com/web2020/img/mkto-template/select-down-arrow.svg) no-repeat;
 }
 
 .mktoForm {
