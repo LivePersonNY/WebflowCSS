@@ -14,20 +14,16 @@ select {
     color: hsla(0, 0%, 100%, .22);
     border-radius: 0;
     font-weight: 300;
-    padding-left: .75rem;
+    padding:8px 22px 8px 10px !important;
     margin-top: .5rem;
-    width: 256px;
+    width: 100% !important;
     height: 44px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    position: relative
-}
-
-.select-container:after,
-select {
-    border-width: 1px;
-    border-color: hsla(0, 0%, 100%, .22)
+    position: relative;
+    border:1px solid #d9d4d0;
+    border-radius: .25rem;
 }
 
 .select-container:after {
@@ -104,7 +100,7 @@ label {
     width:100%;
 }
 .mktoButtonRow{
-    display:block;
+    display:block !important;
 }
 
 @media only screen and (max-width:1185px) {
