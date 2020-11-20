@@ -1,3 +1,219 @@
-.test{
-    color:red;
+  form input:focus {
+    border-bottom-color: #fcfcfd
+}
+
+.default-checkbox {
+    border-width: 1px;
+    --border-opacity: 1;
+    border-color: #494b51;
+    border-color: rgba(73, 75, 81, var(--border-opacity))
+}
+
+select {
+    background-color: transparent;
+    color: hsla(0, 0%, 100%, .22);
+    border-radius: 0;
+    font-weight: 300;
+    padding-left: .75rem;
+    margin-top: .5rem;
+    width: 256px;
+    height: 44px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative
+}
+
+.select-container:after,
+select {
+    border-width: 1px;
+    border-color: hsla(0, 0%, 100%, .22)
+}
+
+.select-container:after {
+    content: "";
+    position: absolute;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    margin-left: 5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    top: 55px;
+    left: 220px
+}
+
+.mktoForm {
+    width: 100% !important;
+    margin: 0 auto;
+    text-align: center !important
+}
+
+.mktoAsterix,
+.mktoGutter,
+.mktoOffset,
+label {
+    display: none
+}
+
+.mktoButtonWrap {
+    margin-left: 0 !important
+}
+
+.mktoForm input {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    border-width: 1px 1px 4px;
+    background-color: transparent;
+    border-color: #d9d4d0 #d9d4d0 #005ef4;
+    padding: 8px 22px 8px 10px !important;
+    font-size: 16px;
+    line-height: 24px !important;
+    width: 100% !important;
+    color: #737881
+}
+
+.mktoForm input:focus {
+    border-bottom-color: #fcfcfd
+}
+
+.mktoButtonWrap.mktoSimple .mktoButton,
+.mktoForm button {
+    border-radius: 9999px;
+    padding: .75rem 1.25rem !important;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 400;
+    display: inline-block;
+    background-image: none !important;
+    border: 0 !important;
+    background-color: #005ef4 !important;
+    font-size: 16px !important;
+    font-family: Roboto, Helvetica;
+    width: 256px
+}
+
+.mktoButtonWrap.mktoSimple .mktoButton:hover {
+    background: #0040d6 !important
+}
+
+.mktoFieldDescriptor.mktoFormCol {
+    width:100%;
+}
+.mktoForm .mktoFieldWrap{
+    width:100%;
+}
+.mktoButtonRow{
+    display:block;
+}
+
+@media only screen and (max-width:1185px) {
+    .mktoForm .mktoFieldWrap {
+        margin-bottom: 12px !important;
+        float: none
+    }
+
+    .mktoButtonWrap.mktoSimple .mktoButton,
+    .mktoForm button,
+    .mktoForm input {
+        width: 100% !important;
+        margin-right: 0 !important
+    }
+
+    .mktoForm input {
+        padding: 22px 22px 22px 10px !important
+    }
+
+    .mktoFormRow {
+        float: none !important
+    }
+
+    .mktoButtonRow {
+        display: inline
+    }
+
+    .mktoForm .mktoFormCol {
+        float: none !important
+    }
+
+    .mktoForm a {
+        padding: 0
+    }
+}
+
+.mktoForm__thankyou--white a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline
+}
+
+.mktoForm .heading-4 {
+    text-align: center
+}
+
+body.locked {
+    position: fixed
+}
+
+.form--sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100;
+    text-align: center
+}
+
+.form--sticky.swapPosition {
+    position: absolute;
+    width: 100%;
+    z-index: 999999999
+}
+
+.form--sticky a .span1,
+.form--sticky a .span2 {
+    display: none
+}
+
+@media only screen and (min-width:1185px) {
+    .form--sticky .container {
+        display: block !important
+    }
+}
+
+@media only screen and (max-width:1184px) {
+    .form--sticky a {
+        text-decoration: none
+    }
+
+    .form--sticky a .span1 {
+        display: block;
+        padding: .75rem 1.25rem;
+        border-radius: 9999px;
+        background: #005ef4;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: Roboto, Helvetica;
+        line-height: 1.25em;
+        width: 205px;
+        color: #fff;
+        text-align: center;
+        margin: auto;
+        cursor: pointer
+    }
+
+    .form--sticky a .span1.swap,
+    .form--sticky a .span2 {
+        display: none
+    }
+
+    .form--sticky a .span2.swap {
+        display: inline-flex;
+        padding-bottom: 1em
+    }
+
+    .form--sticky .container,
+    .form--sticky a .span2 {
+        display: none;
+    }
+
 }
