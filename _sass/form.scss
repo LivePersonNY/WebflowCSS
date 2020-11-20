@@ -9,6 +9,12 @@
     border-color: rgba(73, 75, 81, var(--border-opacity))
 }
 
+.mktoForm .mktoField::placeholder,
+.mktoForm .mktoField::-webkit-input-placeholder,
+.mktoForm select.select-placeholder{
+    color: #FCFCFD;
+}
+
 .mktoForm select {
     background-color: transparent;
     color: hsla(0, 0%, 100%, .22);
@@ -24,10 +30,6 @@
     position: relative;
     border:1px solid #d9d4d0;
     border-radius: .25rem;
-}
-
-.mktoForm select.select-placeholder{
-    color:#fff !important;
 }
 
 .mktoForm select option{
