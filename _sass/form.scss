@@ -1,224 +1,238 @@
-.mktoForm input:focus {
-    border-bottom-color: #fcfcfd
-}
-
-.default-checkbox {
-    border-width: 1px;
-    --border-opacity: 1;
-    border-color: #494b51;
-    border-color: rgba(73, 75, 81, var(--border-opacity))
-}
-
-.mktoForm .mktoField::placeholder,
-.mktoForm .mktoField::-webkit-input-placeholder,
-.mktoForm select.select-placeholder{
-    color: #FCFCFD;
-}
-
-.mktoForm select {
-    background-color: transparent;
-    color: #737881;
-    border-radius: 0;
-    font-weight: 300;
-    padding:8px 22px 8px 10px !important;
-    margin-top: .5rem;
-    width: 100% !important;
-    height: 44px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    position: relative;
-    border:1px solid #d9d4d0;
-    border-radius: .25rem;
-}
-
-.mktoForm select option{
-    color:#494B51;
-}
-
-.mktoForm .select-container:after {
-    content: "";
-    width: 16px;
-    height: 10px;
-    position: absolute;
-    top: 17px;
-    right: 16px;
-    pointer-events: none;
-    background: url(https://lp-site.s3.amazonaws.com/web2020/img/mkto-template/select-down-arrow.svg) no-repeat;
-}
-
 .mktoForm {
-    width: 100% !important;
-    margin: 0 auto;
-    text-align: center !important
+	input {
+		&:focus {
+			border-bottom-color: #fcfcfd;
+			border-bottom-color: #fcfcfd;
+		}
+		border-top-left-radius: .25rem;
+		border-top-right-radius: .25rem;
+		border-width: 1px 1px 4px;
+		background-color: transparent;
+		border-color: #d9d4d0 #d9d4d0 #005ef4;
+		border-style: solid;
+		padding: 8px 22px 8px 10px !important;
+		font-size: 16px;
+		line-height: 24px !important;
+		width: 100% !important;
+		color: #737881;
+	}
+	.mktoField {
+		&::placeholder {
+			color: #FCFCFD;
+		}
+		&::-webkit-input-placeholder {
+			color: #FCFCFD;
+		}
+	}
+	select.select-placeholder {
+		color: #FCFCFD;
+	}
+	select {
+		background-color: transparent;
+		color: #737881;
+		border-radius: 0;
+		font-weight: 300;
+		padding: 8px 22px 8px 10px !important;
+		margin-top: .5rem;
+		width: 100% !important;
+		height: 44px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		position: relative;
+		border: 1px solid #d9d4d0;
+		border-radius: .25rem;
+		option {
+			color: #494B51;
+		}
+	}
+	.select-container {
+		&:after {
+			content: "";
+			width: 16px;
+			height: 10px;
+			position: absolute;
+			top: 17px;
+			right: 16px;
+			pointer-events: none;
+			background: url(https://lp-site.s3.amazonaws.com/web2020/img/mkto-template/select-down-arrow.svg) no-repeat;
+		}
+	}
+	width: 100% !important;
+	margin: 0 auto;
+	text-align: center !important;
+	button {
+		border-radius: 9999px;
+		padding: .75rem 1.25rem !important;
+		text-decoration: none;
+		cursor: pointer;
+		font-weight: 400;
+		display: inline-block;
+		background-image: none !important;
+		border: 0 !important;
+		background-color: #005ef4 !important;
+		font-size: 16px !important;
+		font-family: Roboto, Helvetica;
+		width: 256px;
+	}
+	.mktoFieldWrap {
+		width: 100%;
+	}
+	.heading-4 {
+		text-align: center;
+	}
 }
-
-.mktoAsterix,
-.mktoGutter,
-.mktoOffset,
+.default-checkbox {
+	border-width: 1px;
+	--border-opacity: 1;
+	border-color: #494b51;
+	border-color: rgba(73, 75, 81, var(--border-opacity));
+}
+.mktoAsterix {
+	display: none;
+}
+.mktoGutter {
+	display: none;
+}
+.mktoOffset {
+	display: none;
+}
 label {
-    display: none
+	display: none;
 }
-
 .mktoButtonWrap {
-    margin-left: 0 !important
+	margin-left: 0 !important;
 }
-
-.mktoForm input {
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
-    border-width: 1px 1px 4px;
-    background-color: transparent;
-    border-color: #d9d4d0 #d9d4d0 #005ef4;
-    border-style:solid;
-    padding: 8px 22px 8px 10px !important;
-    font-size: 16px;
-    line-height: 24px !important;
-    width: 100% !important;
-    color: #737881
+.mktoButtonWrap.mktoSimple {
+	.mktoButton {
+		border-radius: 9999px;
+		padding: .75rem 1.25rem !important;
+		text-decoration: none;
+		cursor: pointer;
+		font-weight: 400;
+		display: inline-block;
+		background-image: none !important;
+		border: 0 !important;
+		background-color: #005ef4 !important;
+		font-size: 16px !important;
+		font-family: Roboto, Helvetica;
+		width: 256px;
+		&:hover {
+			background: #0040d6 !important;
+		}
+	}
 }
-
-.mktoForm input:focus {
-    border-bottom-color: #fcfcfd
-}
-
-.mktoButtonWrap.mktoSimple .mktoButton,
-.mktoForm button {
-    border-radius: 9999px;
-    padding: .75rem 1.25rem !important;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: 400;
-    display: inline-block;
-    background-image: none !important;
-    border: 0 !important;
-    background-color: #005ef4 !important;
-    font-size: 16px !important;
-    font-family: Roboto, Helvetica;
-    width: 256px
-}
-
-.mktoButtonWrap.mktoSimple .mktoButton:hover {
-    background: #0040d6 !important
-}
-
 .mktoFieldDescriptor.mktoFormCol {
-    width:100%;
+	width: 100%;
 }
-.mktoForm .mktoFieldWrap{
-    width:100%;
+.mktoButtonRow {
+	display: block !important;
 }
-.mktoButtonRow{
-    display:block !important;
+.mktoForm__thankyou--white {
+	a {
+		color: #fff;
+		font-weight: 600;
+		text-decoration: underline;
+	}
 }
-
-@media only screen and (max-width:1185px) {
-    .mktoForm .mktoFieldWrap {
-        margin-bottom: 12px !important;
-        float: none
-    }
-
-    .mktoButtonWrap.mktoSimple .mktoButton,
-    .mktoForm button,
-    .mktoForm input {
-        width: 100% !important;
-        margin-right: 0 !important
-    }
-
-    .mktoForm input {
-        padding: 22px 22px 22px 10px !important
-    }
-
-    .mktoFormRow {
-        float: none !important
-    }
-
-    .mktoButtonRow {
-        display: inline
-    }
-
-    .mktoForm .mktoFormCol {
-        float: none !important
-    }
-
-    .mktoForm a {
-        padding: 0
-    }
-}
-
-.mktoForm__thankyou--white a {
-    color: #fff;
-    font-weight: 600;
-    text-decoration: underline
-}
-
-.mktoForm .heading-4 {
-    text-align: center
-}
-
 body.locked {
-    position: fixed
+	position: fixed;
 }
-
 .form--sticky {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 100;
-    text-align: center
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	z-index: 100;
+	text-align: center;
+	a {
+		.span1 {
+			display: none;
+		}
+		.span2 {
+			display: none;
+		}
+	}
 }
-
 .form--sticky.swapPosition {
-    position: absolute;
-    width: 100%;
-    z-index: 999999999
+	position: absolute;
+	width: 100%;
+	z-index: 999999999;
 }
-
-.form--sticky a .span1,
-.form--sticky a .span2 {
-    display: none
+@media only screen and (max-width:1185px) {
+	.mktoForm {
+		.mktoFieldWrap {
+			margin-bottom: 12px !important;
+			float: none;
+		}
+		button {
+			width: 100% !important;
+			margin-right: 0 !important;
+		}
+		input {
+			width: 100% !important;
+			margin-right: 0 !important;
+			padding: 22px 22px 22px 10px !important;
+		}
+		.mktoFormCol {
+			float: none !important;
+		}
+		a {
+			padding: 0;
+		}
+	}
+	.mktoButtonWrap.mktoSimple {
+		.mktoButton {
+			width: 100% !important;
+			margin-right: 0 !important;
+		}
+	}
+	.mktoFormRow {
+		float: none !important;
+	}
+	.mktoButtonRow {
+		display: inline;
+	}
 }
-
 @media only screen and (min-width:1185px) {
-    .form--sticky .container {
-        display: block !important
-    }
+	.form--sticky {
+		.container {
+			display: block !important;
+		}
+	}
 }
-
 @media only screen and (max-width:1184px) {
-    .form--sticky a {
-        text-decoration: none
-    }
-
-    .form--sticky a .span1 {
-        display: block;
-        padding: .75rem 1.25rem;
-        border-radius: 9999px;
-        background: #005ef4;
-        font-size: 16px;
-        font-weight: 600;
-        font-family: Roboto, Helvetica;
-        line-height: 1.25em;
-        width: 205px;
-        color: #fff;
-        text-align: center;
-        margin: auto;
-        cursor: pointer
-    }
-
-    .form--sticky a .span1.swap,
-    .form--sticky a .span2 {
-        display: none
-    }
-
-    .form--sticky a .span2.swap {
-        display: inline-flex;
-        padding-bottom: 1em
-    }
-
-    .form--sticky .container,
-    .form--sticky a .span2 {
-        display: none;
-    }
-
+	.form--sticky {
+		a {
+			text-decoration: none;
+			.span1 {
+				display: block;
+				padding: .75rem 1.25rem;
+				border-radius: 9999px;
+				background: #005ef4;
+				font-size: 16px;
+				font-weight: 600;
+				font-family: Roboto, Helvetica;
+				line-height: 1.25em;
+				width: 205px;
+				color: #fff;
+				text-align: center;
+				margin: auto;
+				cursor: pointer;
+			}
+			.span1.swap {
+				display: none;
+			}
+			.span2 {
+				display: none;
+				display: none;
+			}
+			.span2.swap {
+				display: inline-flex;
+				padding-bottom: 1em;
+			}
+		}
+		.container {
+			display: none;
+		}
+	}
 }
