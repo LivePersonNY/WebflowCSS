@@ -80,7 +80,10 @@
 	}
 	.heading-4 {
 		text-align: center;
-	}
+    }
+    .mktoButtonRow{
+        display:block !important;
+    }
 }
 .default-checkbox {
 	border-width: 1px;
@@ -124,9 +127,6 @@ label {
 }
 .mktoFieldDescriptor.mktoFormCol {
 	width: 100%;
-}
-.mktoButtonRow {
-	display: block !important;
 }
 .mktoForm__thankyou--white {
 	a {
@@ -188,9 +188,6 @@ body.locked {
 	}
 	.mktoFormRow {
 		float: none !important;
-	}
-	.mktoButtonRow {
-		display: inline;
 	}
 }
 @media only screen and (min-width:1185px) {
@@ -291,7 +288,10 @@ body.locked {
 	.mktoFormRow {
 		float: left !important;
 		clear: none !important;
-	}
+    }
+    .mktoButtonRow{
+        display:inline-block !important;
+    }
 	.mktoButtonWrap {
 		margin-left: 0 !important;
 	}
@@ -354,9 +354,6 @@ body.locked {
 		}
 		.mktoFormRow {
 			float: none !important;
-		}
-		.mktoButtonRow {
-			display: inline;
 		}
 	}
 	.mktoForm {
