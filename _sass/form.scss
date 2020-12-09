@@ -140,10 +140,6 @@ body.locked {
 	position: fixed;
 }
 .form--sticky {
-	position: sticky;
-	position: -webkit-sticky;
-	top: 0;
-	z-index: 100;
 	text-align: center;
 	a {
 		.span1 {
@@ -236,7 +232,6 @@ body.locked {
 }
 
 .form--horizontal {
-	background: #090C43;
 	padding: 2rem 0;
 	.mktoForm {
 		width: 100% !important;
@@ -246,7 +241,7 @@ body.locked {
 			margin-right: 2rem !important;
 			width: 256px !important;
 			&:focus {
-				border-bottom-color: theme('colors.white');
+				border-bottom-color: #ffffff;
 			}
 		}
 		button {
