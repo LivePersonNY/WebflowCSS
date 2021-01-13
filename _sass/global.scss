@@ -3,3 +3,10 @@
     margin: auto;
     box-shadow: 0 30px 50px rgba(140,140,140,0.4);
 }
+
+.w-container{
+    .w-row{
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}
