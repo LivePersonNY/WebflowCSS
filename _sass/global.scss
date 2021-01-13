@@ -8,5 +8,9 @@
     .w-row{
         margin-left: -16px;
         margin-right: -16px;
+        @media (max-width: 767px){
+            margin-left: 0;
+            margin-right: 0
+        }
     }
 }
