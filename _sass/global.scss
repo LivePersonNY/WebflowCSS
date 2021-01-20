@@ -14,3 +14,9 @@
         }
     }
 }
+
+.section-divider-global{
+    @media (max-width: $screen-max-lg){
+        padding:1rem 0 !important;
+    }
+}
