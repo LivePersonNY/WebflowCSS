@@ -1,4 +1,8 @@
 .mktoForm {
+	.thank-you-message{
+		font-size: 1.5rem;
+    	line-height: 1.75rem;
+	}
 	input {
 		&:focus {
 			border-bottom-color: #fcfcfd;
