@@ -338,10 +338,13 @@ body.locked {
 				padding: 0;
 			}
 		}
-		.mktoButtonWrap.mktoSimple {
-			.mktoButton {
-				width: 100% !important;
-				margin-right: 0 !important;
+		.mktoButtonRow{
+			display:block !important;
+			.mktoButtonWrap.mktoSimple {
+				.mktoButton {
+					width: 100% !important;
+					margin-right: 0 !important;
+				}
 			}
 		}
 		.mktoFormRow {
