@@ -6,3 +6,12 @@ $('h1, h2, h3, h4, h5, p, li').widowFix({
     prevLimit: 8,
     //linkFix: false
 });
+
+// mkto sticky form toggle
+$('.mobileForm').on('click', function() {
+  // $('body').toggleClass('locked');
+  // $('.form--sticky').toggleClass('swapPosition');
+  $('.form--sticky .container').slideToggle(300);
+  $('.span1').toggleClass('swap');
+  $('.span2').toggleClass('swap');
+});
