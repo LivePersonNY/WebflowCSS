@@ -224,11 +224,11 @@ body.locked {
 			}
 			.span2 {
 				display: none;
-				display: none;
 			}
 			.span2.swap {
-				display: inline-flex;
-				padding-bottom: 1em;
+				display: block;
+				width: 40px;
+				margin: auto;
 			}
 		}
 		.container {
