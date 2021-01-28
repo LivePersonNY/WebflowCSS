@@ -36,7 +36,7 @@ blockquote{
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    .embed-container embed, .embed-container iframe, .embed-container object {
+    embed, iframe, object {
         position: absolute;
         top: 0;
         left: 0;
