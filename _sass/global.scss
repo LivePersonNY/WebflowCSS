@@ -102,6 +102,7 @@ blockquote{
             }
             &.android-phone{
                 margin-bottom:34px;
+                max-width:88%;
                 @media(max-width:$screen-max-lg){
                     margin-bottom:0;
                     top:66px;
@@ -109,7 +110,7 @@ blockquote{
             }
         }
         &.phone-full{
-            max-width:88%;
+            max-width:90%;
             @media(max-width:$screen-max-lg){
                 max-width: 80%;
             }
