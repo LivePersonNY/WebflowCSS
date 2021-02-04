@@ -44,3 +44,70 @@ blockquote{
         height: 100%;
     }
 }
+
+// Hero with phone animation
+.mess-channels-video-container{
+    @media(min-width:$screen-min-lg){
+        height:615px;
+        margin-bottom: -1rem;
+    }
+    .phone-overlay{
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        @media(max-width:$screen-max-lg){
+            max-width:100%;
+            padding:0 15px;
+            width:100%;
+            top:-20px;
+        }
+        &.mess-hero-phone-full{
+            bottom:-88px;
+            @media(max-width:$screen-max-lg){
+                max-width:91%;
+            }
+            &.android-phone-full{
+                bottom:-99px;
+                @media(max-width:$screen-max-lg){
+                    bottom:0;
+                    top:0;
+                }
+            }
+        }
+    }
+    .phone-video{
+        position: relative;
+        margin-bottom:17px;
+        max-width:100%;
+        width:100%;
+        &.mess-channels{
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:-85px;
+            @media(max-width:$screen-max-lg){
+                margin-bottom:-74px;
+                max-width: 300px;
+                position:relative;
+                bottom:0;
+            }
+            &.android-phone{
+                margin-bottom:34px;
+                @media(max-width:$screen-max-lg){
+                    margin-bottom:0;
+                    top:66px;
+                }
+            }
+        }
+        &.phone-full{
+            max-width:80%;
+            @media(max-width:$screen-max-lg){
+                max-width: 88%;
+            }
+        }
+        &.phone-abc {
+            max-width: 88%;
+        }
+    }
+}
