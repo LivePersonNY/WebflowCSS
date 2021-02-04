@@ -65,7 +65,7 @@ blockquote{
         &.mess-hero-phone-full{
             bottom:-88px;
             @media(max-width:$screen-max-lg){
-                max-width:91%;
+                max-width:100%;
             }
             &.android-phone-full{
                 bottom:-99px;
@@ -81,6 +81,7 @@ blockquote{
         margin-bottom:17px;
         max-width:100%;
         width:100%;
+        display:block;
         &.mess-channels{
             position:absolute;
             left:0;
@@ -104,7 +105,7 @@ blockquote{
         &.phone-full{
             max-width:88%;
             @media(max-width:$screen-max-lg){
-                max-width: 88%;
+                max-width: 80%;
             }
         }
         &.phone-abc {
