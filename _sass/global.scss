@@ -21,6 +21,12 @@
     }
 }
 
+.hero-divider{
+    @media (max-width: $screen-max-lg){
+        margin:0 -16px;
+    }
+}
+
 // For resource quotes
 blockquote{
     strong{
