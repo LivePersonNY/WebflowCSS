@@ -86,6 +86,7 @@ blockquote{
             left:0;
             right:0;
             bottom:-85px;
+            margin:auto;
             @media(max-width:$screen-max-lg){
                 margin-bottom:-74px;
                 max-width: 300px;
@@ -101,7 +102,7 @@ blockquote{
             }
         }
         &.phone-full{
-            max-width:80%;
+            max-width:88%;
             @media(max-width:$screen-max-lg){
                 max-width: 88%;
             }
