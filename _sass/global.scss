@@ -121,3 +121,12 @@ blockquote{
         }
     }
 }
+
+.w-slider-nav{
+    .w-slider-dot{
+        background-color:rgba(255, 255, 255, 0.22);
+        &.w-active{
+            background-color:#FF6900;
+        }
+    }
+}
