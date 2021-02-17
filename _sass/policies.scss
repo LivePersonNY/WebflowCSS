@@ -26,15 +26,15 @@
             &:before{
                 font-family: $font-roboto-mono;
                 counter-increment: policy-counter;
-                content: "0" counter(policy-counter);
+                content:counter(policy-counter);
                 margin-right: .5rem;
                 line-height: 1;
             }
         }
-        &:nth-of-type(1n+10){
+        &:nth-of-type(-n+9){
             .policy-number{
                 &:before{
-                    content:counter(policy-counter);
+                    content: "0" counter(policy-counter);
                 }
             }
         }
