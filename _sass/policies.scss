@@ -14,6 +14,7 @@
 }
 
 .policies-content{
+    counter-reset: policy-counter;
     h3{
         font-weight:700;
         margin:0;
@@ -28,6 +29,13 @@
                 content: "0" counter(policy-counter);
                 margin-right: .5rem;
                 line-height: 1;
+            }
+        }
+        &:nth-of-type(1n+10){
+            .policy-number{
+                &:before{
+                    content:counter(policy-counter);
+                }
             }
         }
     }
