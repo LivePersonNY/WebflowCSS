@@ -1,0 +1,34 @@
+.accordian-links{
+    background:$color-blue-navy-lighter;
+    border-radius:1rem;
+    padding:56px;
+    p{
+        margin-bottom:40px;
+        a{
+            font-size: 20px;
+            line-height: 24px;
+            color: #FCFCFD !important;
+            text-decoration: none;
+        }
+    }
+}
+
+.policies-content{
+    h3{
+        font-weight:700;
+        margin:0;
+        font-size:16px;
+        line-height:24px;
+        font-family:$font-roboto;
+        .policy-number{
+            color:$color-orange;
+            &:before{
+                font-family: $font-roboto-mono;
+                counter-increment: policy-counter;
+                content: "0" counter(policy-counter);
+                margin-right: .5rem;
+                line-height: 1;
+            }
+        }
+    }
+}
