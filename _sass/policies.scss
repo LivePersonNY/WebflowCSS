@@ -46,3 +46,20 @@
         }
     }
 }
+
+.legal-container{
+    table {
+        margin-bottom: 20px;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 1rem;
+        td, th {
+            border: 1px solid #dddddd;
+            background: none!important;
+            text-align: left;
+            padding: 8px;
+            font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+    }
+}
