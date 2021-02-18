@@ -126,7 +126,37 @@ blockquote{
     .w-slider-dot{
         background-color:rgba(255, 255, 255, 0.22);
         &.w-active{
-            background-color:#FF6900;
+            background-color:$color-orange;
+        }
+    }
+}
+
+.main-table{
+    width:100%;
+    tr{
+        border-bottom-width: 1px;
+        border-color: $color-gray;
+        .main-table-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding-bottom: .5rem;
+        }
+        .main-table-column-title, .main-table-title {
+            --text-opacity: 1;
+            color: $color-white;
+            border-bottom-width: 4px;
+            border-color: $color-orange;
+            text-align: left;
+        }
+        .main-table-row-heading {
+            --text-opacity: 1;
+            color: $color-white;
+            font-weight: 400;
+        }
+        td {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            padding-right: 5rem;
         }
     }
 }
