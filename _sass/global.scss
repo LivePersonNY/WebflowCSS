@@ -136,20 +136,20 @@ blockquote{
     tr{
         border-bottom-width: 1px;
         border-color: $color-gray;
+        border-bottom-style: solid;
         .main-table-title {
             font-size: 1.25rem;
             font-weight: 700;
             padding-bottom: .5rem;
         }
         .main-table-column-title, .main-table-title {
-            --text-opacity: 1;
             color: $color-white;
             border-bottom-width: 4px;
             border-color: $color-orange;
+            border-bottom-style: solid;
             text-align: left;
         }
         .main-table-row-heading {
-            --text-opacity: 1;
             color: $color-white;
             font-weight: 400;
         }
