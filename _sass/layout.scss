@@ -29,7 +29,9 @@
     > .navbar{
         + .section-default{
             .column{
-                text-align: center;
+                @media(max-width:$screen-max-lg){
+                    text-align: center;
+                }
             }
         }
     }
