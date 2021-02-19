@@ -35,3 +35,10 @@
         }
     }
 }
+
+.card-grid{
+    @media(max-width:$screen-max-lg){
+        grid-template-columns: repeat(auto-fit,minmax(100%,1fr)) !important;
+        grid-row-gap:32px;
+    }
+}
