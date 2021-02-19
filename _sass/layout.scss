@@ -16,9 +16,10 @@
             @media(max-width:$screen-max-lg){
                 width:100%;
             }
-            img{
+            > img{
                 @media(max-width:$screen-max-lg){
-                    // width:100%;
+                    width:100%;
+                    padding-top:48px;
                 }
             }
         }
