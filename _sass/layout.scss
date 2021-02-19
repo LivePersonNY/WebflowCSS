@@ -26,9 +26,11 @@
 }
 
 .glow-container{
-    .section-default:first-of-type{
-        .column{
-            text-align: center;
+    > .navbar{
+        + .section-default{
+            .column{
+                text-align: center;
+            }
         }
     }
 }
