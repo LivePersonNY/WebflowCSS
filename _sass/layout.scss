@@ -16,6 +16,19 @@
             @media(max-width:$screen-max-lg){
                 width:100%;
             }
+            img{
+                @media(max-width:$screen-max-lg){
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+
+.glow-container{
+    .section-default:first-of-type{
+        .column{
+            text-align: center;
         }
     }
 }
