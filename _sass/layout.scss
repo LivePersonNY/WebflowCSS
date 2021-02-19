@@ -1,0 +1,10 @@
+.columns{
+    @media(max-width:$screen-max-lg){
+        flex-wrap:wrap;
+    }
+    .column{
+        @media(max-width:$screen-max-lg){
+            width:100%;
+        }
+    }
+}
