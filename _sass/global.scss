@@ -88,6 +88,9 @@ blockquote{
         max-width:100%;
         width:100%;
         display:block;
+        @media(max-width:$screen-max-lg){
+            display:inline-block;
+        }
         &.mess-channels{
             position:absolute;
             left:0;
@@ -123,6 +126,11 @@ blockquote{
     &.full-iphone{
         height: auto;
         margin-bottom:0;
+        .phone-overlay{
+            @media(max-width:$screen-max-lg){
+                padding:0;
+            }
+        }
     }
 }
 
