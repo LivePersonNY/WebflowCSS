@@ -196,3 +196,12 @@ blockquote{
         height:auto !important;
     }
 }
+
+.channel-stat{
+    margin:auto;
+    @media(min-width:$screen-min-lg){
+        position:absolute;
+        right: -97px;
+        top: 71px;
+    }
+}
