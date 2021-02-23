@@ -205,3 +205,23 @@ blockquote{
         // top: 71px;
     }
 }
+
+.default-link {
+    text-decoration: none;
+    color: $color-blue-periwinkle-light;
+    font-family: $font-roboto;
+    font-weight: $font-weight-light;
+    &.arrow-link{
+        font-weight: $font-weight-bold;
+        &:after{
+            content: "";
+            border-width: 1px;
+            border-color: #fcfcfd;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 4px;
+            margin-left: 5px;
+            transform: rotate(-45deg);
+        }
+    }
+}
