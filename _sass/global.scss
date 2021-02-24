@@ -173,36 +173,10 @@ blockquote{
     }
 }
 
-.upgrade-embed{
-    h2{
-        text-align:center;
-    }
-    img{
-        display:block;
-        margin-right:auto;
-        margin-left:auto;
-    }
-    .text-center{
-        text-align: center;
-    }
-    .main-table{
-        margin-bottom:80px;
-    }
-}
-
 .menu-button.w-nav-button{
     svg{
         width:40px !important;
         height:auto !important;
-    }
-}
-
-.channel-stat{
-    margin:auto;
-    @media(min-width:$screen-min-lg){
-        position:absolute;
-        right: -97px;
-        // top: 71px;
     }
 }
 

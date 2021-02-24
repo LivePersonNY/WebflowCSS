@@ -1,0 +1,48 @@
+.channel-stat{
+    margin:auto;
+    @media(min-width:$screen-min-lg){
+        position:absolute;
+        right: -97px;
+        // top: 71px;
+    }
+}
+
+.upgrade-embed{
+    h2{
+        text-align:center;
+    }
+    img{
+        display:block;
+        margin-right:auto;
+        margin-left:auto;
+    }
+    .text-center{
+        text-align: center;
+    }
+    .main-table{
+        margin-bottom:80px;
+    }
+}
+
+.intents{
+    .bubble-fade{
+        display:none;
+        position:absolute;
+        &.bubble-tr{
+          right:-13px;
+          top:49px;
+        }
+        &.bubble-bl{
+          left:13px;
+          bottom:40px;
+        }
+        &.bubble-tl{
+          left:2px;
+          top:49px;
+        }
+        &.bubble-br{
+          right:25px;
+          bottom:40px;
+        }
+    }
+}
