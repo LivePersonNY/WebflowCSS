@@ -211,6 +211,7 @@ blockquote{
     color: $color-blue-periwinkle-light;
     font-family: $font-roboto;
     font-weight: $font-weight-light;
+    cursor: pointer;
     &.arrow-link{
         font-weight: $font-weight-bold;
         &:after{
