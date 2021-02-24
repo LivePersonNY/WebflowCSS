@@ -24,3 +24,26 @@ var rellax = new Rellax('.channel-stat, .background-box', {
     center: true,
     speed: -.6
 });
+
+function fadeBubbles(){
+	$('.desktop-only .bubble-tr').fadeIn(1000).delay(1750).fadeOut(1000,function(){
+		$('.desktop-only .bubble-bl').fadeIn(1000).delay(1750).fadeOut(1000,function(){
+			$('.desktop-only .bubble-tl').fadeIn(1000).delay(1750).fadeOut(1000,function(){
+				$('.desktop-only .bubble-br').fadeIn(1000).delay(1750).fadeOut(1000,function(){
+					fadeBubbles();
+				});
+			});
+		});
+	});
+};
+function fadeBubblesMobile(){
+	$('.mobile-only .bubble-tr').fadeIn(1000).delay(1750).fadeOut(1000,function(){
+		$('.mobile-only .bubble-bl').fadeIn(1000).delay(1750).fadeOut(1000,function(){
+			$('.mobile-only .bubble-tl').fadeIn(1000).delay(1750).fadeOut(1000,function(){
+				$('.mobile-only .bubble-br').fadeIn(1000).delay(1750).fadeOut(1000,function(){
+					fadeBubblesMobile();
+				});
+			});
+		});
+	});
+};
