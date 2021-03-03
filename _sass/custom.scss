@@ -46,3 +46,9 @@
         }
     }
 }
+
+.container-default .columns .column>img{
+    @media(max-width:$screen-max-lg){
+        width:auto;
+    }
+}
