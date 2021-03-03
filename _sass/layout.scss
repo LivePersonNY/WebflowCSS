@@ -26,6 +26,7 @@
             .column{
                 @media(max-width:$screen-max-lg){
                     width:auto;
+                    padding:0 16px;
                 }
                 &.w-col-1{
                     @media(max-width:$screen-max-lg){
