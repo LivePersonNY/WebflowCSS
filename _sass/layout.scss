@@ -27,6 +27,21 @@
                 @media(max-width:$screen-max-lg){
                     width:auto;
                 }
+                &.w-col-1{
+                    @media(max-width:$screen-max-lg){
+                        width:8.33333333%;
+                    }
+                }
+                &.w-col-4{
+                    @media(max-width:$screen-max-lg){
+                        width:33.33333333%;
+                    }
+                }
+                &.w-col-5{
+                    @media(max-width:$screen-max-lg){
+                        width:41.66666667%;
+                    }
+                }
             }
         }
     }
