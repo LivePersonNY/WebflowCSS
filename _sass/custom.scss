@@ -47,7 +47,7 @@
     }
 }
 
-.container-default .columns .column>img{
+.container-default .columns .column>img.mobile-icon-image{
     @media(max-width:$screen-max-lg){
         width:auto;
     }
