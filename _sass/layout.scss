@@ -19,7 +19,9 @@
             > img{
                 @media(max-width:$screen-max-lg){
                     max-width:100%;
-                    margin:auto;
+                    display:block;
+                    margin-left:auto;
+                    margin-right:auto;
                 }
             }
         }
