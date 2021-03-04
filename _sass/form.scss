@@ -4,6 +4,10 @@
 		line-height: 1.75rem;
 		text-align:center;
 		padding:9px 0;
+		a{
+			color:$color-blue-periwinkle-light !important;
+			text-decoration:underline;
+		}
 	}
 	input {
 		&:focus {
