@@ -36,17 +36,17 @@
                 }
                 &.w-col-1{
                     @media(max-width:$screen-max-lg){
-                        width:8.33333333%;
+                        width:8.33333333%  !important;
                     }
                 }
                 &.w-col-4{
                     @media(max-width:$screen-max-lg){
-                        width:33.33333333%;
+                        width:33.33333333% !important;
                     }
                 }
                 &.w-col-5{
                     @media(max-width:$screen-max-lg){
-                        width:41.66666667%;
+                        width:41.66666667% !important;
                     }
                 }
             }
