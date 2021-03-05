@@ -1,4 +1,7 @@
 .container-default{
+    @media(max-width:1120px){
+        max-width: 940px;
+    }
     @media(max-width:$screen-max-lg){
         max-width: 768px;
     }
