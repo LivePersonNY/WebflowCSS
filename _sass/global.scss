@@ -10,6 +10,12 @@ p{
     }
 }
 
+.desktop-only{
+    @media (max-width: $screen-max-lg){
+        display:none !important;
+    }
+}
+
 .w-container{
     .w-row{
         margin-left: -16px;
