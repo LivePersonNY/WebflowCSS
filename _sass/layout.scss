@@ -49,6 +49,11 @@
                         width:41.66666667% !important;
                     }
                 }
+                &.w-col-6{
+                    @media(max-width:$screen-max-lg){
+                        width:50% !important;
+                    }
+                }
             }
         }
     }
