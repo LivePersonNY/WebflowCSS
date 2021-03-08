@@ -54,6 +54,16 @@
                         width:50% !important;
                     }
                 }
+                &.w-col-7{
+                    @media(max-width:$screen-max-lg){
+                        width:58.33333333% !important;
+                    }
+                }
+                &.w-col-8{
+                    @media(max-width:$screen-max-lg){
+                        width:66.66666667% !important;
+                    }
+                }
             }
         }
     }
