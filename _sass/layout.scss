@@ -15,7 +15,7 @@
         @media(max-width:$screen-max-lg){
             flex-wrap:wrap;
         }
-        .column{
+        .column:not(.company-exec-column){
             @media(max-width:$screen-max-lg){
                 width:100%;
             }
