@@ -154,6 +154,8 @@ body.locked {
 }
 .form--sticky {
 	text-align: center;
+	position:sticky;
+	z-index:100;
 	a {
 		.span1 {
 			display: none;
