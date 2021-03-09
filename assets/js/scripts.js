@@ -7,7 +7,6 @@ $('h1, h2, h3, h4, h5, p, li').widowFix({
     //linkFix: false
 });
 
-console.log('running widow fix');
 
 // mkto sticky form toggle
 $('.mobileForm').on('click', function() {
