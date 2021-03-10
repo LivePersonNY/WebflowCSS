@@ -12,6 +12,15 @@
                 margin-top:24px;
             }
         }
+        p, h3, blockquote{
+            display:flex;
+            flex-wrap: wrap;
+        }
+        blockquote{
+            strong{
+                margin-top:12px;
+            }
+        }
         .w-richtext-figure-type-image{
             &.w-richtext-align-floatleft{
                 margin-right:80px;
@@ -27,15 +36,6 @@
                     float:none;
                     margin-right:auto;
                     margin-left:auto;
-                }
-            }
-            ~ p, ~ h3, ~ blockquote{
-                display:flex;
-                flex-wrap: wrap;
-            }
-            ~ blockquote{
-                strong{
-                    margin-top:12px;
                 }
             }
         }
