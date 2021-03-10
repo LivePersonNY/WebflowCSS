@@ -5,30 +5,38 @@
 }
 
 .resource-page{
-    .w-richtext-figure-type-image{
-        &.w-richtext-align-floatleft{
-            margin-right:80px;
+    .w-richtext{
+        h3{
+            margin-top:48px;
             @media(max-width:$screen-max-lg){
-                float:none;
-                margin-right:auto;
-                margin-left:auto;
+                margin-top:24px;
             }
         }
-        &.w-richtext-align-floatright{
-            margin-left:80px;
-            @media(max-width:$screen-max-lg){
-                float:none;
-                margin-right:auto;
-                margin-left:auto;
+        .w-richtext-figure-type-image{
+            &.w-richtext-align-floatleft{
+                margin-right:80px;
+                @media(max-width:$screen-max-lg){
+                    float:none;
+                    margin-right:auto;
+                    margin-left:auto;
+                }
             }
-        }
-        ~ p, ~ h3, ~ blockquote{
-            display:flex;
-            flex-wrap: wrap;
-        }
-        ~ blockquote{
-            strong{
-                margin-top:12px;
+            &.w-richtext-align-floatright{
+                margin-left:80px;
+                @media(max-width:$screen-max-lg){
+                    float:none;
+                    margin-right:auto;
+                    margin-left:auto;
+                }
+            }
+            ~ p, ~ h3, ~ blockquote{
+                display:flex;
+                flex-wrap: wrap;
+            }
+            ~ blockquote{
+                strong{
+                    margin-top:12px;
+                }
             }
         }
     }
