@@ -42,6 +42,7 @@ p{
 // For resource quotes
 blockquote{
     margin:40px 0;
+    padding:0px 0px 0 24px;
     @media (max-width: $screen-max-lg){
         margin:20px 0;
     }
