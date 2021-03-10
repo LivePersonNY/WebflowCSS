@@ -12,6 +12,7 @@
                 float:none;
                 margin-right:auto;
                 margin-left:auto;
+            }
         }
         &.w-richtext-align-floatright{
             margin-left:80px;
@@ -19,6 +20,7 @@
                 float:none;
                 margin-right:auto;
                 margin-left:auto;
+            }
         }
         ~ p, ~ h3, ~ blockquote{
             display:flex;
