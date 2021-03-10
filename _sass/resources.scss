@@ -22,6 +22,7 @@
             }
         }
         .w-richtext-figure-type-image{
+            max-width: 100%;
             &.w-richtext-align-floatleft{
                 margin-right:80px;
                 @media(max-width:$screen-max-lg){
