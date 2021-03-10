@@ -7,10 +7,27 @@
 .resource-page{
     .w-richtext-figure-type-image{
         .w-richtext-align-floatleft{
-
+            margin-right:80px;
+            @media(max-width:$screen-max-lg){
+                float:none;
+                margin-right:auto;
+                margin-left:auto;
+        }
+        .w-richtext-align-floatright{
+            margin-left:80px;
+            @media(max-width:$screen-max-lg){
+                float:none;
+                margin-right:auto;
+                margin-left:auto;
         }
         ~ p, ~ h3, ~ blockquote{
             display:flex;
+            flex-wrap: wrap;
+        }
+        ~ blockquote{
+            strong{
+                margin-top:12px;
+            }
         }
     }
 }
