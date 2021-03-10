@@ -6,14 +6,14 @@
 
 .resource-page{
     .w-richtext-figure-type-image{
-        & .w-richtext-align-floatleft{
+        &.w-richtext-align-floatleft{
             margin-right:80px;
             @media(max-width:$screen-max-lg){
                 float:none;
                 margin-right:auto;
                 margin-left:auto;
         }
-        & .w-richtext-align-floatright{
+        &.w-richtext-align-floatright{
             margin-left:80px;
             @media(max-width:$screen-max-lg){
                 float:none;
