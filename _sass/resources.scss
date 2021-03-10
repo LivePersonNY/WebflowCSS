@@ -3,3 +3,14 @@
         text-align: center;
     }
 }
+
+.resource-page{
+    .w-richtext-figure-type-image{
+        .w-richtext-align-floatleft{
+
+        }
+        ~ p, ~ h3, ~ blockquote{
+            display:flex;
+        }
+    }
+}
