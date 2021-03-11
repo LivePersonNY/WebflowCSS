@@ -2,7 +2,11 @@
     p{
         text-align: center;
         display:block !important;
-        margin-bottom:12px;
+        margin-bottom:8px;
+        .lead{
+            font-size:18px;
+            line-height:20px;
+        }
     }
     ul{
         text-align:left;
