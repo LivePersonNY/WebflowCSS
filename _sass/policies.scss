@@ -108,6 +108,12 @@
             &.lower-roman{
                 list-style:lower-roman;
             }
+            &.decimal{
+                list-style:decimal;
+            }
+            &.no-style{
+                list-style-type: style none;;
+            }
         }
     }
 }
