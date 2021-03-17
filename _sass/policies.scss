@@ -86,6 +86,30 @@
             line-height: 36px;
         }
     }
+    
+    .legal-container ol, .legal-container ul{
+        margin-bottom:0;
+        li{
+            &.hack20-sub-bullet {
+                margin-left: 15px;
+                @media (max-width: 767px) {
+                    margin-left: 10px;
+                }
+            }
+            &.hack20-sub-bullet-2 {
+                margin-left: 30px;
+                @media (max-width: 767px) {
+                    margin-left: 20px;
+                }
+            }
+            &.lower-alpha{
+                list-style:lower-alpha;
+            }
+            &.lower-roman{
+                list-style:lower-roman;
+            }
+        }
+    }
 }
 
 .subprocessor-column{
