@@ -184,6 +184,9 @@ blockquote{
             font-size: 1.25rem;
             font-weight: 700;
             padding-bottom: .5rem;
+            &.text-center{
+                text-align:center;
+            }
         }
         .main-table-column-title, .main-table-title {
             color: $color-white;
