@@ -24,6 +24,9 @@
         p, h3, blockquote{
             display:flex;
             flex-wrap: wrap;
+            strong{
+                display:contents;
+            }
         }
         blockquote{
             strong{
