@@ -136,7 +136,7 @@ blockquote{
                 &.android-phone-gbm{
                     margin-bottom:24px;
                     @media(max-width:$screen-max-lg){
-                        margin-bottom:0;
+                        margin-bottom:-10px;
                     }
                 }
             }
