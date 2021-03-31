@@ -141,6 +141,17 @@
 		  top: 60px;
 		  left: 55px;
 		  font-weight: 600;
+		  .brandLogo {
+			  width: 1.75rem;
+			  border-radius: 9999px;
+			  display: inline-block;
+		  }
+		  .text-black {
+			  color: black;
+		  }
+		  .inline-block {
+			  display: inline-block;
+		  }
 		  .cstatus {
 			position: absolute;
 			font-size: .6rem;
