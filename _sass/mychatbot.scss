@@ -23,6 +23,8 @@
 		.overlay-wrapper {
 		  .close-overlay video {
 			max-width: 450px;
+			margin: 0 auto;
+			display: block;
 		  }
 		  position: absolute;
 		  top: 26%;
