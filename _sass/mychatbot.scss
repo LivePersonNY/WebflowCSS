@@ -236,6 +236,11 @@
 			  padding: 5px;
 			  clear: both;
 			  overflow: hidden;
+			  img {
+				  display: block;
+				  border-radius: .5rem;
+				  margin-bottom: 1rem;
+			  }
 			  .agent-message, .user-message {
 				border-radius: 8px;
 				box-shadow:  0 2px 4px 0 rgba(0,0,0,0.20);
@@ -246,6 +251,7 @@
 				@media (max-width:$screen-max-lg){
 					padding:6px;
 				}
+				
 			  }
 			  .agent-message {
 				background: #ffffff;
