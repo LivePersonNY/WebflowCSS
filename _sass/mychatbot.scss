@@ -104,6 +104,13 @@
 			margin: 2rem 0;
 		}
 		.arrow-link{
+			margin-top: 2rem;
+			font-weight: 700;
+			font-family: Roboto,Helvetica;
+			font-size: 1.25rem;
+			.text-white {
+				color: rgba(252,252,253,var(--text-opacity));
+			}
 			&:after{
 				@media (max-width:$screen-max-lg){
 					transform: rotate(45deg);
