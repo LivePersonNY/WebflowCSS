@@ -60,7 +60,7 @@
 					width:60px;
 				}
 			  }
-			  &.brand {
+			  &.brand-logo {
 				max-height: 85px;
 				max-width: 275px;
 				@media(max-width:$screen-max-lg){
@@ -75,7 +75,7 @@
 	  .pane-hero {
 		.logos-container {
 		  img {
-			&.brand {
+			&.brand-logo {
 			  max-height: 85px;
 			  max-width: 275px;
 				@media(max-width:$screen-max-lg){
