@@ -379,3 +379,34 @@ body.locked {
 		}
 	}
 }
+
+.form--dropdown{
+    .mktoForm{
+		select{
+			border-color: #d9d4d0 #d9d4d0 #005ef4;
+			border-width: 1px 1px 4px;
+			line-height: 24px !important;
+			padding:10px 22px 10px 10px!important;
+			border-radius: .25rem .25rem 0 0;
+			&.select-placeholder{
+				color:#a0aec0 !important;
+			}
+		}
+	} 
+	@media only screen and (min-width: 1185px) {
+		.mktoForm{
+			input, select{
+				width:204px !important;
+			}
+			input{
+				padding:8px 19px 8px 10px!important;
+			}
+			select{
+				padding:8px 19px 8px 10px!important;
+			}
+			.mktoButtonWrap.mktoSimple .mktoButton, button{
+				width:176px;
+			}
+		}
+	}
+}
