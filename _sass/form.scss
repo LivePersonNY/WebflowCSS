@@ -388,6 +388,7 @@ body.locked {
 			line-height: 24px !important;
 			padding:10px 22px 10px 10px!important;
 			border-radius: .25rem .25rem 0 0;
+			margin-top:0;
 			&.select-placeholder{
 				color:#a0aec0 !important;
 			}
@@ -397,13 +398,7 @@ body.locked {
 		.mktoForm{
 			input, select{
 				width:204px !important;
-			}
-			input{
 				padding:8px 19px 8px 10px!important;
-			}
-			select{
-				padding:8px 19px 8px 10px!important;
-			}
 			.mktoButtonWrap.mktoSimple .mktoButton, button{
 				width:176px;
 			}
