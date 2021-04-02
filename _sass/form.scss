@@ -389,9 +389,7 @@ body.locked {
 			padding:10px 22px 10px 10px!important;
 			border-radius: .25rem .25rem 0 0;
 			margin-top:0;
-			&.select-placeholder{
-				color:#a0aec0 !important;
-			}
+			font-size:16px;
 		}
 	} 
 	@media only screen and (min-width: 1185px) {
