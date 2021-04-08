@@ -132,7 +132,7 @@
 		  padding:46px 0;
 	  }
 	  div.iphone-container {
-		height: 660px; //585
+		height: 585px; //585
 		@media (max-width:$screen-max-lg){
 			height:730px;
 		}
@@ -170,6 +170,7 @@
 		background-repeat: no-repeat;
 		background-position: top;
 		background-size: 100%;
+		z-index: 99;
 		@media (max-width:$screen-max-lg){
 			max-width:385px;
 			margin: auto;
