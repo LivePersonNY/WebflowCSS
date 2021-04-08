@@ -182,9 +182,15 @@
 		  width: 320px;
 		  position: relative;
 		  padding: 5px 5px 40px;
+		  @media (max-width:$screen-max-lg){
+			  width:297px;
+		  }
 		  .text-box-wrapper {
 			width: 261px;
 			display: inline-block;
+			@media (max-width:$screen-max-lg){
+				width:240px;
+			}
 			input {
 			  color: #0A0A0A;
 			  width: 100%;
@@ -213,6 +219,9 @@
 		  margin: 100px 30px 0;
 		  overflow-y: scroll;
 		  scrollbar-width: none;
+		  @media (max-width:$screen-max-lg){
+			  height:495px;
+		  }
 		  &::-webkit-scrollbar{
 			  display:none;
 		  }
@@ -238,6 +247,7 @@
 			width: 308px;
 			@media (max-width:$screen-max-lg){
 				text-align:left;
+				width:283px;
 			}
 			.message-container {
 			  padding: 5px;
