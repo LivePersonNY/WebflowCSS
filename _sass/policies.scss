@@ -90,15 +90,16 @@
     ol, ul{
         margin-bottom:0;
         li{
+            margin-left:5px;
             &.hack20-sub-bullet {
                 margin-left: 15px;
-                @media (max-width: 767px) {
+                @media(max-width:$screen-max-lg){
                     margin-left: 10px;
                 }
             }
             &.hack20-sub-bullet-2 {
                 margin-left: 30px;
-                @media (max-width: 767px) {
+                @media(max-width:$screen-max-lg){
                     margin-left: 20px;
                 }
             }
