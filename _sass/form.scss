@@ -162,7 +162,9 @@ body.locked {
 		}
 		.span2 {
 			display: none;
-			width:40px;
+			svg{
+				width:40px;
+			}
 		}
 	}
 }
