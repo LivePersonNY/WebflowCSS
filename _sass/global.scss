@@ -267,3 +267,8 @@ div#LP_Embedded_Nav img
         }
     }
 }
+
+//Chat window fix
+.lp-window-root .lp_line_state_wrapper .lp_line_state{
+    width:auto;
+}
