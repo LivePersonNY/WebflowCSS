@@ -61,10 +61,18 @@ $(function() {
 
 function showAsyncChannels(formVals) {
 	console.log(formVals);
-	var whatsappMessage = "https://api.whatsapp.com/send?phone=12126094200&text=Hey%20"+formVals.Email+"!%20Hit%20send%20to%20start%20a%20thread%20with%20one%20of%20our%20reps!";
+	var waUrl = "https://api.whatsapp.com/send?phone=12126094200&text=Hey%20"+formVals.Email+"!%20Hit%20send%20to%20start%20a%20thread%20with%20one%20of%20our%20reps!";
+	var abcUrl = "https://bcrw.apple.com/business/api/messageprofiles/redirecthelper?service=iMessage&recipient=urn:biz:9c27617e-f108-4e9e-a010-81ea843471e4&biz-group-id=AgentQR&body=Hey%20"+formVals.Email+"!%20Hit%20send%20to%20start%20a%20thread%20with%20one%20of%20our%20reps!";
+	var fbmUrl = "m.me/liveperson?ref="+formVals.Email;
+	
 	var waImg = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/whatsapp.svg');
-	var waLink = $('<a>').attr('href', whatsappMessage).append(waImg);
-	var abc = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/abc.svg');
-	var fbm = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/fbm.svg');
-	$('.async-channels').append(fbm).append(abc).append(waLink);
+	var waLink = $('<a>').attr('target', '_blank').attr('href', waUrl).append(waImg);
+	
+	var abcImg = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/abc.svg');
+	var abcLink = $('<a>').attr('target', '_blank').attr('href', abcUrl).append(abcImg);
+	
+	var fbmImg = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/fbm.svg');
+	var fbmLink = $('<a>').attr('target', '_blank').attr('href', fbmUrl).append(fbmImg);
+	
+	$('.async-channels').append(fbmLink).append(abcLink).append(waLink);
 }
