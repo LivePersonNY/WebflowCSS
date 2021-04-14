@@ -654,7 +654,7 @@ function showMenuHack(engagementId) {
 						console.log("Submitted values: " + JSON.stringify(vals));
 					}
 
-					$('form').parents('.section-default-2').addClass('form-submitted');
+					
 					//console.log('form submitted1');
 				}
 
