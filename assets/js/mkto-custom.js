@@ -645,7 +645,8 @@ function showMenuHack(engagementId) {
 							name: $('input[name="wholeName"]').val(),
 							companySize: $('#NumberOfEmployees').val() == 'NULL' ? 'SMB' : ''
 						};
-						$('form').html('<p class="heading-4">Thanks for your interest! Please continue booking your meeting in the conversation window.</p>');
+						$('form').parents('.section-default-2').addClass('form-submitted');
+						$('div.flip-card').addClass('flipped');
 					} else {
 						$('input[name=console]').val($('input[name=console]').val() + '*Cookie vals passed to fields* ');
 						form.submittable(true);
