@@ -56,6 +56,7 @@
 			color: #494B51;
 		}
 	}
+	// select-container is used on Events Peer-exchange
 	.select-container {
 		&:after {
 			content: "";
@@ -66,6 +67,21 @@
 			right: 16px;
 			pointer-events: none;
 			background: url(https://lp-site.s3.amazonaws.com/web2020/img/mkto-template/select-down-arrow.svg) no-repeat;
+		}
+	}
+	// mkto-dd-field is used on www site
+	.mkto-dd-field{
+		.mktoFieldWrap{
+			&:after {
+				content: "";
+				width: 16px;
+				height: 10px;
+				position: absolute;
+				top: 17px;
+				right: 45px;
+				pointer-events: none;
+				background: url(https://lp-site.s3.amazonaws.com/web2020/img/mkto-template/select-down-arrow.svg) no-repeat;
+			}
 		}
 	}
 	width: 100% !important;
