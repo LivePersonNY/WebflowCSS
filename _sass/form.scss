@@ -441,6 +441,7 @@ body.locked {
 	transition: ease 1s height;
 	
 	@media only screen and (max-width: 1185px) {
+		padding: 0 !important;
 		height: 76px;
 		overflow: hidden;
 		form {
@@ -473,10 +474,13 @@ body.locked {
 	.card-back {
 		transform: rotateX(180deg);
 		background: $color-blue-electric;
+		.column {
+			padding: 0 20px 20px;
+		}
 	}
 	
 	&.flipped {
-		padding: 0 !important;
+		
 		.flip-card-inner {
 			transform: rotateX(180deg);
 		}
