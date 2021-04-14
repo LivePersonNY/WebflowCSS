@@ -78,9 +78,13 @@
 				height: 10px;
 				position: absolute;
 				top: 17px;
-				right: 45px;
+				right: 17px;
 				pointer-events: none;
 				background: url(https://lp-site.s3.amazonaws.com/web2020/img/mkto-template/select-down-arrow.svg) no-repeat;
+				@media only screen and (max-width: 1185px) {
+					top: 19px;
+					right: 12px;
+				}
 			}
 		}
 	}
@@ -387,14 +391,6 @@ body.locked {
 			margin-right: 0 !important;
 			font-size: 18px !important;
 			padding: 10px 22px 10px 10px !important;
-		}
-	}
-	.mkto-dd-field {
-		.mktoFieldWrap {
-			&:after {
-				top: 19px;
-				right: 12px;
-			}
 		}
 	}
 }
