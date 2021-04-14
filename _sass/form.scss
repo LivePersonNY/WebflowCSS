@@ -492,6 +492,10 @@ body.locked {
 		&.smb {
 			.card-back-smb {
 				display: block;
+				.outlined-button {
+					margin-top: 5px;
+					position: relative;
+				}
 			}
 			.card-back {
 				display: none;
