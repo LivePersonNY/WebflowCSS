@@ -60,9 +60,11 @@ $(function() {
 });
 
 function showAsyncChannels(formVals) {
-	console.log(formVals)
-	var wa = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/whatsapp.svg');
+	console.log(formVals);
+	var whatsappMessage = "https://api.whatsapp.com/send?phone=12126094200&text=Hey%20"+formVals.Email+"!%20Hit%20send%20to%20start%20a%20thread%20with%20one%20of%20our%20reps!";
+	var waImg = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/whatsapp.svg');
+	var waLink = $('<a>').attr('href', whatsappMessage).append(waImg);
 	var abc = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/abc.svg');
 	var fbm = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/fbm.svg');
-	$('.async-channels').append(fbm).append(abc).append(wa);
+	$('.async-channels').append(fbm).append(abc).append(waLink);
 }
