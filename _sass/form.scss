@@ -440,8 +440,11 @@ body.locked {
 	width: 100%;
 	
 	@media only screen and (max-width: 1185px) {
-		min-height: 76px;
+		height: 76px;
 		overflow: hidden;
+		form {
+			margin-top: 20px;
+		}
 	}
 	
 	.flip-card-inner {

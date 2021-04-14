@@ -13,6 +13,7 @@ $('.mobileForm').on('click', function() {
   // $('body').toggleClass('locked');
   // $('.form--sticky').toggleClass('swapPosition');
   $('.form--sticky .container').slideToggle(300);
+  $(this).parents('.flip-card').toggleClass('mobile-expanded');
   $('.span1').toggleClass('swap');
   $('.span2').toggleClass('swap');
 });
