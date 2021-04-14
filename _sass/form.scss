@@ -438,12 +438,16 @@ body.locked {
 	perspective: 1000px;
 	height: 100px;
 	width: 100%;
+	transition: ease 1s height;
 	
 	@media only screen and (max-width: 1185px) {
 		height: 76px;
 		overflow: hidden;
 		form {
 			margin-top: 20px !important;
+		}
+		&.mobile-expanded {
+			height: 330px;
 		}
 	}
 	
