@@ -441,6 +441,10 @@ body.locked {
 	height: 100px;
 	width: 100%;
 	
+	@media only screen and (max-width: 1185px) {
+		height: 76px;
+	}
+	
 	.flip-card-inner {
 		position: relative;
 		width: 100%;
