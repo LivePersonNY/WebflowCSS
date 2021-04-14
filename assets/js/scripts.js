@@ -58,3 +58,10 @@ $(function() {
     }, 3000);
 
 });
+
+function showAsyncChannels(email) {
+	var wa = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/whatsapp.svg');
+	var abc = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/abc.svg');
+	var fbm = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/fbm.svg');
+	$('.async-channels').append(fbm).append(abc).append(wa);
+}
