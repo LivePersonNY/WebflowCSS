@@ -476,6 +476,7 @@ body.locked {
 	}
 	
 	&.flipped {
+		padding: 0 !important;
 		.flip-card-inner {
 			transform: rotateX(180deg);
 		}
