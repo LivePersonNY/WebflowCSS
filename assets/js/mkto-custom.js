@@ -646,7 +646,7 @@ function showMenuHack(engagementId) {
 							companySize: $('#NumberOfEmployees').val() == 'NULL' ? 'SMB' : ''
 						};
 						$('form').parents('.section-default-2').addClass('form-submitted');
-						$('div.flip-card').addClass('flipped');
+						$('div.flip-card').addClass('flipped smb');
 					} else {
 						$('input[name=console]').val($('input[name=console]').val() + '*Cookie vals passed to fields* ');
 						form.submittable(true);

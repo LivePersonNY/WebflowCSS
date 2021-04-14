@@ -462,7 +462,7 @@ body.locked {
 		//box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	}
 	
-	.card-front, .card-back {
+	.card-front, .card-back, .card-back-smb {
 		  position: absolute;
 		  width: 100%;
 		  height: 100%;
@@ -471,7 +471,7 @@ body.locked {
 		  transform: rotateX(0deg);
 	}
 	
-	.card-back {
+	.card-back, .card-back-smb {
 		transform: rotateX(180deg);
 		background: $color-blue-electric;
 		.column {
@@ -479,10 +479,20 @@ body.locked {
 		}
 	}
 	
+	.card-back-smb {
+		display: none;
+	}
+	
 	&.flipped {
 		
 		.flip-card-inner {
 			transform: rotateX(180deg);
+		}
+		
+		&.smb {
+			.card-back-smb {
+				display: block;
+			}
 		}
 	}
 	.channel-col {
