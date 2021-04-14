@@ -468,9 +468,12 @@ body.locked {
 			transform: rotateX(180deg);
 		}
 	}
-	.async-channels {
-		.channel {
-			margin: 0 10px;
+	.channel-col {
+		align-items: flex-start;
+		.async-channels {
+			.channel {
+				margin: 0 10px;
+			}
 		}
 	}
 }
