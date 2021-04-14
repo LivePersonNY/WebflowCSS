@@ -647,6 +647,9 @@ function showMenuHack(engagementId) {
 						};
 						$('form').parents('.section-default-2').addClass('form-submitted');
 						$('div.flip-card').addClass('flipped smb');
+						$('.flip-card').on('click', 'p,a,img', function() {
+							$('.flipped').fadeOut();
+						});
 					} else {
 						$('input[name=console]').val($('input[name=console]').val() + '*Cookie vals passed to fields* ');
 						form.submittable(true);
