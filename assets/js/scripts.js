@@ -78,6 +78,8 @@ function showAsyncChannels(formVals) {
 	}
 	var fbmImg = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/fbm.svg');
 	var fbmLink = $('<a>').attr('target', '_blank').attr('href', fbmUrl).append(fbmImg);
-	
+	$('.async-channels').on('a', 'click', function() {
+		$('.flipped').fadeOut();
+	});
 	$('.async-channels').append(fbmLink).append(abcLink).append(waLink);
 }
