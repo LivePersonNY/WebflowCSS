@@ -642,7 +642,7 @@ function showMenuHack(engagementId) {
 						$('.flip-card').on('click', 'p,a,img', function() {
 							$('.flipped').fadeOut();
 						});
-						dataLayer.push({'event' : gtmEvent || 'request-demo-form-smb'});
+						dataLayer.push({'event' : 'request-demo-form-smb'});
 					} else {
 						$('input[name=console]').val($('input[name=console]').val() + '*Cookie vals passed to fields* ');
 						form.submittable(true);
