@@ -444,7 +444,7 @@ body.locked {
 	height: 100px;
 	width: 100%;
 	transition: ease 1s height;
-	display: block;
+	display: block !important;
 	
 	@media only screen and (max-width: 1185px) {
 		padding: 0 !important;
