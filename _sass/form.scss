@@ -425,7 +425,12 @@ body.locked {
 		.mktoForm{
 			input, select{
 				width:204px !important;
+			}
+			input{
 				padding:8px 19px 8px 10px!important;
+			}
+			select{
+				padding:8px 38px 8px 10px!important;
 			}
 			.mktoButtonWrap.mktoSimple .mktoButton, button{
 				width:176px;
