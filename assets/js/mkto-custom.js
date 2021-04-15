@@ -345,7 +345,7 @@ function updateLpTags() {
 				//dataLayer.push({'event':'agent-connected'});
 				pushSDEData();
 				pixelFire = true;
-				formSubmissionComplete('Sales agent connections', 'agent-connected');
+				//formSubmissionComplete('Sales agent connections', 'agent-connected');
 
 			}
 		});
@@ -650,6 +650,7 @@ function showMenuHack(engagementId) {
 						$('.flip-card').on('click', 'p,a,img', function() {
 							$('.flipped').fadeOut();
 						});
+						dataLayer.push({'event' : gtmEvent || 'request-demo-form-smb'});
 					} else {
 						$('input[name=console]').val($('input[name=console]').val() + '*Cookie vals passed to fields* ');
 						form.submittable(true);
