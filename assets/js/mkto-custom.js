@@ -637,14 +637,6 @@ function showMenuHack(engagementId) {
 						JWTPayload.info.accountName = currVals.testGroup || "";
 
 						form.submittable(false);
-						/*lpMultiChannelEngagement.startWebWithMessage('', 'request-demo-cta');
-						leadData = {
-							email: $('#Email').val() || '',
-							firstname: $('input[name="FirstName"]').val(),
-							lastname: $('input[name="LastName"]').val(),
-							name: $('input[name="wholeName"]').val(),
-							companySize: $('#NumberOfEmployees').val() == 'NULL' ? 'SMB' : ''
-						};*/
 						$('form').parents('.section-default-2').addClass('form-submitted');
 						$('div.flip-card').addClass('flipped smb');
 						$('.flip-card').on('click', 'p,a,img', function() {
