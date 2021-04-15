@@ -443,8 +443,8 @@ body.locked {
 	perspective: 1000px;
 	height: 100px;
 	width: 100%;
-	transition: ease 1s height;
-	display: block !important;
+	transition: ease 1s height, ease 1s opacity;
+	opacity: 1;
 	
 	@media only screen and (max-width: 1185px) {
 		padding: 0 !important;
