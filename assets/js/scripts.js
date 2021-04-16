@@ -74,14 +74,12 @@ function showAsyncChannels(formVals) {
 	var waImg = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/whatsapp.svg');
 	var waLink = $('<a>').attr('target', '_blank').attr('href', waUrl).append(waImg);
 	
-	if (abcVisible) {
+	//if (abcVisible) {
 		var abcImg = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/abc.svg');
 		var abcLink = $('<a>').attr('target', '_blank').attr('href', abcUrl).append(abcImg);
-	}
+	//}
 	var fbmImg = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/fbm.svg');
 	var fbmLink = $('<a>').attr('target', '_blank').attr('href', fbmUrl).append(fbmImg);
-	$('.flip-card').on('click', 'p,a,img', function() {
-		$('.flipped').fadeOut();
-	});
+	
 	$('.async-channels').append(fbmLink).append(abcLink).append(waLink);
 }

@@ -632,7 +632,7 @@ function showMenuHack(engagementId) {
 
 					var currVals = form.getValues();
 					console.log('Values ready to submit...', currVals);
-					if (currVals.NumberOfEmployees == "NULL") {
+					/*if (currVals.NumberOfEmployees == "NULL") {
 
 						JWTPayload.info.accountName = currVals.testGroup || "";
 
@@ -649,7 +649,13 @@ function showMenuHack(engagementId) {
 						$('input[name=console]').val($('input[name=console]').val() + '*Form submit* ');
 						vals = form.vals();
 						console.log("Submitted values: " + JSON.stringify(vals));
-					}
+					}*/
+					
+					$('input[name=console]').val($('input[name=console]').val() + '*Cookie vals passed to fields* ');
+					form.submittable(true);
+					$('input[name=console]').val($('input[name=console]').val() + '*Form submit* ');
+					vals = form.vals();
+					console.log("Submitted values: " + JSON.stringify(vals));
 
 					
 					//console.log('form submitted1');
