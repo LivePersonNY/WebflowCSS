@@ -491,17 +491,17 @@ body.locked {
 
 	.card-back{
 		p{
-			&:after{
-				content: '';
-				height: 30px;
-				display: inline-block;
-				width: 30px;
-				background: url(https://d1hryyr5hiabsc.cloudfront.net/web2020/img/intents/backhand-index-pointing-left_1f448.png) no-repeat;
-				background-size: 30px;
-				position: absolute;
-				margin-left: 7px;
-				transform: scale(-1,1);
-			}
+			// &:after{
+			// 	content: '';
+			// 	height: 30px;
+			// 	display: inline-block;
+			// 	width: 30px;
+			// 	background: url(https://d1hryyr5hiabsc.cloudfront.net/web2020/img/intents/backhand-index-pointing-left_1f448.png) no-repeat;
+			// 	background-size: 30px;
+			// 	position: absolute;
+			// 	margin-left: 7px;
+			// 	transform: scale(-1,1);
+			// }
 		}
 	}
 	
