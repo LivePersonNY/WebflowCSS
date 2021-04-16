@@ -455,6 +455,9 @@ body.locked {
 		}
 		&.mobile-expanded {
 			height: 390px;
+			&.flipped {
+				height: 295px;
+			}
 		}
 	}
 	
