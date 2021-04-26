@@ -1,0 +1,276 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400;700;900&display=swap');
+@import 'variables';
+
+// start styles from greenhouse
+#content {
+	margin-bottom: 30px;
+}
+h1{
+	display:none;
+}
+h2#board_title {
+	text-align: center;
+    margin-bottom: 45px;
+    font-size: 32px;
+    font-weight: 400;
+    font-family:$font-roboto-slab;
+}
+.accessible section.level-0 h3 {
+	font-family: "Open Sans";
+	color: $color-white;
+	font-size: 26px;
+	line-height: 30px;
+	font-weight: 400;
+}
+
+.opening a {
+	font-family: "Open Sans";
+	color: #22B3EB;
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+li, p {
+	font-family: "Open Sans";
+	font-size: 16px;
+	line-height: 24px;
+	color: #162036;
+}
+.location {
+	color: #162036;
+	font-size: 20px;
+	font-family: "Open Sans";
+	font-weight: normal;
+}
+
+section {
+	// border-bottom: 1px solid #DADADA;
+	max-width: 700px;
+}
+section:last-of-type {
+	border-bottom: none;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+#app_body {
+	max-width: 940px;
+	margin: 0 auto;
+}
+#app_body h1 {
+	text-align: left;
+	margin-bottom: 8px;
+	font-size: 26px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.button {
+	background-color: #FF720B;
+	background-image: none;
+	padding: 10px 70px;
+	font-family: "Open Sans";
+	font-size: 16px;
+}
+
+ul {
+	list-style:none;
+}
+
+li::before {
+	content: '\2022';
+	color: #FF720B;
+  	display: inline-block; 
+  	width: 1em;
+  	margin-left: -1em
+}
+
+iframe {
+	border: none;
+}
+// end styles from greenhouse
+
+p{
+	color:$color-gray-lightest;
+	font-family:$font-roboto;
+	font-size:16px;
+	line-height:24px;
+	font-weight:$font-weight-light;
+}
+li{
+	font-family:$font-roboto;
+	font-size:16px;
+	line-height:24px;
+}
+#content li{
+	color:$color-gray-lightest;
+}
+
+a{
+	color:$color-blue-periwinkle-light;
+}
+
+h1{
+	color:$color-white;
+	font-family:$font-roboto-slab;
+	font-size:32px;
+	line-height:36px;
+	text-align:center;
+}
+h2{
+	color:$color-white;
+	font-family:$font-roboto-slab;
+	font-size:28px;
+	line-height:32px;
+	font-weight:$font-weight-normal;
+}
+h3{
+	color:$color-white;
+	font-family:$font-roboto-slab;
+}
+
+.opening a{
+	color:$color-blue-periwinkle-light;
+	font-family:$font-roboto;
+	font-size:24px;
+	line-height:29px;
+	font-weight:$font-weight-bold;
+}
+
+span.location{
+	color:$color-gray-lightest;
+	font-family:$font-roboto;
+	font-size:16px;
+	line-height:24px;
+	font-weight:$font-weight-light;
+}
+
+div.location{
+	color:$color-blue-periwinkle-light;
+	font-family:$font-roboto;
+	font-size:20px;
+	line-height:24px;
+	font-weight:$font-weight-bold;
+}
+
+#app_body h1 {
+	color:$color-white;
+	font-family:$font-roboto-slab;
+	font-size:28px;
+	line-height:32px;
+	font-weight:$font-weight-normal;
+	text-align:left;
+	display:block;
+}
+
+.company-name{
+	color:$color-gray-lightest;
+	font-family:$font-roboto;
+	font-size:16px;
+	line-height:24px;
+	font-weight:$font-weight-light;
+}
+
+.company-name + a{
+	color:$color-blue-periwinkle-light;
+	font-family:$font-roboto;
+	font-size:16px;
+	line-height:24px;
+	font-weight:$font-weight-light;
+}
+
+ul {
+	padding-left:16px;
+}
+
+li::before {
+	color:$color-blue-periwinkle-light;
+}
+
+#application{
+	border-radius:1rem;
+}
+
+#application h2{
+	color:#162036;
+	font-weight:bold;
+}
+
+#application h3 {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#application li, #application p{
+	color:#162036;
+}
+
+#application a{
+	color:#2975CA;
+}
+
+#application strong{
+	font-size:16px;
+}
+
+.large.blue{
+	border-radius:1rem;
+}
+
+#submit_app{
+	background:$color-blue-electric;
+	text-shadow:none;
+	border-radius:100px;
+	padding:1rem;
+	font-weight:$font-weight-normal;
+	font-size:16px;
+}
+
+.filter-container{
+	position:relative;
+}
+
+.filter-container label{
+	display:none !important;
+}
+
+.filter-container::after{
+	// content: '\0002c5';
+    font-size: 26px;
+    position: absolute;
+    top: 7px;
+    right: 30px;
+	color: #737881;
+	pointer-events:none;
+}
+
+.filter-container select{
+	appearance:none;
+	-o-appearance: none;
+   	-ms-appearance: none;
+   	-webkit-appearance: none;
+   	-moz-appearance: none;
+	border:1px solid $color-gray;
+	color:$color-gray;
+	font-family:$font-roboto;
+	font-size:16px;
+	line-height:24px;
+	font-weight:$font-weight-light;
+	padding:10px 14px;
+	margin-right:20px;
+}
+section .opening:last-of-type {
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+}
+section:last-of-type .opening:last-of-type {
+    border: 0;
+}
