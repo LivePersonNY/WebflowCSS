@@ -530,6 +530,7 @@ body.locked {
 	.channel-col {
 		align-items: flex-start;
 		.async-channels {
+			margin-top: -3px;
 			.channel {
 				margin: 0 10px;
 			}
