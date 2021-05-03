@@ -65,19 +65,23 @@ $(function() {
 function showAsyncChannels(formVals) {
 	console.log(formVals);
 	
-	var abcVisible = navigator.userAgent.match(/iPhone|iPad|iPod/i) || navigator.userAgent.match(/Mac OS X/i)
+	var abcVisible = navigator.userAgent.match(/iPhone|iPad|iPod/i) || navigator.userAgent.match(/Mac OS X/i);
 	
 	var waUrl = "https://api.whatsapp.com/send?phone=12126094200&text=Hey%20"+formVals.Email+"!%20Hit%20send%20to%20start%20a%20thread%20with%20one%20of%20our%20reps!";
 	var abcUrl = "https://bcrw.apple.com/business/api/messageprofiles/redirecthelper?service=iMessage&recipient=urn:biz:9c27617e-f108-4e9e-a010-81ea843471e4&biz-group-id=AgentQR&body=Hey%20"+formVals.Email+"!%20Hit%20send%20to%20start%20a%20thread%20with%20one%20of%20our%20reps!";
 	var fbmUrl = "https://m.me/liveperson?ref="+formVals.Email;
+	var smsUrl = "sms:+16462572513?body=test "+formVals.Email;
 	
 	var waImg = $('<img>').addClass('channel').attr('src', 'https://assets-global.website-files.com/5fd12c44f4b20161bb3602da/6090337f5589f64990ec61d3_whatsapp.svg');
 	var waLink = $('<a>').attr('target', '_blank').attr('href', waUrl).append(waImg);
 	
-	//if (abcVisible) {
-		var abcImg = $('<img>').addClass('channel').attr('src', 'https://assets-global.website-files.com/5fd12c44f4b20161bb3602da/609033e67821e30ed73e7722_apple.svg');
+	var abcImg = $('<img>').addClass('channel').attr('src', 'https://assets-global.website-files.com/5fd12c44f4b20161bb3602da/609033e67821e30ed73e7722_apple.svg');
+	if (abcVisible) {
 		var abcLink = $('<a>').attr('target', '_blank').attr('href', abcUrl).append(abcImg);
-	//}
+	} else {
+		var abcLink = $('<a>').attr('target', '_blank').attr('href', smsUrl).append(abcImg);
+	}
+
 	var fbmImg = $('<img>').addClass('channel').attr('src', 'https://assets-global.website-files.com/5fd12c44f4b20161bb3602da/609033b8b4b1ad41a070ffbc_fbm.svg');
 	var fbmLink = $('<a>').attr('target', '_blank').attr('href', fbmUrl).append(fbmImg);
 	
