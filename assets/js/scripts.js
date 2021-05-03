@@ -65,21 +65,27 @@ $(function() {
 function showAsyncChannels(formVals) {
 	console.log(formVals);
 	
-	var abcVisible = navigator.userAgent.match(/iPhone|iPad|iPod/i) || navigator.userAgent.match(/Mac OS X/i)
+	var abcVisible = navigator.userAgent.match(/iPhone|iPad|iPod/i) || navigator.userAgent.match(/Mac OS X/i);
 	
-	var waUrl = "https://api.whatsapp.com/send?phone=12126094200&text=Hey%20"+formVals.Email+"!%20Hit%20send%20to%20start%20a%20thread%20with%20one%20of%20our%20reps!";
-	var abcUrl = "https://bcrw.apple.com/business/api/messageprofiles/redirecthelper?service=iMessage&recipient=urn:biz:9c27617e-f108-4e9e-a010-81ea843471e4&biz-group-id=AgentQR&body=Hey%20"+formVals.Email+"!%20Hit%20send%20to%20start%20a%20thread%20with%20one%20of%20our%20reps!";
+	var message = "Send%20this%20message%20to%20continue%20scheduling%20your%20demo.%20We%E2%80%99ll%20use%20"+formVals.Email+"%20as%20your%20unique%20identifier%2C%20so%20don%E2%80%99t%20delete%20your%20email%20from%20this%20message%20%F0%9F%99%82";
+	
+	var waUrl = "https://api.whatsapp.com/send?phone=12126094200&text=" + message;
+	var abcUrl = "https://bcrw.apple.com/business/api/messageprofiles/redirecthelper?service=iMessage&recipient=urn:biz:9c27617e-f108-4e9e-a010-81ea843471e4&biz-group-id=AgentQR&body=" + message;
 	var fbmUrl = "https://m.me/liveperson?ref="+formVals.Email;
+	var smsUrl = "sms:+16462572513?body=" + message;
 	
-	var waImg = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/whatsapp.svg');
+	var waImg = $('<img>').addClass('channel').attr('src', 'https://assets-global.website-files.com/5fd12c44f4b20161bb3602da/6090337f5589f64990ec61d3_whatsapp.svg');
 	var waLink = $('<a>').attr('target', '_blank').attr('href', waUrl).append(waImg);
 	
-	//if (abcVisible) {
-		var abcImg = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/abc.svg');
+	var abcImg = $('<img>').addClass('channel').attr('src', 'https://assets-global.website-files.com/5fd12c44f4b20161bb3602da/609033e67821e30ed73e7722_apple.svg');
+	if (abcVisible) {
 		var abcLink = $('<a>').attr('target', '_blank').attr('href', abcUrl).append(abcImg);
-	//}
-	var fbmImg = $('<img>').addClass('channel').attr('src', 'https://d1hryyr5hiabsc.cloudfront.net/web2020/img/async/fbm.svg');
+	} else {
+		var abcLink = $('<a>').attr('target', '_blank').attr('href', smsUrl).append(abcImg);
+	}
+
+	var fbmImg = $('<img>').addClass('channel').attr('src', 'https://assets-global.website-files.com/5fd12c44f4b20161bb3602da/609033b8b4b1ad41a070ffbc_fbm.svg');
 	var fbmLink = $('<a>').attr('target', '_blank').attr('href', fbmUrl).append(fbmImg);
 	
-	$('.async-channels').append(fbmLink).append(abcLink).append(waLink);
+	$('.async-channels').append(abcLink).append(fbmLink).append(waLink);
 }
