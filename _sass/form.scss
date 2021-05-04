@@ -27,7 +27,7 @@
 			}
 		}
 	}
-	input {
+	input,input:autofill {
 		&:focus {
 			border-bottom-color: #fcfcfd;
 			border-bottom-color: #fcfcfd;
