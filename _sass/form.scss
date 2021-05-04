@@ -454,9 +454,6 @@ body.locked {
 	@media only screen and (max-width: 1185px) {
 		padding: 0 !important;
 		height: 76px;
-		&.flipped {
-			height: 100px;
-		}
 		overflow: hidden;
 		form {
 			padding: 20px !important;
