@@ -584,6 +584,6 @@ body.locked {
 		}
 	}
 	&.dismissed {
-		height: 0;
+		height: 0 !important;
 	}
 }
