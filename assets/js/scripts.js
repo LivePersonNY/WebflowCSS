@@ -65,6 +65,8 @@ $(function() {
 function showAsyncChannels(formVals) {
 	console.log(formVals);
 	
+	$('.paragraph-19-copy').append($('.thumbs-up'));
+	
 	var abcVisible = navigator.userAgent.match(/iPhone|iPad|iPod/i) || navigator.userAgent.match(/Mac OS X/i);
 	
 	var message = "Send%20this%20message%20to%20continue%20scheduling%20your%20demo.%20We%E2%80%99ll%20use%20"+formVals.Email+"%20as%20your%20unique%20identifier%2C%20so%20don%E2%80%99t%20delete%20your%20email%20from%20this%20message%20%F0%9F%99%82";
