@@ -75,17 +75,17 @@ function showAsyncChannels(formVals) {
 	var smsUrl = "sms:+16462572513?body=" + message;
 	
 	var waImg = $('<img>').addClass('channel').attr('src', 'https://assets-global.website-files.com/5fd12c44f4b20161bb3602da/6090337f5589f64990ec61d3_whatsapp.svg');
-	var waLink = $('<a>').attr('target', '_blank').attr('href', waUrl).append(waImg);
+	var waLink = $('<a>').attr('target', '_blank').attr('href', waUrl).attr('title', 'WhatsApp Business').append(waImg);
 	
 	var abcImg = $('<img>').addClass('channel').attr('src', 'https://assets-global.website-files.com/5fd12c44f4b20161bb3602da/609033e67821e30ed73e7722_apple.svg');
 	if (abcVisible) {
-		var abcLink = $('<a>').attr('target', '_blank').attr('href', abcUrl).append(abcImg);
+		var abcLink = $('<a>').attr('target', '_blank').attr('href', abcUrl).attr('title', 'Apple Business Chat').append(abcImg);
 	} else {
-		var abcLink = $('<a>').attr('target', '_blank').attr('href', smsUrl).append(abcImg);
+		var abcLink = $('<a>').attr('target', '_blank').attr('href', smsUrl).attr('title', 'SMS Text Messaging').append(abcImg);
 	}
 
 	var fbmImg = $('<img>').addClass('channel').attr('src', 'https://assets-global.website-files.com/5fd12c44f4b20161bb3602da/609033b8b4b1ad41a070ffbc_fbm.svg');
-	var fbmLink = $('<a>').attr('target', '_blank').attr('href', fbmUrl).append(fbmImg);
+	var fbmLink = $('<a>').attr('target', '_blank').attr('href', fbmUrl).attr('title', 'FaceBook Messenger').append(fbmImg);
 	
 	$('.async-channels').append(abcLink).append(fbmLink).append(waLink);
 }
