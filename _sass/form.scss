@@ -563,7 +563,7 @@ body.locked {
 		background: white;
 		opacity: .5;
 		/* margin-top: 10px; */
-		width: 40%;
+		width: 25%;
 		margin: 20px auto;
 		border-radius: 100px;
 	}
@@ -582,5 +582,8 @@ body.locked {
 				}
 			}
 		}
+	}
+	.dismissed {
+		height: 0;
 	}
 }
