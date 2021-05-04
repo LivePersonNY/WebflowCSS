@@ -66,9 +66,7 @@ function showAsyncChannels(formVals) {
 	console.log(formVals);
 	
 	$('.paragraph-19-copy').append($('.thumbs-up'));
-	var dismiss = $('<div>').addClass('dismiss-line').mousedown(function() {
-		$('.flipped').addClass('dismissed');
-	});
+	var dismiss = $('<div>').addClass('dismiss-line');
 	$('.async-channels').after(dismiss);
 	
 	var abcVisible = navigator.userAgent.match(/iPhone|iPad|iPod/i) || navigator.userAgent.match(/Mac OS X/i);
