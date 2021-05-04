@@ -467,7 +467,12 @@ body.locked {
 		&.mobile-expanded {
 			height: 465px;
 			&.flipped {
-				height: 295px;
+				height: 225px;
+			}
+			.card-back {
+				.w-col-1 {
+					display: none;
+				}
 			}
 		}
 		.thumbs-up {
@@ -552,6 +557,9 @@ body.locked {
 		align-items: flex-start;
 		.async-channels {
 			margin-top: -3px;
+			@media only screen and (max-width: 1185px) {
+				text-align: center;	
+			}
 			.channel {
 				margin: 0 10px;
 				&:hover {
