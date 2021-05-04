@@ -66,7 +66,7 @@ function showAsyncChannels(formVals) {
 	console.log(formVals);
 	
 	$('.paragraph-19-copy').append($('.thumbs-up'));
-	var dismiss = $('<div>').addClass('dismiss-line').swipe(function() {
+	var dismiss = $('<div>').addClass('dismiss-line').on("swipe", function() {
 		$('.flipped').addClass('dismissed');
 	});
 	$('.async-channels').after(dismiss);
