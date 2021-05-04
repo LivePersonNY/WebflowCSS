@@ -464,20 +464,21 @@ body.locked {
 		form {
 			padding: 20px !important;
 		}
-		
-		&.form-submitted {
+		&.mobile-expanded {
 			height: 465px;
+		}
+		&.form-submitted {
+			&.flipped {
+				height: 225px;
+			}
 			.card-back {
 				.w-col-1 {
 					display: none;
 				}
 				.column {
-					width: 100%;
+					widows: 100%;
 				}
 			}
-		}
-		&.flipped {
-			height: 225px;
 		}
 		.thumbs-up {
 			transform: rotate(90deg) rotateY(180deg);
