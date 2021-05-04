@@ -536,6 +536,9 @@ body.locked {
 			margin-top: -3px;
 			.channel {
 				margin: 0 10px;
+				&:hover {
+					opacity: .7;
+				}
 			}
 		}
 	}
