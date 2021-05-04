@@ -114,7 +114,9 @@ function handleTouchStart(evt) {
 };                                                
 
 function handleTouchMove(evt) {
-	console.log(evt);
+	if (evt.target.className.indexOf('flipped') < 0) {
+		return;
+	}
 	if ( ! xDown || ! yDown ) {
 		return;
 	}
