@@ -117,6 +117,7 @@ function handleTouchMove(evt) {
 	if (evt.target.className.indexOf('flipped') < 0) {
 		return;
 	}
+	
 	if ( ! xDown || ! yDown ) {
 		return;
 	}
@@ -135,7 +136,7 @@ function handleTouchMove(evt) {
 		}                       
 	} else {
 		if ( yDiff > 0 ) {
-			/* up swipe */ 
+			$('.flipped.').addClass('dismissed');
 		} else { 
 			/* down swipe */
 		}                                                                 
