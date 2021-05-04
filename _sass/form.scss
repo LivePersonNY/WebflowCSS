@@ -32,6 +32,9 @@
 			border-bottom-color: #fcfcfd;
 			border-bottom-color: #fcfcfd;
 		}
+		&, &:autofill {
+			background: red;
+		}
 		border-top-left-radius: .25rem;
 		border-top-right-radius: .25rem;
 		border-width: 1px 1px 4px;
@@ -52,10 +55,10 @@
 			color: #FCFCFD;
 		}
 	}
-	select.select-placeholder {
-		color: #FCFCFD;
-	}
 	select {
+		&.select-placeholder {
+			color: #FCFCFD;
+		}
 		background-color: transparent;
 		color: #737881;
 		border-radius: 0;
