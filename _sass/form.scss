@@ -464,14 +464,15 @@ body.locked {
 		form {
 			padding: 20px !important;
 		}
-		column {
-			width: 100%;
-		}
+		
 		&.form-submitted {
 			height: 465px;
 			.card-back {
 				.w-col-1 {
 					display: none;
+				}
+				.column {
+					width: 100%;
 				}
 			}
 		}
