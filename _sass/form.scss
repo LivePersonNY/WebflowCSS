@@ -32,8 +32,8 @@
 			border-bottom-color: #fcfcfd;
 			border-bottom-color: #fcfcfd;
 		}
-		&, &:autofill {
-			background: red;
+		&:autofill, &:-webkit-autofill {
+			background: transparent;
 		}
 		border-top-left-radius: .25rem;
 		border-top-right-radius: .25rem;
