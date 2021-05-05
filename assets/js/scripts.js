@@ -124,7 +124,7 @@ function appendDismissLine() {
 			if (phase == 'cancel') {
 				$('.flipped').attr('style', null);
 			}
-			if (phase !== 'move' || (currentDirection === 'left' || currentDirection === 'right')) return;
+			if (currentDirection === 'left' || currentDirection === 'right') return;
 			if (currentDirection === 'down') distance = distance * -1;
 			$('.flipped').height(touchHeight - distance);
 		}
