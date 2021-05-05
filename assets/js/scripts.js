@@ -113,7 +113,7 @@ function showAsyncChannels(formVals) {
 function appendDismissLine() {
 	var dismiss = $('<div>').addClass('dismiss-line');
 	var container = $('<div>').addClass('dismiss-container').append(dismiss).swipe({
-		threshold: 20,
+		threshold: 40,
 		swipe: function(event, direction) {
 			$('.flipped').addClass('dismissed');
 			$('.flipped').attr('style', null);
