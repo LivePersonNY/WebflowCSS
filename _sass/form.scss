@@ -545,6 +545,8 @@ body.locked {
 			transform: rotateX(180deg);
 		}
 		
+		max-height: 320px;
+		
 		&.smb {
 			.card-back-smb {
 				display: block;
