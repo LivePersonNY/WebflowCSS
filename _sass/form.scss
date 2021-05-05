@@ -519,7 +519,7 @@ body.locked {
 	}
 
 	.card-back, .card-back-smb{
-		p, .column{
+		p{
 			@media only screen and (max-width: 1185px) {
 				text-align: center;
 				max-width: 325px;
