@@ -121,8 +121,9 @@ function appendDismissLine() {
 		swipeStatus: function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection) {
 			var touchHeight = $('.flipped').height();
 			console.log(phase);
-			if (phase == 'cancel') {
+			if (phase == 'cancel' || phase == 'end') {
 				$('.flipped').attr('style', null);
+				return;
 			}
 			if (currentDirection === 'left' || currentDirection === 'right') return;
 			if (currentDirection === 'down') distance = distance * -1;
