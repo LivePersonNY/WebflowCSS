@@ -115,6 +115,7 @@ function appendDismissLine() {
 	var container = $('<div>').addClass('dismiss-container').append(dismiss).swipe({
 		swipeStatus: function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection) {
 			var touchHeight = $('.flipped').height();
+			console.log(phase);
 			if (phase === 'cancel') {
 				if (distance > 30) {
 					$('.flipped').addClass('dismissed');
