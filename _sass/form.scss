@@ -448,7 +448,7 @@ body.locked {
 	perspective: 1000px;
 	height: 100px;
 	width: 100%;
-	transition: ease .2s height, ease .5s opacity;
+	transition: ease .5s height, ease .5s opacity;
 	opacity: 1;
 	
 	.thumbs-up {
