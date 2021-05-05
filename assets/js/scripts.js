@@ -113,15 +113,16 @@ function showAsyncChannels(formVals) {
 function appendDismissLine() {
 	var dismiss = $('<div>').addClass('dismiss-line');
 	var container = $('<div>').addClass('dismiss-container').append(dismiss).swipe({
+		threshold: 20,
+		swipe: function(event, direction) {
+			$('.flipped').addClass('dismissed');
+			$('.flipped').attr('style', null);
+		},
 		swipeStatus: function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection) {
 			var touchHeight = $('.flipped').height();
 			console.log(phase);
-			if (phase === 'cancel') {
-				if (distance > 30) {
-					$('.flipped').addClass('dismissed');
-				} else {
-					$('.flipped').attr('style', null);
-				}
+			if (phase == 'cancel') {
+				$('.flipped').attr('style', null);
 			}
 			if (phase !== 'move' || (currentDirection === 'left' || currentDirection === 'right')) return;
 			if (currentDirection === 'down') distance = distance * -1;
