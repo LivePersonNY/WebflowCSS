@@ -469,7 +469,7 @@ body.locked {
 		}
 		&.form-submitted {
 			&.flipped {
-				height: 250px;
+				height: 260px;
 			}
 			.card-back {
 				.w-col-1 {
@@ -559,7 +559,8 @@ body.locked {
 		}
 	}
 	.dismiss-container {
-		padding: 20px 0;
+		padding: 25px 0;
+		width: 100%;
 		.dismiss-line {
 			height: 10px;
 			background: white;
