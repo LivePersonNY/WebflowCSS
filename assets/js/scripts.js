@@ -116,7 +116,9 @@ function appendDismissLine() {
 		threshold: 100,
 		cancelThreshold: 10,
 		swipe: function(event, direction) {
-			$('.flipped').addClass('dismissed');
+			if (direction === 'up') {
+				$('.flipped').addClass('dismissed');
+			}
 			$('.flipped').attr('style', null);
 		},
 		swipeStatus: function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection) {
