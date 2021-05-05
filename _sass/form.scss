@@ -564,6 +564,9 @@ body.locked {
 		}
 		padding: 25px 0;
 		width: 100%;
+		position: absolute;
+		left: 0;
+		bottom: -20px;
 		.dismiss-line {
 			height: 10px;
 			background: white;

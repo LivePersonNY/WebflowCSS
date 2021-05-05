@@ -83,7 +83,7 @@ function showAsyncChannels(formVals) {
 	console.log(formVals);
 	
 	$('.paragraph-19-copy').append($('.thumbs-up'));
-	$('.async-channels').after(appendDismissLine());
+	appendDismissLine();
 	
 	var abcVisible = navigator.userAgent.match(/iPhone|iPad|iPod/i) || navigator.userAgent.match(/Mac OS X/i);
 	
@@ -128,6 +128,6 @@ function appendDismissLine() {
 		}
 	});
 	
-	return container;
+	$('.flipped').append(container);
 }
 
