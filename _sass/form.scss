@@ -559,6 +559,9 @@ body.locked {
 		}
 	}
 	.dismiss-container {
+		@media only screen and (min-width: 1185px) {
+			display: none;	
+		}
 		padding: 25px 0;
 		width: 100%;
 		.dismiss-line {
