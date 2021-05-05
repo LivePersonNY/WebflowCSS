@@ -558,14 +558,17 @@ body.locked {
 			}
 		}
 	}
-	.dismiss-line {
-		height: 10px;
-		background: white;
-		opacity: .5;
-		/* margin-top: 10px; */
-		width: 25%;
-		margin: 20px auto;
-		border-radius: 100px;
+	.dismiss-container {
+		padding: 20px 0;
+		.dismiss-line {
+			height: 10px;
+			background: white;
+			opacity: .5;
+			/* margin-top: 10px; */
+			width: 25%;
+			margin: auto;
+			border-radius: 100px;
+		}
 	}
 	.channel-col {
 		align-items: flex-start;

@@ -66,10 +66,7 @@ function showAsyncChannels(formVals) {
 	console.log(formVals);
 	
 	$('.paragraph-19-copy').append($('.thumbs-up'));
-	var dismiss = $('<div>').addClass('dismiss-line').mousedown(function() {
-		$('.flipped').addClass('dismissed');
-	});
-	$('.async-channels').after(dismiss);
+	$('.async-channels').after(appendDismissLine());
 	
 	var abcVisible = navigator.userAgent.match(/iPhone|iPad|iPod/i) || navigator.userAgent.match(/Mac OS X/i);
 	
@@ -94,5 +91,14 @@ function showAsyncChannels(formVals) {
 	var fbmLink = $('<a>').attr('target', '_blank').attr('href', fbmUrl).attr('title', 'FaceBook Messenger').append(fbmImg);
 	
 	$('.async-channels').append(abcLink).append(fbmLink).append(waLink);
+}
+
+function appendDismissLine() {
+	var dismiss = $('<div>').addClass('dismiss-line');
+	var container = $('<div>').addClass('dismiss-container').append(dismiss).mousedown(function() {
+		$('.flipped').addClass('dismissed');
+	});
+	
+	return container;
 }
 
