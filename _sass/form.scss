@@ -551,7 +551,11 @@ body.locked {
 				.outlined-button {
 					margin-top: 5px;
 					position: relative;
+					
 				}
+			}
+			@media only screen and (max-width: 1185px) {
+				height: 280px;
 			}
 			.card-back {
 				display: none;
