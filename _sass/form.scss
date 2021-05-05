@@ -448,7 +448,7 @@ body.locked {
 	perspective: 1000px;
 	height: 100px;
 	width: 100%;
-	transition: ease 1s height, ease 1s opacity;
+	transition: ease .2s height, ease .5s opacity;
 	opacity: 1;
 	
 	.thumbs-up {
@@ -590,6 +590,7 @@ body.locked {
 				&:hover {
 					opacity: .7;
 				}
+				transition: .4s ease opacity;
 			}
 		}
 	}
