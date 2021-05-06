@@ -119,7 +119,7 @@ function appendDismissLine() {
 			if (direction === 'up') {
 				$('.flipped').addClass('dismissed');
 			}
-			$('.flipped, .card-back, .card-back-smb').attr('style', null);
+			$('.flipped').attr('style', null);
 		},
 		swipeStatus: function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection) {
 			var touchHeight = $('.flipped').height();
@@ -133,7 +133,7 @@ function appendDismissLine() {
 			
 			//if (distance * -1 > 0) return;
 			$('.flipped').height(touchHeight - (distance * .6));
-			$('.flipped .card-back, .flipped .card-back-smb').css('bottom', -1 * (distance * .6) );
+			//$('.flipped .card-back, .flipped .card-back-smb').css('bottom', -1 * (distance * .6) );
 			//$('.flipped').css('top', distance * -1);
 			
 			/*var curTop = parseInt($('.flipped').css('top'));
