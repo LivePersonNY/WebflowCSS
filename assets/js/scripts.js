@@ -129,7 +129,7 @@ function appendDismissLine() {
 				return;
 			}
 			if (currentDirection === 'left' || currentDirection === 'right') return;
-			if (currentDirection === 'down') return;
+			if (currentDirection === 'down' ) return;
 			//$('.flipped').height(touchHeight - (distance * .6));
 			$('.flipped').css('top', distance * -1);
 		}

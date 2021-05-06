@@ -448,7 +448,7 @@ body.locked {
 	perspective: 1000px;
 	height: 100px;
 	width: 100%;
-	transition: linear .2s height;
+	transition: ease .2s top;
 	display: block !important;
 	
 	.thumbs-up {
@@ -606,6 +606,6 @@ body.locked {
 		}
 	}
 	&.dismissed {
-		height: 0 !important;
+		top: -260px !important;
 	}
 }
