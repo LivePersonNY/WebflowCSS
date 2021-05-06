@@ -448,8 +448,8 @@ body.locked {
 	perspective: 1000px;
 	height: 100px;
 	width: 100%;
-	transition: linear .2s height, ease .5s opacity;
-	opacity: 1;
+	transition: linear .2s height;
+
 	
 	.thumbs-up {
 		display: inline-block;
