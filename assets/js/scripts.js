@@ -119,7 +119,7 @@ function appendDismissLine() {
 			if (direction === 'up') {
 				$('.flipped').addClass('dismissed');
 			}
-			$('.flipped').attr('style', null);
+			$('.flipped, .card-back, .card-back-smb').attr('style', null);
 		},
 		swipeStatus: function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection) {
 			var touchHeight = $('.flipped').height();
