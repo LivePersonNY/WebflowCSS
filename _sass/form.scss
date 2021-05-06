@@ -448,7 +448,7 @@ body.locked {
 	perspective: 1000px;
 	height: 100px;
 	width: 100%;
-	transition: ease .2s top;
+	transition: ease .2s top, ease .3s height;
 	display: block !important;
 	
 	.thumbs-up {
