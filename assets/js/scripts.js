@@ -129,8 +129,9 @@ function appendDismissLine() {
 				return;
 			}
 			if (currentDirection === 'left' || currentDirection === 'right') return;
-			if (currentDirection === 'down') distance = distance * -1;
-			$('.flipped').height(touchHeight - (distance * .6));
+			if (currentDirection === 'down') return;
+			//$('.flipped').height(touchHeight - (distance * .6));
+			$('.flipped').css('top', distance * -1);
 		}
 	});
 	
