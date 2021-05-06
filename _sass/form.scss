@@ -611,8 +611,5 @@ body.locked {
 	}
 	&.dismissed {
 		height: 0 !important;
-		.card-back, .card-back-smb {
-			bottom: -260px;
-		}
 	}
 }
