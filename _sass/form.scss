@@ -449,7 +449,7 @@ body.locked {
 	height: 100px;
 	width: 100%;
 	transition: linear .2s height;
-	
+	display: block !important;
 	
 	.thumbs-up {
 		display: inline-block;
