@@ -134,11 +134,11 @@ function appendDismissLine() {
 			//$('.flipped').height(touchHeight - (distance * .6));
 			$('.flipped').css('top', distance * -1);
 			
-			var curTop = parseInt($('.flipped').css('top'));
+			/*var curTop = parseInt($('.flipped').css('top'));
 			if (curTop >= 0) {
 				$('.flipped').css('top', 0);
 				return;
-			}
+			}*/
 		}
 	});
 	
