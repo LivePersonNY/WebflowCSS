@@ -448,7 +448,7 @@ body.locked {
 	perspective: 1000px;
 	height: 100px;
 	width: 100%;
-	transition: ease .2s height;
+	transition: linear .2s height, linear .2s bottom;
 	display: block !important;
 	
 	.thumbs-up {
@@ -606,7 +606,7 @@ body.locked {
 		}
 	}
 	&.dismissed {
-		height: -260px !important;
+		height: 0 !important;
 		.card-back, .card-back-smb {
 			bottom: -260px;
 		}
