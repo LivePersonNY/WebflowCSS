@@ -606,7 +606,9 @@ body.locked {
 		}
 	}
 	&.dismissed {
-		top: -1000px !important;
-		position: absolute;
+		height: -260px !important;
+		.card-back, .card-back-smb {
+			bottom: -260px;
+		}
 	}
 }
