@@ -11,78 +11,34 @@
         .slide-container {
             width: 100%;
         }   
-        .slider-styles {
-        -webkit-appearance: none;  /* Override default CSS styles */
-        appearance: none;
-        width: 100%; /* Full-width */
-        height: 15px; /* Specified height */
-        background: #2E305F; /* Grey background */
-        outline: none; /* Remove outline */
-        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-        transition: opacity .2s;
-        border-radius: 5px;  
-        }
 
-        /* Mouse-over effects */
-        .slider-styles:hover {
-        opacity: 1; /* Fully shown on mouse-over */
-        }
-
-        /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-        .slider-styles::-webkit-slider-thumb {
-        -webkit-appearance: none; /* Override default look */
-        appearance: none;
-        width: 25px; /* Set a specific slider handle width */
-        height: 25px; /* Slider handle height */
-        background: #fcfcfd; /* Green background */
-        cursor: pointer; /* Cursor on hover */
-        border-radius: 50%; 
-        }
-
-        .slider-styles::-moz-range-thumb {
-        width: 25px; /* Set a specific slider handle width */
-        height: 25px; /* Slider handle height */
-        background: #fcfcfd; /* Green background */
-        cursor: pointer; /* Cursor on hover */
-        border-radius: 50%; 
-        }
-
-        .slider-styles::-moz-range-progress, .slider-styles::-ms-fill-lower {
-        background-color: #ff6900; 
-        }
-
-        .slide-container p{
-            margin-bottom:0;
-            margin-top:24px;
-        }
 
         .jqslider-styles.ui-slider {
-        height: 15px; /* Specified height */
-        background: #2E305F; /* Grey background */
-        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+        height: 15px; 
+        background: #2E305F; 
+        opacity: 0.7; 
+        -webkit-transition: .2s; 
         transition: opacity .2s;
         border-radius: 5px;  
         border:0;
         }
         .jqslider-styles.ui-slider:hover {
-        opacity: 1; /* Fully shown on mouse-over */
+        opacity: 1; 
         }
         .jqslider-styles.ui-slider .ui-slider-range{
             background:#ff6900;
         }
         .jqslider-styles.ui-slider .ui-slider-handle{
-        width: 25px; /* Set a specific slider handle width */
-        height: 25px; /* Slider handle height */
-        background: #fcfcfd; /* Green background */
-        cursor: pointer; /* Cursor on hover */
+        width: 25px; 
+        height: 25px; 
+        background: #fcfcfd; 
+        cursor: pointer; 
         border-radius: 50%; 
         outline:none;
         }
         
         .slider-value{
-        -webkit-appearance: none; /* Override default look */
+        -webkit-appearance: none; 
         appearance: none;
         background:none;
         border:0;
