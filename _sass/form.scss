@@ -606,6 +606,7 @@ body.locked {
 		}
 	}
 	&.dismissed {
-		top: -5000px !important;
+		top: -1000px !important;
+		position: absolute;
 	}
 }
