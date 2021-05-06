@@ -131,6 +131,7 @@ function appendDismissLine() {
 			if (currentDirection === 'left' || currentDirection === 'right') return;
 			if (currentDirection === 'down') distance = distance * -1;
 			
+			if (distance * -1 > 0) return;
 			//$('.flipped').height(touchHeight - (distance * .6));
 			$('.flipped').css('top', distance * -1);
 			
