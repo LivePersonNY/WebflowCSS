@@ -69,6 +69,9 @@
         .jqslider-styles.ui-slider:hover {
         opacity: 1; /* Fully shown on mouse-over */
         }
+        .jqslider-styles.ui-slider .ui-slider-range{
+            background:#ff6900;
+        }
         .jqslider-styles.ui-slider .ui-slider-handle{
         width: 25px; /* Set a specific slider handle width */
         height: 25px; /* Slider handle height */
@@ -94,26 +97,26 @@
 			
 <div style="width:800px;margin:auto">
     <div class="slide-container">
-        <!-- <p class="slider1-value"></p>
-        <input type="range" data-roi="sales-traffic" min="1000000" max="100000000" value="50000000" step="10000" class="slider-styles" id="slider1"> -->
 
-        <p class="slider2-value"></p>
-        <input type="range" data-roi="sales-conv-rate" min="0" max="10" value=".5" step=".01" class="slider-styles" id="slider2">
+        <input class="slider-value" id="slider1-value" data-slider-ref="slider1" data-roi="sales-traffic">
+        <div id="slider1" class="jqslider-styles" data-min="1000000" data-max="100000000" data-value="50000000" data-step="10000"></div>
 
-        <p class="slider3-value"></p>
-        <input type="range" data-roi="sales-avg-order" min="0" max="500" value="100" step=".01" class="slider-styles" id="slider3">
+        <input class="slider-value" id="slider2-value" data-slider-ref="slider2" data-roi="sales-conv-rate">
+        <div id="slider2" class="jqslider-styles" data-min="0" data-max="10" data-value=".50" data-step=".01"></div>
 
-        <p class="slider4-value"></p>
-        <input type="range" data-roi="care-call-volume" min="1000000" max="100000000" value="10000000" step="10000" class="slider-styles" id="slider4">
+        <input class="slider-value" id="slider3-value" data-slider-ref="slider3" data-roi="sales-avg-order">
+        <div id="slider3" class="jqslider-styles" data-min="0" data-max="500" data-value="100" data-step=".01"></div>
 
-        <p class="slider5-value"></p>
-        <input type="range" data-roi="care-cost-per-call" min="0" max="50" value="6" step=".01" class="slider-styles" id="slider5">
+        <input class="slider-value" id="slider4-value" data-slider-ref="slider4" data-roi="care-call-volume">
+        <div id="slider4" class="jqslider-styles" data-min="1000000" data-max="100000000" data-value="10000000" data-step="10000"></div>
 
-        <p class="slider6-value"></p>
-        <input type="range" data-roi="care-contact-resolution" min="0" max="100" value="70" step=".01" class="slider-styles" id="slider6">
+        <input class="slider-value" id="slider5-value" data-slider-ref="slider5" data-roi="care-cost-per-call">
+        <div id="slider5" class="jqslider-styles" data-min="0" data-max="50" data-value="6" data-step=".01"></div>
 
-        <input class="slider-value" id="slider1-value" data-slider-ref="slider1">
-        <div id="slider1" class="jqslider-styles" data-roi="sales-traffic" data-min="1000000" data-max="100000000" data-value="50000000" data-step="10000"></div>
+        <input class="slider-value" id="slider6-value" data-slider-ref="slider6" data-roi="care-contact-resolution">
+        <div id="slider6" class="jqslider-styles" data-min="0" data-max="100" data-value="70" data-step=".01"></div>
+        
+    
     </div>
 
     <div style="border:1px solid red; margin:20px 0">
@@ -136,16 +139,16 @@
 
 <script>
 
-    $('.slider-styles').each(function(){
-        var sliderID = $(this).attr('id');
-        $('.' + sliderID + '-value').text($(this).val());
-    });
+    // $('.slider-styles').each(function(){
+    //     var sliderID = $(this).attr('id');
+    //     $('.' + sliderID + '-value').text($(this).val());
+    // });
 
-    $('.slider-styles').on('input', function(){
-        var sliderID = $(this).attr('id');
-        $('.' + sliderID + '-value').text($(this).val());
-        //ROICalc.init();
-    });
+    // $('.slider-styles').on('input', function(){
+    //     var sliderID = $(this).attr('id');
+    //     $('.' + sliderID + '-value').text($(this).val());
+    //     //ROICalc.init();
+    // });
 
     //ROICalc.init();
 
@@ -155,12 +158,14 @@
         var sliderStep = $(this).data('step');
         var sliderValue = $(this).data('value');
         $(this).slider({
-            min: sliderMin,
-            max: sliderMax,
-            step: sliderStep,
-            value: sliderValue,
+            range: 'min',
+            min: parseFloat(sliderMin),
+            max: parseFloat(sliderMax),
+            step: parseFloat(sliderStep),
+            value: parseFloat(sliderValue),
             slide: function(event, ui) {
                 $('#' + $(this).attr('id') + '-value').val(ui.value);
+                ROICalc.init();
             }
         });
     })
@@ -168,10 +173,12 @@
     $('.slider-value').each(function(){
         $(this).val( $('#' + $(this).data('slider-ref')).slider('value'));
         $(this).on('input', function(){
-            console.log($(this));
             $('#' + $(this).data('slider-ref')).slider('value', $(this).val());
+            ROICalc.init();
         })
     })
+
+    ROICalc.init();
      
 
 </script>
