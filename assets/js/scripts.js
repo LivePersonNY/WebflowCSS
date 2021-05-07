@@ -131,13 +131,15 @@ function appendDismissLine() {
 			if (currentDirection === 'left' || currentDirection === 'right') return;
 			if (currentDirection === 'down') distance = distance * -1;
 			var currentScrollTop = $(document).scrollTop();
-			//if (distance * -1 > 0) return;
+			
 			var newHeight = touchHeight - (distance * .6);
 			
 			if (currentScrollTop < $('.flipped').position().top) {
 				$('.flipped').height(newHeight);
 			} else {
-				$('.flipped').css('top', -1 * (260 - newHeight));
+				var newTop = -1 * (260 - newHeight);
+				if (newTop > 0) return;
+				$('.flipped').css('top', newTop);
 			}
 			
 			//$('.flipped').css('margin-bottom', 260-newHeight);
