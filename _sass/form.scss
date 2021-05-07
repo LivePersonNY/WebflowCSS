@@ -618,6 +618,7 @@ body.locked {
 	}
 	&.dismissed {
 		height: 0 !important;
+		top: 0 !important;
 	}
 	&.dismissed-but-here {
 		top: 0 !important;
