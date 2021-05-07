@@ -133,9 +133,14 @@ function appendDismissLine() {
 			var currentScrollTop = $(document).scrollTop();
 			//if (distance * -1 > 0) return;
 			var newHeight = touchHeight - (distance * .6);
-			$('.flipped').height(newHeight);
 			
-			$('.flipped').css('margin-bottom', 260-newHeight);
+			if (currentScrollTop <= $('.flipped').position().top) {
+				$('.flipped').height(newHeight);
+			} else {
+				$('.flipped').css('top', -1 * (260 - newHeight));
+			}
+			
+			//$('.flipped').css('margin-bottom', 260-newHeight);
 			//$('.flipped .card-back, .flipped .card-back-smb').css('bottom', -1 * (distance * .6) );
 			//$('.flipped').css('top', distance * -1);
 			
