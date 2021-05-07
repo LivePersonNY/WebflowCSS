@@ -116,6 +116,7 @@ function appendDismissLine() {
 		threshold: 70,
 		cancelThreshold: 10,
 		swipe: function(event, direction) {
+			var currentScrollTop = $(document).scrollTop();
 			if (direction === 'up') {
 				var touchHeight = $('.flipped').height();
 				if (currentScrollTop < $('.flipped').position().top - 5) {
