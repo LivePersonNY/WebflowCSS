@@ -147,8 +147,11 @@ function appendDismissLine() {
 				$('.flipped').css('top', 0);
 			} else {
 				var newTop = -1 * (touchHeight - newHeight);
-				if (newTop > 0) return;
-				$('.flipped').css('top', newTop);
+				if (newTop > 0) {
+					$('.flipped').css('top', 0);
+				} else {
+					$('.flipped').css('top', newTop);
+				}
 			}
 			
 			//$('.flipped').css('margin-bottom', 260-newHeight);
