@@ -170,10 +170,10 @@
     display: inline-block;
     width: 8px;
     height: 8px;
-	background-color: #2493bf;
+	background-color: #ff6900;
 }
 .bar-chart .legend li:nth-child(2):before {
-	background-color: #38b59c;
+	background-color: #005EF4;
 }
 </style>
 
@@ -237,36 +237,49 @@
 
             <figure id="two" class="bar-chart">
                 <p>Estimated Total Benefit</p>
-                <ul class="legend">
-                    <li>Category A</li>
-                    <li>Category B</li>
-                </ul>
 
                 <div class="row bars">
                     <div class="x-axis">
                         <div class="year wrap">
                             <div class="col">
-                                <span class="bar"></span>
-                                <span class="bar"></span>
+                                <span class="bar">
+                                    <span class="tooltip"></span>
+                                </span>
+                                <span class="bar">
+                                    <span class="tooltip"></span>
+                                </span>
                             </div>
                             <span class="label">2019</span>
                         </div>
                         <div class="year wrap">
                             <div class="col">
-                                <span class="bar"></span>
-                                <span class="bar"></span>
+                                <span class="bar">
+                                    <span class="tooltip"></span>
+                                </span>
+                                <span class="bar">
+                                    <span class="tooltip"></span>
+                                </span>
                             </div>
                             <span class="label">2020</span>
                         </div>
                         <div class="year wrap">
                             <div class="col">
-                                <span class="bar"></span>
-                                <span class="bar"></span>
+                                <span class="bar">
+                                    <span class="tooltip"></span>
+                                </span>
+                                <span class="bar">
+                                    <span class="tooltip"></span>
+                                </span>
                             </div>
                             <span class="label">2021</span>
                         </div>
                     </div>
                 </div>
+
+                <ul class="legend">
+                    <li>Cost savings</li>
+                    <li>Revenue growth</li>
+                </ul>
 
             </figure>
 
@@ -285,10 +298,6 @@
 
     <script>
 
-        function updateResults(){
-            ROICalc.init();
-        }
-
         $('.jqslider-styles').each(function () {
             var sliderMin = $(this).data('min');
             var sliderMax = $(this).data('max');
@@ -302,7 +311,11 @@
                 value: parseFloat(sliderValue),
                 slide: function (event, ui) {
                     $('#' + $(this).attr('id') + '-value').val(ui.value);
-                    updateResults();
+                    updateChart();
+                    ROICalc.model.updateAll();
+                    ROICalc.model.calculate.sales.run();
+                    ROICalc.model.calculate.care.run();
+                    ROICalc.model.calculate.totals.run();
                 }
             });
         })
@@ -311,38 +324,45 @@
             $(this).val($('#' + $(this).data('slider-ref')).slider('value'));
             $(this).on('input', function () {
                 $('#' + $(this).data('slider-ref')).slider('value', $(this).val());
-                updateResults();
+                updateChart();
             })
         })
 
-        var oneObj = {
-            element: [{
-                name: "#two",
-                numbers: [0.6, 1.4, 1.4, 3.6, 4.4, 5.4]
-            }]
-        }
+        ROICalc.init({
+            inputs: {
+                event: 'input'
+            }
+        });
 
-        setTimeout(function () {
-            for (var i = 0; i < oneObj.element.length; i++) {
-                $(oneObj.element[i].name + ' .bar').each(function (index) {
+        var updateChart = function(){ 
+
+            //$('#two .bar .tooltip').remove();
+
+            var oneObj = {
+                element: [{
+                    name: "#two",
+                    numbers: [ROICalc.results.totals.growth.year1 , ROICalc.results.totals.savings.year1, ROICalc.results.totals.growth.year2, ROICalc.results.totals.savings.year2, ROICalc.results.totals.growth.year3, ROICalc.results.totals.savings.year3]
+                }]
+            }
+
+            setTimeout(function () {
+                $('#two .bar').each(function (index) {
                     // To better represent % of height
-                    var numbersFull = oneObj.element[i].numbers[index] * 7.25;
+                    var numberAlter = (oneObj.element[0].numbers[index] / 100000).toFixed(2);
+                    var numbersFull = numberAlter * 1.25;
                     $(this).css({
                         'height': numbersFull + '%'
                     });
                     // Create tooltip
-                    $('<span class="tooltip">' + oneObj.element[i].numbers[index] + 'M</span>')
-                        .prependTo(this);
+                    $(this).find('.tooltip').text('$' + numberAlter + 'M');
+                    // $('<span class="tooltip">' + oneObj.element[0].numbers[index] + 'M</span>')
+                    //     .prependTo(this);
                 });
 
-            }
+            }, 500);
+        }
 
-        }, 500);
-
-
-
-        updateResults();
-
+        updateChart();
 
         // Total growth on bottom blue
         // Total savings on top orange
