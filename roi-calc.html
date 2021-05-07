@@ -248,6 +248,7 @@
                                 <span class="bar">
                                     <span class="tooltip"></span>
                                 </span>
+                                <p class="total-year-benefit"></p>
                             </div>
                             <span class="label">2019</span>
                         </div>
@@ -259,6 +260,7 @@
                                 <span class="bar">
                                     <span class="tooltip"></span>
                                 </span>
+                                <p class="total-year-benefit"></p>
                             </div>
                             <span class="label">2020</span>
                         </div>
@@ -270,6 +272,7 @@
                                 <span class="bar">
                                     <span class="tooltip"></span>
                                 </span>
+                                <p class="total-year-benefit"></p>
                             </div>
                             <span class="label">2021</span>
                         </div>
@@ -341,7 +344,8 @@
             var oneObj = {
                 element: [{
                     name: "#two",
-                    numbers: [ROICalc.results.totals.growth.year1 , ROICalc.results.totals.savings.year1, ROICalc.results.totals.growth.year2, ROICalc.results.totals.savings.year2, ROICalc.results.totals.growth.year3, ROICalc.results.totals.savings.year3]
+                    numbers: [ROICalc.results.totals.growth.year1, ROICalc.results.totals.savings.year1, ROICalc.results.totals.growth.year2, ROICalc.results.totals.savings.year2, ROICalc.results.totals.growth.year3, ROICalc.results.totals.savings.year3],
+                    totals: [ROICalc.results.totals.total_benefit.year1, ROICalc.results.totals.total_benefit.year2, ROICalc.results.totals.total_benefit.year3]
                 }]
             }
 
@@ -358,6 +362,13 @@
                     // $('<span class="tooltip">' + oneObj.element[0].numbers[index] + 'M</span>')
                     //     .prependTo(this);
                 });
+
+                $('#two .total-year-benefit').each(function (year) {
+                    var numberAlter = (oneObj.element[0].totals[year] / 1000000).toFixed(2);
+                    $(this).text('$' + numberAlter + 'M');
+                });
+
+                
 
             }, 500);
         }
