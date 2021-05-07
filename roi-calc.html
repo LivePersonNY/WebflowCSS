@@ -233,7 +233,7 @@
                 <p>Total benefit Y3: <span data-roi="total-total-benefit-year3"></span></p>
             </div>
         </div>
-        <div style="width:500px;margin:auto;float:left;margin-left:80px;">
+        <div style="width:500px;margin:auto;float:left;margin-left:80px;height:870px">
 
             <figure id="two" class="bar-chart">
                 <p>Estimated Total Benefit</p>
@@ -348,8 +348,8 @@
             setTimeout(function () {
                 $('#two .bar').each(function (index) {
                     // To better represent % of height
-                    var numberAlter = (oneObj.element[0].numbers[index] / 100000).toFixed(2);
-                    var numbersFull = numberAlter * 1.10;
+                    var numberAlter = (oneObj.element[0].numbers[index] / 1000000).toFixed(2);
+                    var numbersFull = numberAlter * 5.5;
                     $(this).css({
                         'height': numbersFull + '%'
                     });
