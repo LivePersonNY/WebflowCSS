@@ -618,5 +618,6 @@ body.locked {
 	}
 	&.dismissed {
 		height: 0 !important;
+		top: 0 !important;
 	}
 }
