@@ -117,7 +117,14 @@ function appendDismissLine() {
 		cancelThreshold: 10,
 		swipe: function(event, direction) {
 			if (direction === 'up') {
-				$('.flipped').addClass('dismissed');
+				var touchHeight = $('.flipped').height();
+				if (currentScrollTop < $('.flipped').position().top - 50) {
+					$('.flipped').addClass('dismissed');
+				} else {
+					$('.flipped').animate({top: -1 * (touchHeight)}, 'fast', function() {
+						$('.flipped').addClass('dismissed');
+					})
+				}
 			}
 			$('.flipped').attr('style', null);
 		},
