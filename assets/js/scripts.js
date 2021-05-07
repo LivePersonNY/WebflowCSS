@@ -136,6 +136,7 @@ function appendDismissLine() {
 			
 			if (currentScrollTop < $('.flipped').position().top) {
 				$('.flipped').height(newHeight);
+				$('.flipped').css('top', 0);
 			} else {
 				var newTop = -1 * (touchHeight - newHeight);
 				var curTop = parseInt($('.flipped').css('top'));
