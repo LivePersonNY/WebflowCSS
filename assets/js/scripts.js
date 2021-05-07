@@ -123,7 +123,7 @@ function appendDismissLine() {
 					$('.flipped').addClass('dismissed');
 				} else {
 					$('.flipped').animate({top: -1 * (touchHeight)}, 'fast', function() {
-						$('.flipped').addClass('dismissed');
+						$('.flipped').css('position', 'relative');
 					})
 				}
 			}
