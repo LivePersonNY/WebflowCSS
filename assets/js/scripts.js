@@ -118,7 +118,7 @@ function appendDismissLine() {
 		swipe: function(event, direction) {
 			if (direction === 'up') {
 				var touchHeight = $('.flipped').height();
-				if (currentScrollTop < $('.flipped').position().top - 50) {
+				if (currentScrollTop < $('.flipped').position().top - 5) {
 					$('.flipped').addClass('dismissed');
 				} else {
 					$('.flipped').animate({top: -1 * (touchHeight)}, 'fast', function() {
@@ -141,7 +141,7 @@ function appendDismissLine() {
 			
 			var newHeight = touchHeight - (distance);
 			
-			if (currentScrollTop < $('.flipped').position().top - 50) {
+			if (currentScrollTop < $('.flipped').position().top - 5) {
 				$('.flipped').height(newHeight);
 				$('.flipped').css('top', 0);
 			} else {
