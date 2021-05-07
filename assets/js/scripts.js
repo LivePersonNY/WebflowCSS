@@ -132,7 +132,7 @@ function appendDismissLine() {
 			if (currentDirection === 'down') distance = distance * -1;
 			var currentScrollTop = $(document).scrollTop();
 			
-			var newHeight = touchHeight - (distance * .6);
+			var newHeight = touchHeight - (distance);
 			
 			if (currentScrollTop < $('.flipped').position().top) {
 				$('.flipped').height(newHeight);
