@@ -470,6 +470,7 @@ body.locked {
 		&.form-submitted {
 			&.flipped {
 				height: 260px;
+				max-height: 260px;
 			}
 			.card-back {
 				.w-col-1 {
@@ -562,6 +563,7 @@ body.locked {
 			}
 			@media only screen and (max-width: 1185px) {
 				height: 280px;
+				max-height: 280px;
 				.card-back-smb {
 					.column {
 						text-align: center;
