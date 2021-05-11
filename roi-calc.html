@@ -236,6 +236,7 @@
         <div style="width:500px;margin:auto;float:left;margin-left:80px;height:870px">
 
             <figure id="two" class="bar-chart">
+                <p class="estimated-total-benefit"></p>
                 <p>Estimated Total Benefit</p>
 
                 <div class="row bars">
@@ -339,7 +340,7 @@
 
         var updateChart = function(){ 
 
-            //$('#two .bar .tooltip').remove();
+            var estimatedTotalBenefit = 0;
 
             var oneObj = {
                 element: [{
@@ -364,8 +365,11 @@
                 });
 
                 $('#two .total-year-benefit').each(function (year) {
+                    estimatedTotalBenefit += oneObj.element[0].totals[year];
                     var numberAlter = (oneObj.element[0].totals[year] / 1000000).toFixed(2);
                     $(this).text('$' + numberAlter + 'M');
+                    var estimatedTotalBenefitAlter = (estimatedTotalBenefit / 1000000).toFixed(2);
+                    $('#two .estimated-total-benefit').text('$' + estimatedTotalBenefitAlter + 'M');
                 });
 
                 
