@@ -308,3 +308,8 @@ div#LP_Embedded_Nav img
         }
     }
 }
+
+// Hiding publish button from Editor view
+.w-editor-publish-controls, #publish-option{
+    display:none;
+}
