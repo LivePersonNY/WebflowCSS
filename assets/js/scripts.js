@@ -77,7 +77,7 @@ $(function() {
         $(".LPMcontainer").attr("onclick", "ga('send', 'event', 'form', 'submit', 'Chat engagement clicks')");
     }, 3000);
 	
-	appendDismissLine('.mobile-v2');
+	appendDismissLine('.sticky-form');
 
 });
 
@@ -112,8 +112,9 @@ function showAsyncChannels(formVals) {
 	$('.async-channels').append(abcLink).append(fbmLink).append(waLink);
 }
 
-function appendDismissLine(selector) {
+function appendDismissLine(appendTo, selector, callback) {
 	selector = selector || '.flipped';
+	appendTo = appendTo || '.flipped';
 	var dismiss = $('<div>').addClass('dismiss-line');
 	var container = $('<div>').addClass('dismiss-container').append(dismiss).swipe({
 		threshold: 70,
@@ -121,22 +122,22 @@ function appendDismissLine(selector) {
 		swipe: function(event, direction) {
 			var currentScrollTop = $(document).scrollTop();
 			if (direction === 'up') {
-				var touchHeight = $('.flipped').height();
-				if (currentScrollTop < $('.flipped').position().top - 5) {
-					$('.flipped').addClass('dismissed');
+				var touchHeight = $(selector).height();
+				if (currentScrollTop < $(selector).position().top - 5) {
+					$(selector).addClass('dismissed');
 				} else {
-					$('.flipped').animate({top: -1 * (touchHeight)}, 'fast', function() {
-						$('.flipped').addClass('dismissed');
+					$(selector).animate({top: -1 * (touchHeight)}, 'fast', function() {
+						$(selector).addClass('dismissed');
 					})
 				}
 			}
-			$('.flipped').attr('style', null);
+			$(selector).attr('style', null);
 		},
 		swipeStatus: function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection) {
-			var touchHeight = $('.flipped').height();
+			var touchHeight = $(selector).height();
 			console.log(phase);
 			if (phase == 'cancel' || phase == 'end') {
-				$('.flipped').attr('style', null);
+				$(selector).attr('style', null);
 				return;
 			}
 			if (currentDirection === 'left' || currentDirection === 'right') return;
@@ -145,15 +146,15 @@ function appendDismissLine(selector) {
 			
 			var newHeight = touchHeight - (distance);
 			
-			if (currentScrollTop < $('.flipped').position().top - 5) {
-				$('.flipped').height(newHeight);
-				$('.flipped').css('top', 0);
+			if (currentScrollTop < $(selector).position().top - 5) {
+				$(selector).height(newHeight);
+				$(selector).css('top', 0);
 			} else {
 				var newTop = -1 * (touchHeight - newHeight);
 				if (newTop > 0) {
-					$('.flipped').css('top', 0);
+					$(selector).css('top', 0);
 				} else {
-					$('.flipped').css('top', newTop);
+					$(selector).css('top', newTop);
 				}
 			}
 			
@@ -169,7 +170,7 @@ function appendDismissLine(selector) {
 		}
 	});
 	
-	$(selector).append(container);
+	$(appendTo).append(container);
 }
 
 const el = document.querySelector(".sticky-form")
