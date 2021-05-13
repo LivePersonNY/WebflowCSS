@@ -1,6 +1,6 @@
 .sticky-form {
 	transition: .5s ease background-color;
-	.is-pinned {
+	&.is-pinned {
 		background-color: $color-blue-navy-light;
 	}
 }
