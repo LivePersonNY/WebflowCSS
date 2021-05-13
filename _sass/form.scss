@@ -471,9 +471,12 @@ body.locked {
 			padding: 20px !important;
 		}
 		&.mobile-expanded {
-			height: 465px;
-			.mobile-v2:after {
-				display: none;
+			height: 360px;
+			.mobile-v2 {
+				bottom: 10px;
+				&:after {
+					display: none;
+				}
 			}
 		}
 		&.form-submitted {
@@ -496,6 +499,7 @@ body.locked {
 			
 		}
 		.mobile-v2 {
+			transition: .5s ease bottom;
 			position: absolute;
 			left: 0;
 			right: 0;
