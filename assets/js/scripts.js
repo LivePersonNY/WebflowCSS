@@ -26,7 +26,7 @@ $('.mobile-v2').on('click', function() {
 	var formPos = $('.flip-card').position().top;
 	console.log(currentScrollTop + "/" + formPos);
 	if (formPos > currentScrollTop) {
-		$("html, body").animate({scrollTop: formPos + 200}, 'fast');
+		$("html, body").animate({scrollTop: formPos + 200});
 	}
 });
 
