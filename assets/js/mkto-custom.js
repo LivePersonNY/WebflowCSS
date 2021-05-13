@@ -583,7 +583,7 @@ function showMenuHack(engagementId) {
 
 		$('input[name=console]').val($('input[name=console]').val() + '*End wholeName split function* ');
 		
-		$('label').forEach(function() {
+		$('label').each(function() {
 			$(this).attr('aria-label', $(this).attr('for'));
 		});
 
