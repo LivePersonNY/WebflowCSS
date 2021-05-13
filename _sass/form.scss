@@ -668,4 +668,11 @@ body.locked {
 		top: 0 !important;
 		position: relative;
 	}
+	&.form-submitted {
+		.mobile-v2 {
+			& > .dismiss-container {
+				display: none;
+			}
+		}
+	}
 }
