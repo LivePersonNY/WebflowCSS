@@ -35,10 +35,9 @@
 	input {
 		&:focus {
 			border-bottom-color: #fcfcfd;
-			border-bottom-color: #fcfcfd;
 		}
 		&:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
-			  -webkit-text-fill-color: #d9d4d0;
+			  -webkit-text-fill-color: #fcfcfd;
 			  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
 			  box-shadow: 0 0 0px 1000px transparent inset;
 			  transition: background-color 5000s ease-in-out 0s;
@@ -53,7 +52,7 @@
 		font-size: 16px !important;
 		line-height: 24px !important;
 		width: 100% !important;
-		color: #d9d4d0;
+		color: #fcfcfd;
 	}
 	.mktoField {
 		&::placeholder {
@@ -68,7 +67,7 @@
 			color: #FCFCFD;
 		}
 		background-color: transparent;
-		color: #737881;
+		color: #FCFCFD;
 		border-radius: 0;
 		font-weight: 300;
 		padding: 8px 22px 8px 10px !important;
@@ -307,7 +306,9 @@ body.locked {
 			margin-right: 2rem !important;
 			width: 256px !important;
 			&:focus,&:focus-visible {
-				border-bottom-color: #ffffff;
+				border-bottom-color: #fcfcfd;
+				outline-color: transparent;
+				outline-width: 0px;
 			}
 		}
 		button {
