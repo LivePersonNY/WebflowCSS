@@ -1,4 +1,6 @@
-
+.sticky-form {
+	top: -1px;
+}
 .mktoForm {
 	.thank-you-message{
 		font-size: 1.5rem;
@@ -207,9 +209,6 @@ body.locked {
 		.span2 {
 			display: none;
 		}
-	}
-	&:sticky {
-		background: transparent;
 	}
 }
 .form--sticky.swapPosition {
