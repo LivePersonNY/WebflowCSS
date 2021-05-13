@@ -555,7 +555,7 @@ body.locked {
 	}
 	
 	&.flipped {
-		
+		height: 100px;
 		.flip-card-inner {
 			transform: rotateX(180deg);
 		}
