@@ -13,6 +13,21 @@
     .slide-container {
         width: 100%;
     }
+    .slide-container p{
+        margin-bottom:0;
+        margin-top:30px;
+    }
+
+    .slide-container .industry-select{
+        appearance: none;
+        background:#2E305F;
+        border:0;
+        border-radius: 8px;
+        color:#C5C7CE;
+        width:100%;
+        padding:10px 15px;
+        outline: none !important;
+    }
 
 
     .jqslider-styles.ui-slider {
@@ -48,7 +63,7 @@
         background: none;
         border: 0;
         margin-bottom: 6px;
-        margin-top: 20px;
+        margin-top: 5px;
     }
 
     .contain {
@@ -185,26 +200,40 @@
         <div style="width:500px;margin:auto;float:left;">
             <div class="slide-container">
 
+                <select class="industry-select">
+                    <option value="" disabled selected>Select industry</option>
+                    <option value="telco" data-sales-conv-rate=".05" data-sales-avg-order="1000" data-care-cost-per-call="8.27" data-care-contact-resolution="70.1">Telco</option>
+                    <option value="fiserv" data-sales-conv-rate=".05" data-sales-avg-order="912" data-care-cost-per-call="5.12" data-care-contact-resolution="75.9">Fiserv</option>
+                    <option value="travel" data-sales-conv-rate="1" data-sales-avg-order="375" data-care-cost-per-call="5.01" data-care-contact-resolution="72">Travel</option>
+                    <option value="retail" data-sales-conv-rate="1" data-sales-avg-order="100" data-care-cost-per-call="3.50" data-care-contact-resolution="70">Retail</option>
+                </select>
+
+                <p>Annual website traffic</p>
                 <input class="slider-value" id="slider1-value" data-slider-ref="slider1" data-roi="sales-traffic">
                 <div id="slider1" class="jqslider-styles" data-min="1000000" data-max="100000000" data-value="50000000"
                     data-step="10000"></div>
 
+                <p>Conversion rate to sale</p>
                 <input class="slider-value" id="slider2-value" data-slider-ref="slider2" data-roi="sales-conv-rate">
-                <div id="slider2" class="jqslider-styles" data-min="0" data-max="10" data-value=".50" data-step=".01">
+                <div id="slider2" class="jqslider-styles" data-min="0" data-max="5" data-value=".50" data-step=".01">
                 </div>
 
+                <p>Average order value</p>
                 <input class="slider-value" id="slider3-value" data-slider-ref="slider3" data-roi="sales-avg-order">
-                <div id="slider3" class="jqslider-styles" data-min="0" data-max="500" data-value="100" data-step=".01">
+                <div id="slider3" class="jqslider-styles" data-min="0" data-max="5000" data-value="100" data-step=".01">
                 </div>
 
+                <p>Average call volume</p>
                 <input class="slider-value" id="slider4-value" data-slider-ref="slider4" data-roi="care-call-volume">
-                <div id="slider4" class="jqslider-styles" data-min="1000000" data-max="100000000" data-value="10000000"
+                <div id="slider4" class="jqslider-styles" data-min="1000000" data-max="50000000" data-value="10000000"
                     data-step="10000"></div>
 
+                <p>Cost per call</p>
                 <input class="slider-value" id="slider5-value" data-slider-ref="slider5" data-roi="care-cost-per-call">
                 <div id="slider5" class="jqslider-styles" data-min="0" data-max="50" data-value="6" data-step=".01">
                 </div>
 
+                <p>First contact resolution</p>
                 <input class="slider-value" id="slider6-value" data-slider-ref="slider6"
                     data-roi="care-contact-resolution">
                 <div id="slider6" class="jqslider-styles" data-min="0" data-max="100" data-value="70" data-step=".01">
@@ -376,6 +405,23 @@
 
             }, 500);
         }
+
+        $('.industry-select').change(function(){
+            var salesConvRate = $(this).find(':selected').data('sales-conv-rate');
+            var salesAvgOrder = $(this).find(':selected').data('sales-avg-order');
+            var careCostPerCall = $(this).find(':selected').data('care-cost-per-call');
+            var careContactResolution = $(this).find(':selected').data('care-contact-resolution');
+            $('#slider2-value').val(salesConvRate);
+            $('#slider2').slider('value', salesConvRate);
+            $('#slider3-value').val(salesAvgOrder);
+            $('#slider3').slider('value', salesAvgOrder);
+            $('#slider5-value').val(careCostPerCall);
+            $('#slider5').slider('value', careCostPerCall);
+            $('#slider6-value').val(careContactResolution);
+            $('#slider6').slider('value', careContactResolution);
+            ROICalc.init();
+            updateChart();
+        })
 
         updateChart();
 
