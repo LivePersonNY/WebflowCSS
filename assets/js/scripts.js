@@ -24,7 +24,6 @@ $('.mobile-v2').on('click', function() {
 	$(this).parents('.flip-card').addClass('mobile-expanded');
 	var currentScrollTop = $(document).scrollTop();
 	var formPos = $('.flip-card').position().top;
-	console.log(currentScrollTop + "/" + formPos);
 	if (formPos > currentScrollTop) {
 		$("html, body").animate({scrollTop: formPos + 200});
 	}
@@ -94,7 +93,6 @@ $(function() {
 });
 
 function showAsyncChannels(formVals) {
-	console.log(formVals);
 	
 	$('.paragraph-19-copy').append($('.thumbs-up'));
 	appendDismissLine();
@@ -152,7 +150,6 @@ function appendDismissLine(appendTo, selector, callback) {
 		},
 		swipeStatus: function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection) {
 			var touchHeight = $(selector).height();
-			console.log(phase);
 			if (phase == 'cancel' || phase == 'end') {
 				$(selector).attr('style', null);
 				return;
@@ -192,7 +189,6 @@ function appendDismissLine(appendTo, selector, callback) {
 
 const el = document.querySelector(".sticky-form")
 const observer = new IntersectionObserver(function([e]) {
-	console.log(e);
 	e.target.classList.toggle("is-pinned", e.intersectionRatio < 1 && e.boundingClientRect.y == -1);
 }, { threshold: [1] });
 observer.observe(el);
