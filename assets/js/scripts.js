@@ -9,6 +9,8 @@ $('h1, h2, h3, h4, h5, p, li').widowFix({
     //linkFix: false
 });
 
+var mediaQuery = window.matchMedia("(max-width: 1185px)");
+
 
 // mkto sticky form toggle
 $('.mobileForm').on('click', function() {
@@ -21,11 +23,13 @@ $('.mobileForm').on('click', function() {
 });
 
 $('.mobile-v2').on('click', function() {
-	$(this).parents('.flip-card').addClass('mobile-expanded');
-	var currentScrollTop = $(document).scrollTop();
-	var formPos = $('.flip-card').position().top;
-	if (formPos > currentScrollTop) {
-		$("html, body").animate({scrollTop: formPos + 500});
+	if (mediaQuery.matches) {
+		$(this).parents('.flip-card').addClass('mobile-expanded');
+		var currentScrollTop = $(document).scrollTop();
+		var formPos = $('.flip-card').position().top;
+		if (formPos > currentScrollTop) {
+			$("html, body").animate({scrollTop: formPos + 500});
+		}
 	}
 });
 
