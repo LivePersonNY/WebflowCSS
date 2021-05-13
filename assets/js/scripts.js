@@ -25,6 +25,9 @@ $('.mobile-v2').on('click', function() {
 	var currentScrollTop = $(document).scrollTop();
 	var formPos = $('.flip-card').position().top;
 	console.log(currentScrollTop + "/" + formPos);
+	if (formPos > currentScrollTop) {
+		$("html, body").animate({scrollTop: formPos + 200}, 'fast');
+	}
 });
 
 //rellax
