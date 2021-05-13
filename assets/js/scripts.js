@@ -110,7 +110,8 @@ function showAsyncChannels(formVals) {
 	$('.async-channels').append(abcLink).append(fbmLink).append(waLink);
 }
 
-function appendDismissLine() {
+function appendDismissLine(selector) {
+	selector = selector || '.flipped';
 	var dismiss = $('<div>').addClass('dismiss-line');
 	var container = $('<div>').addClass('dismiss-container').append(dismiss).swipe({
 		threshold: 70,
@@ -166,7 +167,7 @@ function appendDismissLine() {
 		}
 	});
 	
-	$('.flipped').append(container);
+	$(selector).append(container);
 }
 
 const el = document.querySelector(".sticky-form")
