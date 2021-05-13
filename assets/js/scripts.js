@@ -82,7 +82,7 @@ $(function() {
     }, 3000);
 	
 	appendDismissLine('.mobile-v2', '.sticky-form', function() {
-		$('.sticky-form').removeClass('mobile-expanded');
+		$('.sticky-form').removeClass('mobile-expanded').attr('style', null);
 	});
 
 });
