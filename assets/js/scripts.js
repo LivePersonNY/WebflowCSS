@@ -77,7 +77,7 @@ $(function() {
         $(".LPMcontainer").attr("onclick", "ga('send', 'event', 'form', 'submit', 'Chat engagement clicks')");
     }, 3000);
 	
-	appendDismissLine('.sticky-form');
+	appendDismissLine('.mobile-v2', 'sticky-form');
 
 });
 
