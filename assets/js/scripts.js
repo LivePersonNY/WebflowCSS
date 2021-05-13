@@ -20,7 +20,7 @@ $('.mobileForm').on('click', function() {
   $('.span2').toggleClass('swap');
 });
 
-$('.mobile-v2:after').on('click', function() {
+$('.mobile-v2').on('click', function() {
 	$(this).parents('.flip-card').addClass('mobile-expanded');
 });
 
