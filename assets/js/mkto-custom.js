@@ -582,6 +582,10 @@ function showMenuHack(engagementId) {
 		$('input[name=console]').val($('input[name=console]').val() + '*Mkto function start* ');
 
 		$('input[name=console]').val($('input[name=console]').val() + '*End wholeName split function* ');
+		
+		$('label').forEach(function(item) {
+			$(this).attr('aria-label', $(this).attr('for'));
+		});
 
 		form.onValidate(function () {
 			$('input[name=console]').val($('input[name=console]').val() + '*Start onValidate* ');
