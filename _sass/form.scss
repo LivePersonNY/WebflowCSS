@@ -306,7 +306,7 @@ body.locked {
 		input {
 			margin-right: 2rem !important;
 			width: 256px !important;
-			&:focus {
+			&:focus,&:focus-visible {
 				border-bottom-color: #ffffff;
 			}
 		}
