@@ -131,14 +131,15 @@ function appendDismissLine(appendTo, selector, callback) {
 				var touchHeight = $(selector).height();
 				
 				if (currentScrollTop < $(selector).position().top - 5) {
-					console.log(currentScrollTop + " and " + $(selector).position().top);
 					callback ? callback(this) : ($(selector).addClass('dismissed'));
 				} else {
-					/*callback ? callback(this) : (
+					if (callback) {
+						callback(this);
+					} else {
 						$(selector).animate({top: -1 * (touchHeight)}, 'fast', function() {
 							$(selector).addClass('dismissed');
 						});
-					);*/
+					}
 				}
 			}
 			$(selector).attr('style', null);
