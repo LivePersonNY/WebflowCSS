@@ -169,7 +169,7 @@ function appendDismissLine() {
 	$('.flipped').append(container);
 }
 
-const el = document.querySelector(".form--sticky")
+const el = document.querySelector(".sticky-form")
 const observer = new IntersectionObserver( 
   ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
   { threshold: [1] }
