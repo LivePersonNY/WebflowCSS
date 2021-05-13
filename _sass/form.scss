@@ -472,6 +472,9 @@ body.locked {
 		}
 		&.mobile-expanded {
 			height: 465px;
+			.mobile-v2:after {
+				display: none;
+			}
 		}
 		&.form-submitted {
 			&.flipped {
@@ -492,6 +495,23 @@ body.locked {
 			width: 25px;
 			
 		}
+		.mobile-v2 {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -19px;
+			&:after {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: ' ';
+				background:transparent;
+			}
+		}
+
 	}
 	
 	.flip-card-inner {
