@@ -1,4 +1,9 @@
-
+.sticky-form {
+	transition: .5s ease background-color;
+	.is-pinned {
+		background-color: $color-blue-navy-light;
+	}
+}
 .mktoForm {
 	.thank-you-message{
 		font-size: 1.5rem;
