@@ -208,6 +208,9 @@ body.locked {
 			display: none;
 		}
 	}
+	&:sticky {
+		background: transparent;
+	}
 }
 .form--sticky.swapPosition {
 	position: absolute;
