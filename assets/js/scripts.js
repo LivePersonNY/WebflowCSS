@@ -22,6 +22,9 @@ $('.mobileForm').on('click', function() {
 
 $('.mobile-v2').on('click', function() {
 	$(this).parents('.flip-card').addClass('mobile-expanded');
+	var currentScrollTop = $(document).scrollTop();
+	var formPos = $('.flip-card').position().top;
+	console.log(formPos);
 });
 
 //rellax
