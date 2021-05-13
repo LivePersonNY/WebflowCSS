@@ -133,7 +133,8 @@ function appendDismissLine(appendTo, selector, callback) {
 					$(selector).addClass('dismissed');
 				} else {
 					$(selector).animate({top: -1 * (touchHeight)}, 'fast', function() {
-						$(selector).addClass('dismissed');
+						callback ? callback(this) : ($(selector).addClass('dismissed'));
+						
 					})
 				}
 			}
