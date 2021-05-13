@@ -503,7 +503,7 @@ body.locked {
 			position: absolute;
 			left: 0;
 			right: 0;
-			bottom: -19px;
+			bottom: -22px;
 			&:after {
 				display: block;
 				position: absolute;
@@ -513,6 +513,12 @@ body.locked {
 				bottom: 0;
 				content: ' ';
 				background:transparent;
+			}
+			.dismiss-container {
+				padding: 15px 0;
+			}
+			.mktoButton {
+				margin-top: 3px;
 			}
 		}
 
