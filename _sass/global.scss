@@ -252,6 +252,9 @@ div#LP_Embedded_Nav img
     animation-duration: .2s;
     animation-name: chatVisible;
 }
+.lp-window-root button:focus, .lp-window-root input:focus, .lp-window-root textarea:focus, .lp-window-root select:focus, .lp-window-root a:focus, .lp-window-root div:focus, .chips-wrapper button:focus, .chips-wrapper input:focus, .chips-wrapper textarea:focus, .chips-wrapper select:focus, .chips-wrapper a:focus, .chips-wrapper div:focus{
+    outline:none !important;
+}
 
 .LPMimage, .magnifier-large{
     max-width:none;
@@ -304,4 +307,9 @@ div#LP_Embedded_Nav img
             }
         }
     }
+}
+
+// Hiding publish button from Editor view
+.w-editor-publish-controls, #publish-option{
+    display:none !important;
 }
