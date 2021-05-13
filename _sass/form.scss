@@ -325,6 +325,13 @@ body.locked {
 			font-family: "Roboto", "Helvetica";
 			width: 256px;
 		}
+		select {
+			&:focus,&:focus-visible {
+				//border-bottom-color: #fcfcfd;
+				outline-color: transparent;
+				outline-width: 0px;
+			}
+		}
 	}
 	label {
 		display: none;
