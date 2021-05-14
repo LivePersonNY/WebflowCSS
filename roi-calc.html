@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Roboto:300,300italic,regular,700,700italic","Roboto Slab:regular","Roboto Mono:300,regular"]  }});</script>
     <link href="https://assets-global.website-files.com/5fd12c44f4b20161bb3602da/css/homepage-38cf40.f26a9ea35.min.css"
         rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/assets/css/www-main.css" />
@@ -16,6 +17,9 @@
     .slide-container p{
         margin-bottom:0;
         margin-top:30px;
+        font-weight: 700;
+        font-family: 'Roboto', 'Helvetica';
+        font-size:16px;
     }
 
     .slide-container .industry-select{
@@ -64,6 +68,11 @@
         border: 0;
         margin-bottom: 6px;
         margin-top: 5px;
+        font-weight:300;
+        font-size:36px;
+        line-height:44px;
+        font-family: 'Roboto Mono', 'monospace';
+        padding-left:0;
     }
 
     .contain {
@@ -116,7 +125,7 @@
     display: flex;
     height: 100%;
     flex-flow: column-reverse;
-    margin: 0 14%;
+    margin: 0 10%;
 }
 .bar-chart .x-axis .year .col .bar {
     /* flex: 1; */
@@ -143,10 +152,11 @@
   text-align: center;
 }
 .bar-chart .x-axis .label:not(.number) {
-  color: #fff;
-  text-transform: uppercase;
-  padding-top: 1em;
-  font-size: .875em;
+  color: #fcfcfd;
+  padding-top: 12px;
+  font-weight:700;
+  font-size:16px;
+  line-height:24px;
 }
 .bar-chart .x-axis .year .col .bar .tooltip,
 .bar-chart .x-axis .year .col .bar .tooltip:after {
@@ -165,6 +175,7 @@
     padding: 0;
     font-family: 'Roboto Mono', 'monospace';
     text-align:center;
+    font-weight: 400;
 }
 
 /* Legend */
@@ -183,12 +194,37 @@
     content: "";
     margin-right: .5em;
     display: inline-block;
-    width: 8px;
-    height: 8px;
+    width: 20px;
+    height: 20px;
 	background-color: #ff6900;
+    border-radius:100px;
+    top:5px;
+    position: relative;
 }
 .bar-chart .legend li:nth-child(2):before {
 	background-color: #005EF4;
+}
+
+.bar-chart .estimated-total-benefit{
+    font-family: 'Roboto Mono', 'monospace';
+    font-weight:700;
+    font-size:56px;
+    line-height:40px;
+    color:#ff6900;
+    margin-bottom:20px;
+}
+.bar-chart .estimated-total-benefit-text{
+    font-weight:700;
+    font-size:20px;
+    line-height:24px;
+}
+
+.bar-chart .total-year-benefit{
+    font-family: 'Roboto Mono', 'monospace';
+    font-size:32px;
+    line-height:32px;
+    font-weight:400;
+    margin-bottom:12px;
 }
 </style>
 
@@ -266,7 +302,7 @@
 
             <figure id="two" class="bar-chart">
                 <p class="estimated-total-benefit"></p>
-                <p>Estimated Total Benefit</p>
+                <p class="estimated-total-benefit-text">Estimated Total Benefit</p>
 
                 <div class="row bars">
                     <div class="x-axis">
@@ -345,15 +381,13 @@
                 slide: function (event, ui) {
                     $('#' + $(this).attr('id') + '-value').val(ui.value);
                     updateChart();
-                    ROICalc.model.updateAll();
-                    ROICalc.model.calculate.sales.run();
-                    ROICalc.model.calculate.care.run();
-                    ROICalc.model.calculate.totals.run();
                 }
             });
         })
 
         $('.slider-value').each(function () {
+            // var testnum = $('#' + $(this).data('slider-ref')).slider('value');
+            // testnum = testnum.toLocaleString();
             $(this).val($('#' + $(this).data('slider-ref')).slider('value'));
             $(this).on('input', function () {
                 $('#' + $(this).data('slider-ref')).slider('value', $(this).val());
@@ -367,9 +401,17 @@
             }
         });
 
-        var updateChart = function(){ 
+        var updateChart = async function(){ 
+
+            await Promise.all([
+                ROICalc.model.updateAll(),
+                ROICalc.model.calculate.sales.run(),
+                ROICalc.model.calculate.care.run(),
+                ROICalc.model.calculate.totals.run()
+            ]);
 
             var estimatedTotalBenefit = 0;
+            //$('#two .bar').find('.tooltip').empty();
 
             var oneObj = {
                 element: [{
@@ -424,6 +466,10 @@
         })
 
         updateChart();
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
 
         // Total growth on bottom blue
         // Total savings on top orange
