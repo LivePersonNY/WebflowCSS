@@ -1,3 +1,11 @@
+.blog{
+    .resource-collection-item{
+        .columns.blog-hp-featured-columns{
+            margin:0;
+        }
+    }
+}
+
 .blog-item{
     blockquote{
         font-weight:$font-weight-bold;
