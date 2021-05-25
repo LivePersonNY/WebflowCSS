@@ -209,13 +209,13 @@ if (el) {
 
 function setProgress(percent, selector) {
 	  var circle = document.querySelector(selector);
+	  var circleText = document.querySelector(selector + "-val");
 	  var radius = circle.r.baseVal.value;
 	  var circumference = radius * 2 * Math.PI;
 	  circle.style.strokeDasharray = `${circumference} ${circumference}`;
 	circle.style.strokeDashoffset = `${circumference}`;
 	  
 	  const offset = circumference - percent / 100 * circumference;
-	  
+	  circleText.innerHTML = percent + "%";
 	  circle.style.strokeDashoffset = offset;
 	}
-	
