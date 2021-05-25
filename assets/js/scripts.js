@@ -196,9 +196,11 @@ function appendDismissLine(appendTo, selector, callback) {
 	$(appendTo).append(container);
 }
 
-const el = document.querySelector(".sticky-form")
-const observer = new IntersectionObserver(function([e]) {
-	e.target.classList.toggle("is-pinned", e.intersectionRatio < 1 && e.boundingClientRect.y == -1);
-}, { threshold: [1] });
-observer.observe(el);
+const el = document.querySelector(".sticky-form");
+if (el) {
+	const observer = new IntersectionObserver(function([e]) {
+		e.target.classList.toggle("is-pinned", e.intersectionRatio < 1 && e.boundingClientRect.y == -1);
+	}, { threshold: [1] });
+	observer.observe(el);
 
+}
