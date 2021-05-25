@@ -207,18 +207,15 @@ if (el) {
 
 }
 
-var prog_circle = document.querySelector('circle.progress-ring__circle');
-var prog_circleRest = document.querySelector('circle.progress-ring__center');
-var prog_radius = prog_circle.r.baseVal.value;
-var prog_circumference = prog_radius * 2 * Math.PI;
-
-prog_circle.style.strokeDasharray = `${prog_circumference} ${prog_circumference}`;
-prog_circle.style.strokeDashoffset = `${prog_circumference}`;
-//circleRest.style.strokeDasharray = `${circumference} ${circumference}`;
-//circleRest.style.strokeDashoffset = `${circumference}`;
-
-function setProgress(percent) {
-  const offset = prog_circumference - percent / 100 * prog_circumference;
-  prog_circle.style.strokeDashoffset = offset;
-  //circleRest.style.strokeDashoffset = 100 - offset;
-}
+function setProgress(percent, selector) {
+	  var circle = document.querySelector(selector);
+	  var radius = circle.r.baseVal.value;
+	  var circumference = radius * 2 * Math.PI;
+	  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+	circle.style.strokeDashoffset = `${circumference}`;
+	  
+	  const offset = circumference - percent / 100 * circumference;
+	  
+	  circle.style.strokeDashoffset = offset;
+	}
+	
