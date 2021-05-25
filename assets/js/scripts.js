@@ -98,7 +98,9 @@ $(function() {
 
 function getBrandLogo(url) {
 	var matches = url.match(/(?<=\/\/)([a-zA-Z\.0-9]*)/);
-	console.log(matches);
+	if (matches.length == 0) return null;
+	var imageUrl = "https://logo.clearbit.com/" + matches[0];
+	$('#brand-logo').attr('src', imageUrl);
 }
 
 function showAsyncChannels(formVals) {
