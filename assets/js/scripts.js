@@ -96,6 +96,11 @@ $(function() {
 
 });
 
+function getBrandLogo(url) {
+	var matches = url.match(/\/\/([a-zA-Z\.0-9]*)/);
+	console.log(matches);
+}
+
 function showAsyncChannels(formVals) {
 	
 	$('.paragraph-19-copy').append($('.thumbs-up'));
