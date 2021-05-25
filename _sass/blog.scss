@@ -3,6 +3,14 @@
         .columns.blog-hp-featured-columns{
             margin:0;
         }
+        .blog-hp-image{
+            -webkit-mask-image: linear-gradient(5deg,transparent 14%,$color-blue-navy-light 15%);
+            mask-image: linear-gradient(5deg,transparent 14%,$color-blue-navy-light 15%);
+        }
+        .blog-hp-featured-image{
+            -webkit-mask-image: linear-gradient(-86deg, transparent 5%, $color-blue-navy-light 6%);
+            mask-image: linear-gradient(-86deg, transparent 5%, $color-blue-navy-light 6%);
+        }
     }
 }
 
@@ -23,6 +31,12 @@
             position: absolute;
             left: 34px;
             bottom: -1px;
+        }
+    }
+    .resource-collection-item{
+        .blog-hp-image{
+            -webkit-mask-image: linear-gradient(5deg,transparent 14%,$color-blue-navy-light 15%);
+            mask-image: linear-gradient(5deg,transparent 14%,$color-blue-navy-light 15%);
         }
     }
 }
