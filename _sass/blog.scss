@@ -3,6 +3,10 @@
         .columns.blog-hp-featured-columns{
             margin:0;
         }
+        .blog-hp-image{
+            -webkit-mask-image: linear-gradient(5deg,transparent 14%,#1d1f52 15%);
+            mask-image: linear-gradient(5deg,transparent 14%,#1d1f52 15%);
+        }
     }
 }
 
