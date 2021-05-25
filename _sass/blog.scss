@@ -12,4 +12,17 @@
         margin-left:84px;
         margin-right:84px;
     }
+    .blog-author-image-container{
+        &:after {
+            content: '';
+            background: url(https://assets-global.website-files.com/5fd12c4…/60a815f…_linkedin-share.svg) no-repeat;
+            width: 17px;
+            height: 16px;
+            display: block;
+            background-size: 17px 16px;
+            position: absolute;
+            left: 34px;
+            bottom: -1px;
+        }
+    }
 }
