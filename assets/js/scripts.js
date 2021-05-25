@@ -97,7 +97,7 @@ $(function() {
 });
 
 function getBrandLogo(url) {
-	var matches = url.match(/\/\/([a-zA-Z\.0-9]*)/);
+	var matches = url.match(/(?<=\/\/)([a-zA-Z\.0-9]*)/);
 	console.log(matches);
 }
 
