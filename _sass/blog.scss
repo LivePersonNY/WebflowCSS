@@ -47,4 +47,17 @@
             mask-image: linear-gradient(5deg,transparent 14%,$color-blue-navy-light 15%);
         }
     }
+    .glow-container{
+        > .navbar{
+            + .section-default{
+                .column{
+                    &.blog-container{
+                        @media(max-width:$screen-max-lg){
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
