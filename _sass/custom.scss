@@ -52,3 +52,244 @@
         width:auto;
     }
 }
+
+.calc-container{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    background:#1D1F52;
+    padding:32px;
+    border-radius:32px;
+    display:flex;
+}
+
+.calc-left{
+    width: 34%;
+    display: inline-block;
+}
+.calc-right{
+    width: 59%;
+    margin-left: 80px;
+    padding:32px;
+    background: #090C43;
+    display: inline-block;
+    border-radius:16px;
+}
+    .slide-container {
+        width: 100%;
+    }
+    .slide-container p{
+        margin-bottom:0;
+        margin-top:30px;
+        font-weight: 700;
+        font-family: 'Roboto', 'Helvetica';
+        font-size:16px;
+    }
+
+    .slide-container .industry-select{
+        appearance: none;
+        background:#2E305F;
+        border:0;
+        border-radius: 8px;
+        color:#C5C7CE;
+        width:100%;
+        padding:10px 15px;
+        outline: none !important;
+    }
+
+
+    .jqslider-styles.ui-slider {
+        height: 15px;
+        background: #2E305F;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        border-radius: 5px;
+        border: 0;
+    }
+
+    .jqslider-styles.ui-slider:hover {
+        opacity: 1;
+    }
+
+    .jqslider-styles.ui-slider .ui-slider-range {
+        background: #ff6900;
+    }
+
+    .jqslider-styles.ui-slider .ui-slider-handle {
+        width: 25px;
+        height: 25px;
+        background: #fcfcfd;
+        cursor: pointer;
+        border-radius: 50%;
+        outline: none;
+    }
+
+    .slider-value {
+        -webkit-appearance: none;
+        appearance: none;
+        background: none;
+        border: 0;
+        margin-bottom: 6px;
+        margin-top: 5px;
+        font-weight:300;
+        font-size:36px;
+        line-height:44px;
+        font-family: 'Roboto Mono', 'monospace';
+        padding-left:0;
+    }
+
+    .contain {
+    overflow: hidden;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.biz-case {
+    .bar-chart {
+    height:100%;
+    }
+    .bar-chart p {
+        text-align: center;
+        margin: .5em 0 1em;
+    }
+    .bar-chart .row {
+        position: relative;
+        line-height: 1.25em;
+        margin-bottom: 3em;
+        height:500px;
+    }
+    .bar-chart .row .segment {
+        flex: 1 100%;
+        display: block;
+        position: relative;
+        align-self: flex-end;
+    }
+    .bar-chart .row .segment:before {
+        content: "";
+        display: block;
+        width: 100%;
+        bottom: 0;
+        position: absolute;
+        height: 1px;
+        background-color: #414245;
+          z-index: -1;
+    }
+    .bar-chart .label {
+        display: block;
+        font-size: .85em;
+    }
+    /* X Axis */
+    .bar-chart .x-axis {
+      display: flex;
+      height: 100%
+    }
+    .bar-chart .x-axis .year {
+        flex: 1;
+    }
+    .bar-chart .x-axis .year .col {
+        display: flex;
+        height: 100%;
+        flex-flow: column-reverse;
+        margin: 0 10%;
+    }
+    .bar-chart .x-axis .year .col .bar {
+        /* flex: 1; */
+        background-color: #005EF4;
+        /* align-self: flex-end; */
+        position: relative;
+        /* margin: 0 25%; */
+      height: 0px;
+      -webkit-transition: height, 1s ease;
+        -moz-transition: height, 1s ease;
+        -ms-transition: height, 1s ease;
+        transition: height, 1s ease;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bar-chart .x-axis .year .col .bar + .bar {
+        background-color: #ff6900;
+    }
+    .bar-chart .x-axis .label {
+      align-self: flex-end;
+        padding: .5em 0 0;
+      line-height: 1em;
+      text-align: center;
+    }
+    .bar-chart .x-axis .label:not(.number) {
+      color: #fcfcfd;
+      padding-top: 12px;
+      font-weight:700;
+      font-size:16px;
+      line-height:24px;
+    }
+    .bar-chart .x-axis .year .col .bar .tooltip,
+    .bar-chart .x-axis .year .col .bar .tooltip:after {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .bar-chart .x-axis .year .col .bar .tooltip {
+        font-size: 20px;
+        color: #fcfcfd;
+        padding: 0;
+        font-family: 'Roboto Mono', 'monospace';
+        text-align:center;
+        font-weight: 400;
+    }
+    
+    /* Legend */
+    .bar-chart .legend {
+        margin: 0 auto;
+      text-align: center;
+        padding: 0;
+        font-size: .875em;
+    }
+    .bar-chart .legend li {
+        display: inline-block;
+        padding: .25em 1em;
+        line-height: 1em;
+    }
+    .bar-chart .legend li:before {
+        content: "";
+        margin-right: .5em;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #ff6900;
+        border-radius:100px;
+        top:5px;
+        position: relative;
+    }
+    .bar-chart .legend li:nth-child(2):before {
+        background-color: #005EF4;
+    }
+    
+    .bar-chart .estimated-total-benefit{
+        font-family: 'Roboto Mono', 'monospace';
+        font-weight:700;
+        font-size:56px;
+        line-height:40px;
+        color:#ff6900;
+        margin-bottom:20px;
+    }
+    .bar-chart .estimated-total-benefit-text{
+        font-weight:700;
+        font-size:20px;
+        line-height:24px;
+    }
+    
+    .bar-chart .total-year-benefit{
+        font-family: 'Roboto Mono', 'monospace';
+        font-size:32px;
+        line-height:32px;
+        font-weight:400;
+        margin-bottom:12px;
+    }
+}
