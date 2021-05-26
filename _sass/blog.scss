@@ -19,6 +19,10 @@
         font-weight:$font-weight-bold;
         margin-left:84px;
         margin-right:84px;
+        @media(max-width:$screen-max-lg){
+            margin-left:40px;
+            margin-right:40px;
+        }
     }
     .blog-author-image-container{
         &:after {
