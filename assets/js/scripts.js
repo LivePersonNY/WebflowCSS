@@ -207,7 +207,7 @@ if (el) {
 
 }
 
-function setProgress(percent, selector) {
+function setProgress(percent, selector, text) {
 	  var circle = document.querySelector(selector);
 	  var circleText = document.querySelector(selector + "-val");
 	  var radius = circle.r.baseVal.value;
@@ -216,6 +216,6 @@ function setProgress(percent, selector) {
 	circle.style.strokeDashoffset = `${circumference}`;
 	  
 	  const offset = circumference - percent / 100 * circumference;
-	  circleText.innerHTML = percent + "%";
+	  circleText.innerHTML = text || percent + "%";
 	  circle.style.strokeDashoffset = offset;
 	}
