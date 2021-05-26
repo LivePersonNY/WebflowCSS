@@ -343,3 +343,6 @@ div#LP_Embedded_Nav img
 .w-editor-publish-controls, #publish-option{
     display:none !important;
 }
+
+//Hiding empty cms collection lists
+.w-dyn-empty{display:none}
