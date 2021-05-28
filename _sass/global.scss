@@ -175,7 +175,7 @@ blockquote{
         &.phone-full{
             max-width:90%;
             @media(max-width:$screen-max-lg){
-                max-width: 80%;
+                max-width: 80% !important;
             }
         }
         &.phone-abc {
