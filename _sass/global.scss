@@ -103,9 +103,10 @@ blockquote{
 
 // Hero with phone animation
 .mess-channels-video-container{
-    overflow:hidden;
+    
     border-bottom:1px solid transparent;
     @media(min-width:$screen-min-lg){
+      overflow:hidden;
         height:615px;
         margin-bottom: -1rem;
     }
