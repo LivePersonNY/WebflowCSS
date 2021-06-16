@@ -52,7 +52,9 @@ function numberShortFormat(value, appender) {
 		// testnum = testnum.toLocaleString();
 		$(this).val($('#' + $(this).data('slider-ref')).slider('value'));
 		$(this).on('input', function () {
-			$('#' + $(this).data('slider-ref')).slider('value', $(this).val().toLocaleString());
+			var val = $(this).val();
+			$('#' + $(this).data('slider-ref')).slider('value', val);
+			$(this).val(val.toLocaleString());
 			updateChart();
 		})
 	})
