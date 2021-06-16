@@ -124,6 +124,7 @@ function updateTableCells(cellName, valueObj, valueStyle) {
 		updateTableCells("#rev", ROICalc.results.sales.increase, 'currency');
 		$('.annual_traffic').text(ROICalc.model.inputs['sales-traffic'].toLocaleString());
 		$('.conv_rate').text(ROICalc.model.inputs['sales-conv-rate'].toLocaleString());
+		$('.digi_orders').text((ROICalc.model.inputs['sales-traffic'] * (ROICalc.model.inputs['sales-conv-rate']/100)).toLocaleString());
 		
 		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency');
 		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
