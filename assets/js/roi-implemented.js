@@ -29,8 +29,8 @@ function numberShortFormat(value, appender) {
 	return value.toString().replace(/^0\./, '.') + appender;
 }
 
-function locNumber(value, type, curr) {
-	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || 'USD', minimumFractionDigits: 1, maximumFractionDigits: 2});
+function locNumber(value, type, curr, accuracy) {
+	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || 'USD', minimumFractionDigits: accuracy || 2, maximumFractionDigits: 2});
 }
 
 function updateTableCells(cellName, valueObj, valueStyle, subKey) {
@@ -42,7 +42,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		if (subKey) {
 			value = valueObj[item][subKey];
 		}
-		$(cellName + "-" + item).text(locNumber(value, valueStyle));
+		var accuracy = valueStyle == 'percent' ? 1 : 2;
+		$(cellName + "-" + item).text(locNumber(value, valueStyle, undefined, accuracy));
 	});
 }
 
