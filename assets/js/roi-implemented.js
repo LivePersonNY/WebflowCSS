@@ -120,10 +120,10 @@ return value.toString().replace(/^0\./, '.') + appender;
 					$('#fcr-year2').text("$" + numberShort(ROICalc.results.care.fcr.year2));
 					$('#fcr-year3').text("$" + numberShort(ROICalc.results.care.fcr.year3));
 		
-		$('#mess-baseline').text("$" + numberShort(ROICalc.results.care.fcr.baseline));
-					$('#mess-year1').text("$" + numberShort(ROICalc.results.care.fcr.year1));
-					$('#mess-year2').text("$" + numberShort(ROICalc.results.care.fcr.year2));
-					$('#mess-year3').text("$" + numberShort(ROICalc.results.care.fcr.year3));
+		$('#mess-baseline').text("$" + numberShort(ROICalc.results.care.ai_scale.baseline));
+					$('#mess-year1').text("$" + numberShort(ROICalc.results.care.ai_scale.year1));
+					$('#mess-year2').text("$" + numberShort(ROICalc.results.care.ai_scale.year2));
+					$('#mess-year3').text("$" + numberShort(ROICalc.results.care.ai_scale.year3));
 		
 		$('#eff-baseline').text("$" + numberShort(ROICalc.results.care.efficiency.baseline));
 					$('#eff-year1').text("$" + numberShort(ROICalc.results.care.efficiency.year1));
