@@ -41,7 +41,7 @@ function numberShortFormat(value, appender) {
 			step: parseFloat(sliderStep),
 			value: parseFloat(sliderValue),
 			slide: function (event, ui) {
-				$('#' + $(this).attr('id') + '-value').val(ui.value);
+				$('#' + $(this).attr('id') + '-value').val(ui.value.toLocaleString());
 				updateChart();
 			}
 		});
