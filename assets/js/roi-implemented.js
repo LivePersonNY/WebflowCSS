@@ -50,11 +50,9 @@ function numberShortFormat(value, appender) {
 	$('.slider-value').each(function () {
 		// var testnum = $('#' + $(this).data('slider-ref')).slider('value');
 		// testnum = testnum.toLocaleString();
-		$(this).val($('#' + $(this).data('slider-ref')).slider('value'));
+		$(this).val($('#' + $(this).data('slider-ref')).slider('value').toLocaleString());
 		$(this).on('input', function () {
-			var val = $(this).val();
-			$('#' + $(this).data('slider-ref')).slider('value', val);
-			$(this).val(val.toLocaleString());
+			$('#' + $(this).data('slider-ref')).slider('value', $(this).val());
 			updateChart();
 		})
 	})
