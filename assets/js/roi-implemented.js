@@ -132,7 +132,7 @@ function numberShortFormat(value, appender) {
 		$('#eff-baseline').text("$" + numberShort(ROICalc.results.care.efficiency.baseline));
 					$('#eff-year1').text("$" + numberShort(ROICalc.results.care.efficiency.year1));
 					$('#eff-year2').text("$" + numberShort(ROICalc.results.care.efficiency.year2));
-					$('#eff-year3').text("$" + numberShort(ROICalc.results.care.efficiency.year3));
+					$('#eff-year3').text("$" + ROICalc.results.care.efficiency.year3.toFixed(2).toLocaleString());
 		
 		setTimeout(function () {
 			$('#two .bar').each(function (index) {
