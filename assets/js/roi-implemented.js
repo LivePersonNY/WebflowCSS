@@ -126,10 +126,11 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		$('#cost-per-convo-phone').text("$" + numberShort(ROICalc.model.inputs['care-cost-per-call'].toFixed()));
 		$('#cost-per-convo-mess').text("$" + numberShort((ROICalc.model.inputs['care-cost-per-call'] / ROICalc.model.calculate.care.increments.year3.eff_ratio).toFixed()));
 		
+		var conv_rate = ROICalc.model.inputs['sales-conv-rate']/100;
 		updateTableCells("#rev", ROICalc.results.sales.increase, 'currency');
 		$('.annual_traffic').text(ROICalc.model.inputs['sales-traffic'].toLocaleString());
 		$('.conv_rate').text(ROICalc.model.inputs['sales-conv-rate'].toLocaleString());
-		var web_orders = ROICalc.model.inputs['sales-traffic'] * (ROICalc.model.inputs['sales-conv-rate']/100);
+		var web_orders = ROICalc.model.inputs['sales-traffic'] * conv_rate;
 		$('.digi_orders').text(web_orders.toLocaleString());
 		var started_convos = (ROICalc.model.inputs['sales-traffic'] - web_orders);
 		$('.remaining_traffic').text(started_convos.toLocaleString());
@@ -140,7 +141,13 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 			year2: started_convos * ROICalc.model.calculate.sales.increments.year2.acc_rate,
 			year3: started_convos * ROICalc.model.calculate.sales.increments.year3.acc_rate
 		});
-		
+		updateTableCells("#scr", {
+			baseline: 0,
+			year1: conv_rate * ROICalc.model.calculate.sales.increments.year1.conv_rate_m,
+			year2: conv_rate * ROICalc.model.calculate.sales.increments.year2.conv_rate_m,
+			year3: conv_rate * ROICalc.model.calculate.sales.increments.year3.conv_rate_m
+		}, 'percent');
+				
 		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency');
 		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
 		updateTableCells("#mess", ROICalc.results.care.ai_scale, 'currency');
