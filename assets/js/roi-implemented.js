@@ -29,8 +29,8 @@ function numberShortFormat(value, appender) {
 	return value.toString().replace(/^0\./, '.') + appender;
 }
 
-function locNumber(value) {
-	return value.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+function locNumber(value, type) {
+	return value.toLocaleString(type, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 }
 
 function updateTableCells(cellName, valueObj) {
@@ -38,7 +38,7 @@ function updateTableCells(cellName, valueObj) {
 		'baseline', 'year1', 'year2', 'year3'
 	];
 	cols.forEach(function(item) {
-		$(cellName + "-" + item).text(locNumber(valueObj[item]));
+		$(cellName + "-" + item).text(locNumber(valueObj[item], 'currency'));
 	});
 }
 
@@ -122,31 +122,10 @@ function updateTableCells(cellName, valueObj) {
 		$('#cost-per-convo-phone').text("$" + numberShort(ROICalc.model.inputs['care-cost-per-call'].toFixed()));
 		$('#cost-per-convo-mess').text("$" + numberShort((ROICalc.model.inputs['care-cost-per-call'] / ROICalc.model.calculate.care.increments.year3.eff_ratio).toFixed()));
 		
-		$('#rev-baseline').text("$" + locNumber(ROICalc.results.sales.increase.baseline));
-					$('#rev-year1').text("$" + locNumber(ROICalc.results.sales.increase.year1));
-					$('#rev-year2').text("$" + locNumber(ROICalc.results.sales.increase.year2));
-					$('#rev-year3').text("$" + locNumber(ROICalc.results.sales.increase.year3));
-		
-		$('#inc-baseline').text("$" + locNumber(ROICalc.results.sales.average_order_value.baseline));
-					$('#inc-year1').text("$" + locNumber(ROICalc.results.sales.average_order_value.year1));
-					$('#inc-year2').text("$" + locNumber(ROICalc.results.sales.average_order_value.year2));
-					$('#inc-year3').text("$" + locNumber(ROICalc.results.sales.average_order_value.year3));
-		
-		$('#fcr-baseline').text("$" + locNumber(ROICalc.results.care.fcr.baseline));
-					$('#fcr-year1').text("$" + locNumber(ROICalc.results.care.fcr.year1));
-					$('#fcr-year2').text("$" + locNumber(ROICalc.results.care.fcr.year2));
-					$('#fcr-year3').text("$" + locNumber(ROICalc.results.care.fcr.year3));
-		
-		$('#mess-baseline').text("$" + locNumber(ROICalc.results.care.ai_scale.baseline));
-					$('#mess-year1').text("$" + locNumber(ROICalc.results.care.ai_scale.year1));
-					$('#mess-year2').text("$" + locNumber(ROICalc.results.care.ai_scale.year2));
-					$('#mess-year3').text("$" + locNumber(ROICalc.results.care.ai_scale.year3));
-		
-		/*$('#eff-baseline').text("$" + locNumber(ROICalc.results.care.efficiency.baseline));
-					$('#eff-year1').text("$" + locNumber(ROICalc.results.care.efficiency.year1));
-					$('#eff-year2').text("$" + locNumber(ROICalc.results.care.efficiency.year2));
-					$('#eff-year3').text("$" + locNumber(ROICalc.results.care.efficiency.year3));*/
-		
+		updateTableCells("#rev", ROICalc.results.sales.increase);
+		updateTableCells("#inc", ROICalc.results.sales.average_order_value);
+		updateTableCells("#fcr", ROICalc.results.care.fcr);
+		updateTableCells("#mess", ROICalc.results.care.ai_scale);
 		updateTableCells("#eff", ROICalc.results.care.efficiency);
 		
 		setTimeout(function () {
