@@ -30,7 +30,7 @@ function numberShortFormat(value, appender) {
 }
 
 function locNumber(value, type, curr) {
-	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2});
+	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || 'USD', minimumFractionDigits: 1, maximumFractionDigits: 2});
 }
 
 function updateTableCells(cellName, valueObj, valueStyle, subKey) {
