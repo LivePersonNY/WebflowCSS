@@ -136,9 +136,9 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		updateTableCells("#acr", ROICalc.model.calculate.sales.increments, 'percent', 'acc_rate');
 		updateTableCells("#tmc", {
 			baseline: 0,
-			year1: started_convos * ROICalc.model.calculate.sales.increments.acc_rate.year1,
-			year2: started_convos * ROICalc.model.calculate.sales.increments.acc_rate.year2,
-			year3: started_convos * ROICalc.model.calculate.sales.increments.acc_rate.year3
+			year1: started_convos * ROICalc.model.calculate.sales.increments.year1.acc_rate,
+			year2: started_convos * ROICalc.model.calculate.sales.increments.year2.acc_rate,
+			year3: started_convos * ROICalc.model.calculate.sales.increments.year3.acc_rate
 		});
 		
 		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency');
