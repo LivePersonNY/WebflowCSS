@@ -83,7 +83,7 @@ function numberShortFormat(value, appender) {
 			}]
 		}
 		
-		$('.annual_traffc').text(ROICalc.model.inputs['sales-traffic'].toLocaleString());
+		$('.annual_traffic').text(ROICalc.model.inputs['sales-traffic'].toLocaleString());
 		
 		var totalBenefit = ROICalc.results.totals.total_benefit.year1 + ROICalc.results.totals.total_benefit.year2 + ROICalc.results.totals.total_benefit.year3;
 		var circle1val = ROICalc.results.sales.increase.year1 + ROICalc.results.sales.increase.year2 + ROICalc.results.sales.increase.year3;
