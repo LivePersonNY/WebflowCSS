@@ -29,8 +29,8 @@ function numberShortFormat(value, appender) {
 	return value.toString().replace(/^0\./, '.') + appender;
 }
 
-function locNumber(value, type) {
-	return value.toLocaleString(undefined, {style: type || 'currency', minimumFractionDigits: 2, maximumFractionDigits: 2});
+function locNumber(value, type, curr) {
+	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2});
 }
 
 function updateTableCells(cellName, valueObj) {
