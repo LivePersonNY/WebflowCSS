@@ -33,7 +33,7 @@ function numberShortFormat(value, appender) {
 		var sliderMin = $(this).data('min');
 		var sliderMax = $(this).data('max');
 		var sliderStep = $(this).data('step');
-		var sliderValue = $(this).data('value');
+		var sliderValue = $(this).data('value').toLocaleString();
 		$(this).slider({
 			range: 'min',
 			min: parseFloat(sliderMin),
@@ -52,7 +52,9 @@ function numberShortFormat(value, appender) {
 		// testnum = testnum.toLocaleString();
 		$(this).val($('#' + $(this).data('slider-ref')).slider('value').toLocaleString());
 		$(this).on('input', function () {
-			$('#' + $(this).data('slider-ref')).slider('value', $(this).val());
+			var val = $(this).val();
+			$('#' + $(this).data('slider-ref')).slider('value', val);
+			$(this).val(val.toLocaleString());
 			updateChart();
 		})
 	})
