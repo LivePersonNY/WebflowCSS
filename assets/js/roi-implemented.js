@@ -33,12 +33,12 @@ function locNumber(value, type, curr) {
 	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2});
 }
 
-function updateTableCells(cellName, valueObj) {
+function updateTableCells(cellName, valueObj, valueStyle) {
 	const cols = [
 		'baseline', 'year1', 'year2', 'year3'
 	];
 	cols.forEach(function(item) {
-		$(cellName + "-" + item).text(locNumber(valueObj[item], 'currency'));
+		$(cellName + "-" + item).text(locNumber(valueObj[item], valueStyle));
 	});
 }
 
@@ -98,7 +98,6 @@ function updateTableCells(cellName, valueObj) {
 			}]
 		}
 		
-		$('.annual_traffic').text(ROICalc.model.inputs['sales-traffic'].toLocaleString());
 		
 		var totalBenefit = ROICalc.results.totals.total_benefit.year1 + ROICalc.results.totals.total_benefit.year2 + ROICalc.results.totals.total_benefit.year3;
 		var circle1val = ROICalc.results.sales.increase.year1 + ROICalc.results.sales.increase.year2 + ROICalc.results.sales.increase.year3;
@@ -122,11 +121,14 @@ function updateTableCells(cellName, valueObj) {
 		$('#cost-per-convo-phone').text("$" + numberShort(ROICalc.model.inputs['care-cost-per-call'].toFixed()));
 		$('#cost-per-convo-mess').text("$" + numberShort((ROICalc.model.inputs['care-cost-per-call'] / ROICalc.model.calculate.care.increments.year3.eff_ratio).toFixed()));
 		
-		updateTableCells("#rev", ROICalc.results.sales.increase);
-		updateTableCells("#inc", ROICalc.results.sales.average_order_value);
-		updateTableCells("#fcr", ROICalc.results.care.fcr);
-		updateTableCells("#mess", ROICalc.results.care.ai_scale);
-		updateTableCells("#eff", ROICalc.results.care.efficiency);
+		updateTableCells("#rev", ROICalc.results.sales.increase, 'currency');
+		$('.annual_traffic').text(ROICalc.model.inputs['sales-traffic'].toLocaleString());
+		$('.conv_rate').text(ROICalc.model.inputs['sales-conv-rate'].toLocaleString());
+		
+		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency');
+		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
+		updateTableCells("#mess", ROICalc.results.care.ai_scale, 'currency');
+		updateTableCells("#eff", ROICalc.results.care.efficiency, 'currency');
 		
 		setTimeout(function () {
 			$('#two .bar').each(function (index) {
