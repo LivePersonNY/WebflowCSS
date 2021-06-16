@@ -131,7 +131,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		var web_orders = ROICalc.model.inputs['sales-traffic'] * (ROICalc.model.inputs['sales-conv-rate']/100);
 		$('.digi_orders').text(web_orders.toLocaleString());
 		$('.remaining_traffic').text((ROICalc.model.inputs['sales-traffic'] - web_orders).toLocaleString());
-		updateTableCells("#acc", ROICalc.model.calculate.sales.increments, 'percent', 'acc_rate');
+		updateTableCells("#acr", ROICalc.model.calculate.sales.increments, 'percent', 'acc_rate');
 		
 		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency');
 		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
