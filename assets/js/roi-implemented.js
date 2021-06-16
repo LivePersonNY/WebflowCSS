@@ -26,7 +26,7 @@ return numberShortFormat(value, '');
 }
 
 function numberShortFormat(value, appender) {
-return value.toString().replace(/^0\./, '.') + appender;
+	return value.toString().replace(/^0\./, '.') + appender;
 }
 
 	$('.jqslider-styles').each(function () {
@@ -82,6 +82,8 @@ return value.toString().replace(/^0\./, '.') + appender;
 				totals: [ROICalc.results.totals.total_benefit.year1, ROICalc.results.totals.total_benefit.year2, ROICalc.results.totals.total_benefit.year3]
 			}]
 		}
+		
+		$('.annual_traffc').text(ROICalc.model.inputs['sales-traffic'].toLocaleString());
 		
 		var totalBenefit = ROICalc.results.totals.total_benefit.year1 + ROICalc.results.totals.total_benefit.year2 + ROICalc.results.totals.total_benefit.year3;
 		var circle1val = ROICalc.results.sales.increase.year1 + ROICalc.results.sales.increase.year2 + ROICalc.results.sales.increase.year3;
