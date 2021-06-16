@@ -33,12 +33,16 @@ function locNumber(value, type, curr) {
 	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2});
 }
 
-function updateTableCells(cellName, valueObj, valueStyle) {
+function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 	const cols = [
 		'baseline', 'year1', 'year2', 'year3'
 	];
 	cols.forEach(function(item) {
-		$(cellName + "-" + item).text(locNumber(valueObj[item], valueStyle));
+		var value = valueObj[item];
+		if (subKey) {
+			value = valueObj[item][subKey];
+		}
+		$(cellName + "-" + item).text(locNumber(value, valueStyle));
 	});
 }
 
@@ -127,6 +131,7 @@ function updateTableCells(cellName, valueObj, valueStyle) {
 		var web_orders = ROICalc.model.inputs['sales-traffic'] * (ROICalc.model.inputs['sales-conv-rate']/100);
 		$('.digi_orders').text(web_orders.toLocaleString());
 		$('.remaining_traffic').text((ROICalc.model.inputs['sales-traffic'] - web_orders).toLocaleString());
+		updateTableCells("#acc", ROICalc.model.calculate.sales.increments, 'percent', 'acc_rate');
 		
 		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency');
 		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
