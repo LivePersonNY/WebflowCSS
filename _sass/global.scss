@@ -348,6 +348,9 @@ div#LP_Embedded_Nav img
 //Hiding empty cms collection lists
 .w-dyn-empty{display:none}
 
-.dropdown-link.w-dropdown-link.w--current{
+.nav-menu .dropdown-link.w-dropdown-link.w--current{
     color:$color-blue-navy;
+    @media(max-width:$screen-max-lg){
+        color:$color-blue-periwinkle-light;
+    }
 }
