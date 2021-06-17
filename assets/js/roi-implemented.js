@@ -153,6 +153,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		updateTableCells("#total_convos", ROICalc.results.sales.raw, 'integer', 'total_convos');
 		updateTableCells("shift", ROICalc.model.calculate.care.increments, 'percent', 'shift_rate');
 		updateTableCells("convos_shifted", ROICalc.results.care.raw, 'integer', 'conversations_shifted');
+		updateTableCells("fcr-perc", ROICalc.results.care.raw, 'percent', 'messaging_fcr');
 				
 		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency');
 		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
