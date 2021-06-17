@@ -149,6 +149,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 			year3: conv_rate * ROICalc.model.calculate.sales.increments.year3.conv_rate_m
 		}, 'percent');
 		updateTableCells("#mas", ROICalc.results.sales.raw, 'currency', 'mess_assisted_sales');
+		updateTableCells("#avg", ROICalc.results.sales.raw, 'currency', 'avg_order_value');
 				
 		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency');
 		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
