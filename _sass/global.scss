@@ -354,4 +354,7 @@ div#LP_Embedded_Nav img
     @media(max-width:$screen-max-lg){
         color:$color-blue-periwinkle-light;
     }
+    &:hover{
+        color:$color-blue-electric;
+    }
 }
