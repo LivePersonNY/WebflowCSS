@@ -140,7 +140,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 			year1: started_convos * ROICalc.model.calculate.sales.increments.year1.acc_rate,
 			year2: started_convos * ROICalc.model.calculate.sales.increments.year2.acc_rate,
 			year3: started_convos * ROICalc.model.calculate.sales.increments.year3.acc_rate
-		});
+		}, 'decimal');
 		updateTableCells("#scr", {
 			baseline: 0,
 			year1: conv_rate * ROICalc.model.calculate.sales.increments.year1.conv_rate_m,
