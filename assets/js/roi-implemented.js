@@ -30,6 +30,7 @@ function numberShortFormat(value, appender) {
 }
 
 function locNumber(value, type, curr, accuracy) {
+	if (type == 'integer') return value.toLocaleString();
 	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || 'USD', minimumFractionDigits: accuracy || 2, maximumFractionDigits: 2});
 }
 
@@ -140,7 +141,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 			year1: started_convos * ROICalc.model.calculate.sales.increments.year1.acc_rate,
 			year2: started_convos * ROICalc.model.calculate.sales.increments.year2.acc_rate,
 			year3: started_convos * ROICalc.model.calculate.sales.increments.year3.acc_rate
-		}, 'decimal');
+		}, 'integer');
 		updateTableCells("#scr", {
 			baseline: 0,
 			year1: conv_rate * ROICalc.model.calculate.sales.increments.year1.conv_rate_m,
