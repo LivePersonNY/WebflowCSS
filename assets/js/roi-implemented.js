@@ -143,13 +143,15 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 			year3: started_convos * ROICalc.model.calculate.sales.increments.year3.acc_rate
 		}, 'integer');
 		updateTableCells("#scr", {
-			baseline: 0,
+			baseline: conv_rate,
 			year1: conv_rate * ROICalc.model.calculate.sales.increments.year1.conv_rate_m,
 			year2: conv_rate * ROICalc.model.calculate.sales.increments.year2.conv_rate_m,
 			year3: conv_rate * ROICalc.model.calculate.sales.increments.year3.conv_rate_m
 		}, 'percent');
 		updateTableCells("#mas", ROICalc.results.sales.raw, 'currency', 'mess_assisted_sales');
 		updateTableCells("#avg", ROICalc.results.sales.raw, 'currency', 'avg_order_value');
+		updateTableCells("#total_convos", ROICalc.results.sales.raw, 'integer', 'total_convos');
+		updateTableCells("shift", ROICalc.model.calculate.care.increments, 'percent', 'shift_rate');
 				
 		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency');
 		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
