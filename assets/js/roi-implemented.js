@@ -155,6 +155,9 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		updateTableCells("#convos_shifted", ROICalc.results.care.raw, 'integer', 'conversations_shifted');
 		updateTableCells("#fcr-perc", ROICalc.results.care.raw, 'percent', 'messaging_fcr');
 		updateTableCells("#repeat", ROICalc.results.care.raw, 'integer', 'repeat_conversations');
+		updateTableCells("#rem-mess", ROICalc.results.care.raw, 'integer', 'remaining_conversations');
+		updateTableCells("#bot-rate", ROICalc.model.calculate.care.increments, 'percent', 'bcr_rate');
+		updateTableCells("#bot", ROICalc.results.care.raw, 'integer', 'bot_contained_conversations');
 				
 		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency');
 		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
