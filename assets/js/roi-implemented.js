@@ -85,6 +85,13 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 	});
 
 	var updateChart = async function(){ 
+		
+		var currentDate = new Date();
+		var thisYear = currentDate.getFullYear();
+		
+		$('.label.year1').text(thisYear);
+		$('.label.year2').text(thisYear+1);
+		$('.label.year3').text(thisYear+2);
 
 		await Promise.all([
 			ROICalc.model.updateAll(),
