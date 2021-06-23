@@ -176,6 +176,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		updateTableCells("#mess", ROICalc.results.care.ai_scale, 'currency');
 		updateTableCells("#eff", ROICalc.results.care.efficiency, 'currency');
 		
+		updateTableCells("#totals", ROICalc.results.totals.total_benefit, 'currency');
+		
 		setTimeout(function () {
 			$('#two .bar').each(function (index) {
 				// To better represent % of height
