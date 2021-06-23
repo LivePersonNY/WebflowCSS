@@ -50,7 +50,7 @@ p{
     .w-row{
         margin-left: -16px;
         margin-right: -16px;
-        &.reverse-margin {
+        &.reverse-margin, &.bc-table-col {
           margin-left: 0;
           margin-right: 0;
         }
