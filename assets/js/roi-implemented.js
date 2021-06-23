@@ -126,7 +126,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		
 		$('#text_total_benefit').text("$" + numberShort(totalBenefit));
 		$('#text_year1').text("$" + numberShort(ROICalc.results.totals.total_benefit.year1));
-					$('#text_year2').text("$" + numberShort(ROICalc.results.totals.total_benefit.year2));
+		$('#text_year2').text("$" + numberShort(ROICalc.results.totals.total_benefit.year2));
 		$('#text_year3').text("$" + numberShort(ROICalc.results.totals.total_benefit.year3));
 		$('#text-incr').text("$" + numberShort(circle1val));
 		$('#text-ai-savings').text("$" + numberShort(circle4val));
@@ -176,7 +176,9 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		updateTableCells("#mess", ROICalc.results.care.ai_scale, 'currency');
 		updateTableCells("#eff", ROICalc.results.care.efficiency, 'currency');
 		
-		updateTableCells("#totals", ROICalc.results.totals.total_benefit, 'currency');
+		$('#totals-year1').text("$" + numberShort(ROICalc.results.totals.total_benefit.year1));
+		$('#totals-year2').text("$" + numberShort(ROICalc.results.totals.total_benefit.year2));
+		$('#totals-year3').text("$" + numberShort(ROICalc.results.totals.total_benefit.year3));
 		
 		setTimeout(function () {
 			$('#two .bar').each(function (index) {
