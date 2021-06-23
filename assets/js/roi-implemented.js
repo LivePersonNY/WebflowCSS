@@ -161,6 +161,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		
 		updateTableCells("#agent", ROICalc.results.care.raw, 'integer', 'remaining_agent_conversations');
 		updateTableCells("#cost", ROICalc.results.care.raw, 'currency', 'agent_cost_at_baseline');
+		updateTableCells("#mess-eff", ROICalc.model.calculate.care.increments, 'decimal', 'eff_ratio');
+		updateTableCells("#cost-convo", ROICalc.results.care.raw, 'currency', 'cost_per_messaging_conversation');
 				
 		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency');
 		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
