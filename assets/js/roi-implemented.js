@@ -53,16 +53,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		var sliderMax = $(this).data('max');
 		var sliderStep = $(this).data('step');
 		var sliderValue = $(this).data('value').toLocaleString();
-		var pref = '';
-		var suff = '';
-		switch ($(this).attr('id') + '-value').data('symbol')) {
-			case '$':
-				pref='$';
-				break;
-			case '%':
-				suff='%';
-				break;
-		}
+		
 		$(this).slider({
 			range: 'min',
 			min: parseFloat(sliderMin),
@@ -70,6 +61,16 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 			step: parseFloat(sliderStep),
 			value: parseFloat(sliderValue),
 			slide: function (event, ui) {
+				var pref = '';
+				var suff = '';
+				switch ($(this).attr('id') + '-value').data('symbol')) {
+					case '$':
+						pref='$';
+						break;
+					case '%':
+						suff='%';
+						break;
+				}
 				$('#' + $(this).attr('id') + '-value').val(pref + ui.value.toLocaleString() + suff);
 				updateChart();
 			}
