@@ -63,7 +63,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 			slide: function (event, ui) {
 				var pref = '';
 				var suff = '';
-				switch ($(this).attr('id') + '-value').data('symbol')) {
+				switch ($('#' + $(this).attr('id') + '-value').data('symbol')) {
 					case '$':
 						pref='$';
 						break;
