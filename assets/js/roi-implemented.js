@@ -69,11 +69,21 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 	$('.slider-value').each(function () {
 		// var testnum = $('#' + $(this).data('slider-ref')).slider('value');
 		// testnum = testnum.toLocaleString();
-		$(this).val($(this).data('symbol') + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString());
+		var pref = '';
+		var suff = '';
+		switch ($(this).data('symbol')) {
+			case '$':
+				pref='$';
+				break;
+			case '%':
+				suff='%';
+				break;
+		}
+		$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
 			var val = $(this).val();
 			$('#' + $(this).data('slider-ref')).slider('value', val);
-			$(this).val(val.toLocaleString());
+			$(this).val(pref + val.toLocaleString() + suff);
 			updateChart();
 		})
 	})
