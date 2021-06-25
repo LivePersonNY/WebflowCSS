@@ -73,7 +73,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		$(this).on('input', function () {
 			var val = $(this).val();
 			$('#' + $(this).data('slider-ref')).slider('value', val);
-			$(this).val(val.toLocaleString());
+			$(this).val($(this).data('symbol') + val.toLocaleString());
 			updateChart();
 		})
 	})
