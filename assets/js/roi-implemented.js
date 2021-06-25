@@ -122,7 +122,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		setProgress(((circle2val / circle1val)*100).toFixed(), '#circle2', numberShort(circle2val), 'Growth');
 		setProgress(((fcr / totalBenefit)*100).toFixed(), '#circle3', numberShort(fcr, 1), 'Growth');
 		setProgress(((circle4val / totalBenefit)*100).toFixed(), '#circle4', numberShort(circle4val), 'Savings');
-		setProgress(((circle5val / circle5val)*100).toFixed(), '#circle5', numberShort(circle5val), 'Savings');
+		setProgress(((circle5val / totalBenefit)*100).toFixed(), '#circle5', numberShort(circle5val), 'Savings');
 		
 		$('#text_total_benefit').text("$" + numberShort(totalBenefit));
 		$('#text_year1').text("$" + numberShort(ROICalc.results.totals.total_benefit.year1));
