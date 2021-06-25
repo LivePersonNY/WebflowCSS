@@ -196,10 +196,10 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 
 			$('#two .total-year-benefit').each(function (year) {
 				estimatedTotalBenefit += oneObj.element[0].totals[year];
-				var numberAlter = (oneObj.element[0].totals[year] / 1000000).toFixed(2);
-				$(this).text('$' + numberAlter + 'M');
-				var estimatedTotalBenefitAlter = (estimatedTotalBenefit / 1000000).toFixed(2);
-				$('#two .estimated-total-benefit').text('$' + estimatedTotalBenefitAlter + 'M');
+				//var numberAlter = (oneObj.element[0].totals[year] / 1000000).toFixed(2);
+				$(this).text('$' + numberShort(oneObj.element[0].totals[year], 2));
+				//var estimatedTotalBenefitAlter = (estimatedTotalBenefit / 1000000).toFixed(2);
+				$('#two .estimated-total-benefit').text('$' + numberShort(estimatedTotalBenefit, 2));
 			});
 
 			
