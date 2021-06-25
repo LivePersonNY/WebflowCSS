@@ -189,7 +189,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 					'height': numbersFull + '%'
 				});
 				// Create tooltip
-				$(this).find('.tooltip').text('$' + numberAlter + 'M');
+				$(this).find('.tooltip').text('$' + numberShort(oneObj.element[0].numbers[index], 2));
 				// $('<span class="tooltip">' + oneObj.element[0].numbers[index] + 'M</span>')
 				//     .prependTo(this);
 			});
