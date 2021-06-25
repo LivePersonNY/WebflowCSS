@@ -55,7 +55,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		var sliderValue = $(this).data('value').toLocaleString();
 		var pref = '';
 		var suff = '';
-		switch ($(this).data('symbol')) {
+		switch ($(this).attr('id') + '-value').data('symbol')) {
 			case '$':
 				pref='$';
 				break;
