@@ -69,11 +69,11 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 	$('.slider-value').each(function () {
 		// var testnum = $('#' + $(this).data('slider-ref')).slider('value');
 		// testnum = testnum.toLocaleString();
-		$(this).val($('#' + $(this).data('slider-ref')).slider('value').toLocaleString());
+		$(this).val($(this).data('symbol') + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString());
 		$(this).on('input', function () {
 			var val = $(this).val();
 			$('#' + $(this).data('slider-ref')).slider('value', val);
-			$(this).val($(this).data('symbol') + val.toLocaleString());
+			$(this).val(val.toLocaleString());
 			updateChart();
 		})
 	})
