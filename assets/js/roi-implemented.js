@@ -15,13 +15,13 @@ circle.style.strokeDashoffset = offset;
 }
 
 
-function numberShort(value) {
+function numberShort(value, precision) {
 if (value < 1000) return numberShortFormat(value, '');
-if (value < 1000000) return numberShortFormat((value / 1000).toFixed(), 'K');
-if (value < 10000000) return numberShortFormat((value / 1000000).toFixed(1), 'M');
-if (value < 1000000000) return numberShortFormat((value / 1000000).toFixed(), 'M');
-if (value < 10000000000) return numberShortFormat((value / 1000000000).toFixed(1), 'B');
-if (value < 1000000000000) return numberShortFormat((value / 1000000000).toFixed(), 'B');
+if (value < 1000000) return numberShortFormat((value / 1000).toFixed(precision), 'K');
+if (value < 10000000) return numberShortFormat((value / 1000000).toFixed(precision), 'M');
+if (value < 1000000000) return numberShortFormat((value / 1000000).toFixed(precision), 'M');
+if (value < 10000000000) return numberShortFormat((value / 1000000000).toFixed(precision), 'B');
+if (value < 1000000000000) return numberShortFormat((value / 1000000000).toFixed(precision), 'B');
 return numberShortFormat(value, '');
 }
 
@@ -120,7 +120,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		var circle4val = ROICalc.results.care.ai_scale.year1 + ROICalc.results.care.ai_scale.year2 + ROICalc.results.care.ai_scale.year3;
 		setProgress(((circle1val / totalBenefit)*100).toFixed(), '#circle1', numberShort(circle1val), 'Growth');
 		setProgress(((circle2val / circle1val)*100).toFixed(), '#circle2', numberShort(circle2val), 'Growth');
-		setProgress(((fcr / totalBenefit)*100).toFixed(), '#circle3', numberShort(fcr), 'Growth');
+		setProgress(((fcr / totalBenefit)*100).toFixed(), '#circle3', numberShort(fcr, 1), 'Growth');
 		setProgress(((circle4val / totalBenefit)*100).toFixed(), '#circle4', numberShort(circle4val), 'Savings');
 		setProgress(((circle5val / circle5val)*100).toFixed(), '#circle5', numberShort(circle5val), 'Savings');
 		
