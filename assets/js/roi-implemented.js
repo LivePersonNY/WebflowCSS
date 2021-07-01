@@ -90,11 +90,14 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 				suff='%';
 				break;
 		}
-		$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
+		var formatedVal = pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff;
+		$(this).val(formatedVal);
+		//$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
 			var val = $(this).val();
 			$('#' + $(this).data('slider-ref')).slider('value', val);
-			$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
+			$(this).val(formatedVal);
+			//$(this).val(val.toLocaleString());
 			updateChart();
 		})
 	})
