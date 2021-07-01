@@ -46,6 +46,9 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		if(!accuracy){
 			accuracy = valueStyle == 'percent' ? 1 : 2;
 		}
+		if (cellName == '#inc'){
+			console.log('test: ' + $(cellName + "-" + item).text(locNumber(value, valueStyle, undefined, accuracy, accuracyMax)));
+		}
 		$(cellName + "-" + item).text(locNumber(value, valueStyle, undefined, accuracy, accuracyMax));
 	});
 }
@@ -196,7 +199,6 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		updateTableCells("#cost-convo", ROICalc.results.care.raw, 'currency', 'cost_per_messaging_conversation');
 				
 		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency', undefined, 0, 0);
-		console.log('test: ' + updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency', undefined, 0, 0));
 		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
 		updateTableCells("#mess", ROICalc.results.care.ai_scale, 'currency');
 		updateTableCells("#eff", ROICalc.results.care.efficiency, 'currency');
