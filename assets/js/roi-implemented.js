@@ -29,12 +29,12 @@ function numberShortFormat(value, appender) {
 	return value.toString().replace(/^0\./, '.') + appender;
 }
 
-function locNumber(value, type, curr, accuracy) {
+function locNumber(value, type, curr, accuracy, accuracyMax) {
 	if (type == 'integer') return value.toLocaleString();
-	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || 'USD', minimumFractionDigits: accuracy || 2, maximumFractionDigits: 2});
+	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || 'USD', minimumFractionDigits: accuracy || 2, maximumFractionDigits: accuracyMax || 2});
 }
 
-function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy) {
+function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accuracyMax) {
 	const cols = [
 		'baseline', 'year1', 'year2', 'year3'
 	];
@@ -46,7 +46,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy) {
 		if(!accuracy){
 			accuracy = valueStyle == 'percent' ? 1 : 2;
 		}
-		$(cellName + "-" + item).text(locNumber(value, valueStyle, undefined, accuracy));
+		$(cellName + "-" + item).text(locNumber(value, valueStyle, undefined, accuracy, accuracyMax));
 	});
 }
 
