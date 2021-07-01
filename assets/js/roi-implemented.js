@@ -108,8 +108,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 			console.log('new value ' + pref );
 			console.log('new value ' + $(this).val().toLocaleString());
 			console.log('new value ' + suff);
-			console.log('new value ' + pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
-			$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
+			console.log('new value ' + pref + $(this).val().toLocaleString() + suff);
+			$(this).val(pref + $(this).val().toLocaleString() + suff);
 			//$(this).val(val.toLocaleString());
 			updateChart();
 		})
