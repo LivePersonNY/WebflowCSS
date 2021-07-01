@@ -111,9 +111,9 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		var currentDate = new Date();
 		var thisYear = currentDate.getFullYear();
 		
-		$('.label.year1').text(thisYear+1);
-		$('.label.year2').text(thisYear+2);
-		$('.label.year3').text(thisYear+3);
+		// $('.label.year1').text(thisYear+1);
+		// $('.label.year2').text(thisYear+2);
+		// $('.label.year3').text(thisYear+3);
 
 		await Promise.all([
 			ROICalc.model.updateAll(),
