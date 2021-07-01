@@ -46,7 +46,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		if (cellName == '#inc'){
 			console.log(`FIRST = subkey: ${subKey}, accuracy: ${accuracy}, accMax: ${accuracyMax}`);
 		}
-		if(!accuracy){
+		if(accuracy == undefined){
 			if (cellName == '#inc'){
 				console.log(`inhere!`);
 			}
