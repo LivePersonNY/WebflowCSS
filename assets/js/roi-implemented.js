@@ -206,7 +206,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 			$('#two .bar').each(function (index) {
 				// To better represent % of height
 				var numberAlter = (oneObj.element[0].numbers[index] / 1000000).toFixed(2);
-				var numbersFull = numberAlter * 3;
+				//var numbersFull = numberAlter * 3;
+				var numbersFull = numberAlter * 1;
 				$(this).css({
 					'height': numbersFull + '%'
 				});
