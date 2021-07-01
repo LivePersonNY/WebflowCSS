@@ -93,9 +93,9 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
 			var val = $(this).val();
-			$('#' + $(this).data('slider-ref')).slider('value', val);
 			var valFloat = parseFloat(val.replace(/[^0-9-.]/g, '')); 
 			console.log('val: ' + val + ', locale: ' + valFloat.toLocaleString() + ' pref/suff: ' + pref + suff);
+			$('#' + $(this).data('slider-ref')).slider('value', valFloat);
 			$(this).val(pref + valFloat.toLocaleString() + suff);
 			updateChart();
 		})
