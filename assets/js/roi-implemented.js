@@ -34,7 +34,7 @@ function locNumber(value, type, curr, accuracy) {
 	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || 'USD', minimumFractionDigits: accuracy || 2, maximumFractionDigits: 2});
 }
 
-function updateTableCells(cellName, valueObj, valueStyle, subKey) {
+function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy) {
 	const cols = [
 		'baseline', 'year1', 'year2', 'year3'
 	];
@@ -43,7 +43,9 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		if (subKey) {
 			value = valueObj[item][subKey];
 		}
-		var accuracy = valueStyle == 'percent' ? 1 : 2;
+		if(!accuracy){
+			accuracy = valueStyle == 'percent' ? 1 : 2;
+		}
 		$(cellName + "-" + item).text(locNumber(value, valueStyle, undefined, accuracy));
 	});
 }
@@ -193,7 +195,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		updateTableCells("#mess-eff", ROICalc.model.calculate.care.increments, 'decimal', 'eff_ratio');
 		updateTableCells("#cost-convo", ROICalc.results.care.raw, 'currency', 'cost_per_messaging_conversation');
 				
-		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency');
+		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency', undefined, 2);
 		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
 		updateTableCells("#mess", ROICalc.results.care.ai_scale, 'currency');
 		updateTableCells("#eff", ROICalc.results.care.efficiency, 'currency');
