@@ -216,7 +216,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 					year = 2;
 					barDivider = 1;
 				}
-				var calcHeight = ((oneObj.element[0].numbers[index] / oneObj.element[0].totals[year]) * 100) / barDivider;
+				var calcHeight = ((oneObj.element[0].numbers[index] / oneObj.element[0].totals[year]) * 100) * barDivider;
 				//console.log('year: ' + year + ', number: ' + oneObj.element[0].numbers[index] + ', total:' + oneObj.element[0].totals[year] + ', height:' + calcHeight);
 				$(this).css({
 					'height': calcHeight + '%'
