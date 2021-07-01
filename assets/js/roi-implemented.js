@@ -90,13 +90,21 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 				suff='%';
 				break;
 		}
-		var formatedVal = pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff;
-		$(this).val(formatedVal);
-		//$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
+		$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
 			var val = $(this).val();
 			$('#' + $(this).data('slider-ref')).slider('value', val);
-			$(this).val(formatedVal);
+			var pref = '';
+			var suff = '';
+			switch ($(this).data('symbol')) {
+				case '$':
+					pref='$';
+					break;
+				case '%':
+					suff='%';
+					break;
+			}
+			$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 			//$(this).val(val.toLocaleString());
 			updateChart();
 		})
