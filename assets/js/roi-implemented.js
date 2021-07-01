@@ -43,15 +43,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		if (subKey) {
 			value = valueObj[item][subKey];
 		}
-		if (cellName == '#inc'){
-			console.log(`FIRST = subkey: ${subKey}, accuracy: ${accuracy}, accMax: ${accuracyMax}`);
-		}
 		if(accuracy == undefined){
 			accuracy = valueStyle == 'percent' ? 1 : 2;
-		}
-		if (cellName == '#inc'){
-			console.log('test: ' + locNumber(value, valueStyle, undefined, accuracy, accuracyMax));
-			console.log(`SECOND = subkey: ${subKey}, accuracy: ${accuracy}, accMax: ${accuracyMax}`);
 		}
 		$(cellName + "-" + item).text(locNumber(value, valueStyle, undefined, accuracy, accuracyMax));
 	});
@@ -166,7 +159,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		$('#cost-per-convo-mess').text("$" + numberShort((ROICalc.model.inputs['care-cost-per-call'] / ROICalc.model.calculate.care.increments.year3.eff_ratio).toFixed()));
 		
 		var conv_rate = ROICalc.model.inputs['sales-conv-rate']/100;
-		updateTableCells("#rev", ROICalc.results.sales.increase, 'currency');
+		updateTableCells("#rev", ROICalc.results.sales.increase, 'currency', undefined, '0', '0');
 		$('.annual_traffic').text(ROICalc.model.inputs['sales-traffic'].toLocaleString());
 		$('.conv_rate').text(ROICalc.model.inputs['sales-conv-rate'].toLocaleString());
 		var web_orders = ROICalc.model.inputs['sales-traffic'] * conv_rate;
@@ -203,9 +196,9 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		updateTableCells("#cost-convo", ROICalc.results.care.raw, 'currency', 'cost_per_messaging_conversation');
 				
 		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency', undefined, '0', '0');
-		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
-		updateTableCells("#mess", ROICalc.results.care.ai_scale, 'currency');
-		updateTableCells("#eff", ROICalc.results.care.efficiency, 'currency');
+		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency', undefined, '0', '0');
+		updateTableCells("#mess", ROICalc.results.care.ai_scale, 'currency', undefined, '0', '0');
+		updateTableCells("#eff", ROICalc.results.care.efficiency, 'currency', undefined, '0', '0');
 		
 		$('#totals-year1').text("$" + numberShort(ROICalc.results.totals.total_benefit.year1));
 		$('#totals-year2').text("$" + numberShort(ROICalc.results.totals.total_benefit.year2));
