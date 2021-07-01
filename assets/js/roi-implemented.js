@@ -47,7 +47,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			accuracy = valueStyle == 'percent' ? 1 : 2;
 		}
 		if (cellName == '#inc'){
-			console.log('test: ' + $(cellName + "-" + item).text(locNumber(value, valueStyle, undefined, accuracy, accuracyMax)));
+			console.log('test: ' + locNumber(value, valueStyle, undefined, accuracy, accuracyMax));
+			console.log(`subkey: ${subKey}, accuracy: ${accuracy}, accMax: ${accuracyMax}`);
 		}
 		$(cellName + "-" + item).text(locNumber(value, valueStyle, undefined, accuracy, accuracyMax));
 	});
