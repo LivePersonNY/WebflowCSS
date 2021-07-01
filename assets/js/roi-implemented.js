@@ -225,6 +225,13 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 				$('#two .estimated-total-benefit').text('$' + numberShort(estimatedTotalBenefit, 2));
 			});
 
+			$('.year.wrap').each(function(year){
+				var firstNumber = (oneObj.element[0].numbers[index] / 1000000).toFixed(2);
+				var secondNumber = (oneObj.element[0].numbers[index * 2] / 1000000).toFixed(2);
+				estimatedTotalBenefit += oneObj.element[0].totals[year];
+				console.log('first: ' + firstNumber + ' second: ' + secondNumber + ' totalbenefit: ' + estimatedTotalBenefit);
+			})
+
 			
 
 		}, 500);
