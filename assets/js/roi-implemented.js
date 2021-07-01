@@ -43,12 +43,18 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		if (subKey) {
 			value = valueObj[item][subKey];
 		}
+		if (cellName == '#inc'){
+			console.log(`FIRST = subkey: ${subKey}, accuracy: ${accuracy}, accMax: ${accuracyMax}`);
+		}
 		if(!accuracy){
+			if (cellName == '#inc'){
+				console.log(`inhere!`);
+			}
 			accuracy = valueStyle == 'percent' ? 1 : 2;
 		}
 		if (cellName == '#inc'){
 			console.log('test: ' + locNumber(value, valueStyle, undefined, accuracy, accuracyMax));
-			console.log(`subkey: ${subKey}, accuracy: ${accuracy}, accMax: ${accuracyMax}`);
+			console.log(`SECOND = subkey: ${subKey}, accuracy: ${accuracy}, accMax: ${accuracyMax}`);
 		}
 		$(cellName + "-" + item).text(locNumber(value, valueStyle, undefined, accuracy, accuracyMax));
 	});
