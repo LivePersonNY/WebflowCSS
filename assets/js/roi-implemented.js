@@ -210,11 +210,11 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 				var year = 0;
 				if(index > 1 && index < 4){
 					year = 1;
-				} else if(index > 4){
+				} else if(index > 3){
 					year = 2;
 				}
 				var calcHeight = (oneObj.element[0].numbers[index] / oneObj.element[0].totals[year]) * 100;
-				console.log('year: ' + year + ', number: ' + oneObj.element[0].numbers[index] + ', total:' + oneObj.element[0].totals[year] + ', height:' + calcHeight);
+				//console.log('year: ' + year + ', number: ' + oneObj.element[0].numbers[index] + ', total:' + oneObj.element[0].totals[year] + ', height:' + calcHeight);
 				$(this).css({
 					'height': calcHeight + '%'
 				});
@@ -231,14 +231,6 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 				//var estimatedTotalBenefitAlter = (estimatedTotalBenefit / 1000000).toFixed(2);
 				$('#two .estimated-total-benefit').text('$' + numberShort(estimatedTotalBenefit, 2));
 			});
-
-			// $('.year.wrap').each(function(year){
-			// 	var year = year + 1;
-			// 	var firstNumber = (oneObj.element[0].numbers[year] / 1000000).toFixed(2);
-			// 	var secondNumber = (oneObj.element[0].numbers[year * 2] / 1000000).toFixed(2);
-			// 	estimatedTotalBenefit += oneObj.element[0].totals[year];
-			// 	console.log('first: ' + firstNumber + ' second: ' + secondNumber + ' totalbenefit: ' + estimatedTotalBenefit);
-			// })
 
 			
 
