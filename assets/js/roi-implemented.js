@@ -195,7 +195,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		updateTableCells("#mess-eff", ROICalc.model.calculate.care.increments, 'decimal', 'eff_ratio');
 		updateTableCells("#cost-convo", ROICalc.results.care.raw, 'currency', 'cost_per_messaging_conversation');
 				
-		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency', undefined, 0);
+		updateTableCells("#inc", ROICalc.results.sales.average_order_value, 'currency', undefined, 0, 0);
 		updateTableCells("#fcr", ROICalc.results.care.fcr, 'currency');
 		updateTableCells("#mess", ROICalc.results.care.ai_scale, 'currency');
 		updateTableCells("#eff", ROICalc.results.care.efficiency, 'currency');
