@@ -207,9 +207,15 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 				// To better represent % of height
 				var numberAlter = (oneObj.element[0].numbers[index] / 1000000).toFixed(2);
 				//var numbersFull = numberAlter * 3;
-				var numbersFull = numberAlter * 1;
+				var year = 0;
+				if(index > 1 && index < 4){
+					year = 1;
+				} else if(index > 4){
+					year = 2;
+				}
+				var calcHeight = (oneObj.element[0].numbers[index] / oneObj.element[0].totals[year]) * 100;
 				$(this).css({
-					'height': numbersFull + '%'
+					'height': calcHeight + '%'
 				});
 				// Create tooltip
 				$(this).find('.tooltip').text('$' + numberShort(oneObj.element[0].numbers[index], 2));
@@ -225,12 +231,13 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 				$('#two .estimated-total-benefit').text('$' + numberShort(estimatedTotalBenefit, 2));
 			});
 
-			$('.year.wrap').each(function(year){
-				var firstNumber = (oneObj.element[0].numbers[index] / 1000000).toFixed(2);
-				var secondNumber = (oneObj.element[0].numbers[index * 2] / 1000000).toFixed(2);
-				estimatedTotalBenefit += oneObj.element[0].totals[year];
-				console.log('first: ' + firstNumber + ' second: ' + secondNumber + ' totalbenefit: ' + estimatedTotalBenefit);
-			})
+			// $('.year.wrap').each(function(year){
+			// 	var year = year + 1;
+			// 	var firstNumber = (oneObj.element[0].numbers[year] / 1000000).toFixed(2);
+			// 	var secondNumber = (oneObj.element[0].numbers[year * 2] / 1000000).toFixed(2);
+			// 	estimatedTotalBenefit += oneObj.element[0].totals[year];
+			// 	console.log('first: ' + firstNumber + ' second: ' + secondNumber + ' totalbenefit: ' + estimatedTotalBenefit);
+			// })
 
 			
 
