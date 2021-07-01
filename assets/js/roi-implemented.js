@@ -92,6 +92,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 		}
 		$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
+			console.log('updating');
 			var val = $(this).val();
 			$('#' + $(this).data('slider-ref')).slider('value', val);
 			var pref = '';
@@ -104,6 +105,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 					suff='%';
 					break;
 			}
+			console.log('new value ' + pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 			$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 			//$(this).val(val.toLocaleString());
 			updateChart();
