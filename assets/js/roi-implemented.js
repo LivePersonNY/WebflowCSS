@@ -208,12 +208,15 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 				var numberAlter = (oneObj.element[0].numbers[index] / 1000000).toFixed(2);
 				//var numbersFull = numberAlter * 3;
 				var year = 0;
+				var barDivider = .33;
 				if(index > 1 && index < 4){
 					year = 1;
+					barDivider = .66;
 				} else if(index > 3){
 					year = 2;
+					barDivider = 1;
 				}
-				var calcHeight = (oneObj.element[0].numbers[index] / oneObj.element[0].totals[year]) * 100;
+				var calcHeight = ((oneObj.element[0].numbers[index] / oneObj.element[0].totals[year]) * 100) / barDivider;
 				//console.log('year: ' + year + ', number: ' + oneObj.element[0].numbers[index] + ', total:' + oneObj.element[0].totals[year] + ', height:' + calcHeight);
 				$(this).css({
 					'height': calcHeight + '%'
