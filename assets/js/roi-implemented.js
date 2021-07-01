@@ -106,7 +106,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey) {
 					break;
 			}
 			console.log('new value ' + pref );
-			console.log('new value ' + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString());
+			console.log('new value ' + $(this).val().toLocaleString());
 			console.log('new value ' + suff);
 			console.log('new value ' + pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 			$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
