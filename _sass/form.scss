@@ -144,6 +144,76 @@
     .mktoButtonRow{
         display:block !important;
     }
+	.mktoRadioList {
+		width: 100% !important;
+		>label {
+			color: #FCFCFD;
+			font-family: 'Roboto', 'Helvetica';
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		>input {
+			width: auto !important;
+			margin-top: 6px;
+			outline: none;
+			border: 1px solid #A7ACBE;
+			appearance: none;
+			display: block;
+			padding: 0 !important;
+			width: 14px !important;
+			height: 14px;
+			border-radius: 4px;
+			float: left;
+			margin-top: 6px;
+			border-radius: 100px;
+			&:checked {
+				background: #A7ACBE;
+			}
+		}
+	}
+	.mktoCheckboxList {
+		width: 100% !important;
+		>label {
+			color: #FCFCFD;
+			font-family: 'Roboto', 'Helvetica';
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		>input {
+			width: auto !important;
+			margin-top: 6px;
+			outline: none;
+			border: 1px solid #A7ACBE;
+			appearance: none;
+			display: block;
+			padding: 0 !important;
+			width: 14px !important;
+			height: 14px;
+			border-radius: 4px;
+			float: left;
+			margin-top: 6px;
+			&:checked {
+				&::after {
+					content: "✔";
+					display: block;
+					font-size: 20px;
+					margin-top: -9px;
+					color: #FCFCFD;
+				}
+			}
+		}
+	}
+	textarea.mktoField {
+		width: 100% !important;
+		background: none;
+		border: 1px solid #d9d4d0;
+		border-radius: 4px;
+		color: #FCFCFD;
+		padding: 12px;
+		height: auto;
+	}
 }
 .default-checkbox {
 	border-width: 1px;
