@@ -9,6 +9,13 @@ function setCookie(name, value, days) {
 
 function formSubmissionComplete(pixelEvent, gtmEvent) {
 
+	var downloads = [
+		'get report',
+		'watch now'
+	];
+	if (downloads.indexOf(pixelEvent) >= 0) {
+		dataLayer.push({'event' : 'resource-download-form'});
+	}
     ga('send', 'event', 'form', 'submit', pixelEvent);
     dataLayer.push({'event' : gtmEvent || 'form-submitted'});
     var capterra_vkey = '2204790610e633c11ee2cfb2140ab50a',
