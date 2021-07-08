@@ -144,7 +144,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		var circle4val = ROICalc.results.care.ai_scale.year1 + ROICalc.results.care.ai_scale.year2 + ROICalc.results.care.ai_scale.year3;
 		setProgress(((circle1val / totalBenefit)*100).toFixed(), '#circle1', numberShort(circle1val), 'Growth');
 		setProgress(((circle2val / circle1val)*100).toFixed(), '#circle2', numberShort(circle2val), 'Growth');
-		setProgress(((fcr / totalBenefit)*100).toFixed(), '#circle3', numberShort(fcr, 1), 'Growth');
+		setProgress(((fcr / totalBenefit)*100).toFixed(), '#circle3', numberShort(fcr), 'Growth');
 		setProgress(((circle4val / totalBenefit)*100).toFixed(), '#circle4', numberShort(circle4val), 'Savings');
 		setProgress(((circle5val / totalBenefit)*100).toFixed(), '#circle5', numberShort(circle5val), 'Savings');
 		
