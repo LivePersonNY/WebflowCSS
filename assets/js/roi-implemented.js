@@ -93,6 +93,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			case '%':
 				suff='%';
 				break;
+			default:
+				break;
 		}
 		$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
