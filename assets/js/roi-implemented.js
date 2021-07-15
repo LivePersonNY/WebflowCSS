@@ -72,6 +72,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 					case '%':
 						suff='%';
 						break;
+					default:
+						break;
 				}
 				$('#' + $(this).attr('id') + '-value').val(pref + ui.value.toLocaleString() + suff);
 				updateChart();
