@@ -275,6 +275,7 @@ body.locked {
 	text-align: center;
 	position:sticky;
 	z-index:100;
+	display:block !important;
 	.mobileForm {
 		.span1 {
 			display: none;
