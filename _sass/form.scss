@@ -275,7 +275,7 @@ body.locked {
 	text-align: center;
 	position:sticky;
 	z-index:100;
-	a {
+	.mobileForm {
 		.span1 {
 			display: none;
 		}
@@ -332,6 +332,9 @@ body.locked {
 	.form--sticky {
 		a {
 			text-decoration: none;
+		}
+		.mobileForm{
+			display:block !important;
 			.span1 {
 				display: block;
 				padding: .75rem 1.25rem;
