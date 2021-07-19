@@ -61,7 +61,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			min: parseFloat(sliderMin),
 			max: parseFloat(sliderMax),
 			step: parseFloat(sliderStep),
-			value: parseFloat(sliderValue),
+			value: parseFloat(sliderValue.replace(/,/g, '')),
 			slide: function (event, ui) {
 				var pref = '';
 				var suff = '';
