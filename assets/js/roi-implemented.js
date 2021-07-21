@@ -61,7 +61,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			min: parseFloat(sliderMin),
 			max: parseFloat(sliderMax),
 			step: parseFloat(sliderStep),
-			value: parseFloat(sliderValue.replace(/,/g, '')),
+			value: parseFloat(sliderValue),
 			slide: function (event, ui) {
 				var pref = '';
 				var suff = '';
@@ -71,8 +71,6 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 						break;
 					case '%':
 						suff='%';
-						break;
-					default:
 						break;
 				}
 				$('#' + $(this).attr('id') + '-value').val(pref + ui.value.toLocaleString() + suff);
@@ -92,8 +90,6 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 				break;
 			case '%':
 				suff='%';
-				break;
-			default:
 				break;
 		}
 		$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
@@ -196,6 +192,14 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		
 		updateTableCells("#agent", ROICalc.results.care.raw, 'integer', 'remaining_agent_conversations');
 		updateTableCells("#cost", ROICalc.results.care.raw, 'currency', 'agent_cost_at_baseline');
+		
+		updateTableCells("#cost", {
+			baseline: ROICalc.model.inputs['care-cost-per-call'],
+			year1:ROICalc.model.inputs['care-cost-per-call'],
+			year2:ROICalc.model.inputs['care-cost-per-call'],
+			year3:ROICalc.model.inputs['care-cost-per-call']
+		}, 'currency');
+		
 		updateTableCells("#mess-eff", ROICalc.model.calculate.care.increments, 'decimal', 'eff_ratio');
 		updateTableCells("#cost-convo", ROICalc.results.care.raw, 'currency', 'cost_per_messaging_conversation');
 				
