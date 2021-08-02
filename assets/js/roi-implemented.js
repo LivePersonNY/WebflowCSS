@@ -18,9 +18,9 @@ circle.style.strokeDashoffset = offset;
 function numberShort(value, precision) {
 if (value < 1000) return numberShortFormat(locNumber(value, 'currency', undefined, 0, 0), '');
 if (value < 1000000) return numberShortFormat(locNumber(value / 1000, 'currency', undefined, precision, precision), 'K');
-
-if (value < 1000000) return numberShortFormat((value / 1000).toFixed(precision), 'K');
-if (value < 10000000) return numberShortFormat((value / 1000000).toFixed(precision), 'M');
+if (value < 10000000) return numberShortFormat(locNumber(value / 1000000, 'currency', undefined, precision, precision), 'M');
+//if (value < 1000000) return numberShortFormat((value / 1000).toFixed(precision), 'K');
+//if (value < 10000000) return numberShortFormat((value / 1000000).toFixed(precision), 'M');
 if (value < 1000000000) return numberShortFormat((value / 1000000).toFixed(precision), 'M');
 if (value < 10000000000) return numberShortFormat((value / 1000000000).toFixed(precision), 'B');
 if (value < 1000000000000) return numberShortFormat((value / 1000000000).toFixed(precision), 'B');
