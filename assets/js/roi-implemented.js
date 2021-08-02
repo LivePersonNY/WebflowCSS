@@ -76,8 +76,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 						pref=symb;
 						break;
 				}
-				//$('#' + $(this).attr('id') + '-value').val(locNumber(ui.value, type, undefined, 0));
-				$('#' + $(this).attr('id') + '-value').val(pref + ui.value.toLocaleString() + suff);
+				$('#' + $(this).attr('id') + '-value').val(locNumber(ui.value, type, undefined, 0, 0));
+				//$('#' + $(this).attr('id') + '-value').val(pref + ui.value.toLocaleString() + suff);
 				updateChart();
 			}
 		});
@@ -99,8 +99,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 				pref=symb;
 				break;
 		}
-		//$(this).val(locNumber($('#' + $(this).data('slider-ref')).slider('value'), type, undefined, 0));
-		$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
+		$(this).val(locNumber($('#' + $(this).data('slider-ref')).slider('value'), type, undefined, 0, 0));
+		//$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
 			var val = $(this).val();
 			var valFloat = parseFloat(val.replace(/[^0-9-.]/g, '')); 
