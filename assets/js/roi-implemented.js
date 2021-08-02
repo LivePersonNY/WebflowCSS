@@ -167,11 +167,11 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		var fcr = ROICalc.results.care.fcr.year1 + ROICalc.results.care.fcr.year2 + ROICalc.results.care.fcr.year3;
 		var circle5val = ROICalc.results.care.efficiency.year1 + ROICalc.results.care.efficiency.year2 + ROICalc.results.care.efficiency.year3;
 		var circle4val = ROICalc.results.care.ai_scale.year1 + ROICalc.results.care.ai_scale.year2 + ROICalc.results.care.ai_scale.year3;
-		setProgress(((circle1val / totalBenefit)*100).toFixed(), '#circle1', numberShort(circle1val), 'Growth');
-		setProgress(((circle2val / circle1val)*100).toFixed(), '#circle2', numberShort(circle2val), 'Growth');
-		setProgress(((fcr / totalBenefit)*100).toFixed(), '#circle3', numberShort(fcr), 'Growth');
-		setProgress(((circle4val / totalBenefit)*100).toFixed(), '#circle4', numberShort(circle4val), 'Savings');
-		setProgress(((circle5val / totalBenefit)*100).toFixed(), '#circle5', numberShort(circle5val), 'Savings');
+		setProgress(((circle1val / totalBenefit)*100).toFixed(), '#circle1', numberShort(circle1val, 0), 'Growth');
+		setProgress(((circle2val / circle1val)*100).toFixed(), '#circle2', numberShort(circle2val, 0), 'Growth');
+		setProgress(((fcr / totalBenefit)*100).toFixed(), '#circle3', numberShort(fcr, 0), 'Growth');
+		setProgress(((circle4val / totalBenefit)*100).toFixed(), '#circle4', numberShort(circle4val, 0), 'Savings');
+		setProgress(((circle5val / totalBenefit)*100).toFixed(), '#circle5', numberShort(circle5val, 0), 'Savings');
 		
 		$('#text_total_benefit').text(numberShort(totalBenefit));
 		$('#text_year1').text(numberShort(ROICalc.results.totals.total_benefit.year1));
