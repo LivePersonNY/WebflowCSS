@@ -31,7 +31,7 @@ function numberShortFormat(value, appender) {
 
 function locNumber(value, type, curr, accuracy, accuracyMax) {
 	if (type == 'integer') return value.toLocaleString();
-	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || 'USD', minimumFractionDigits: accuracy || 2, maximumFractionDigits: accuracyMax || 2});
+	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || window.showCurrency || 'USD', minimumFractionDigits: accuracy || 2, maximumFractionDigits: accuracyMax || 2});
 }
 
 function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accuracyMax) {
@@ -65,15 +65,19 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			slide: function (event, ui) {
 				var pref = '';
 				var suff = '';
-				switch ($('#' + $(this).attr('id') + '-value').data('symbol')) {
-					case '$':
-						pref='$';
-						break;
+				var type = 'currency';
+				var symb = $('#' + $(this).attr('id') + '-value').data('symbol');
+				switch (symb) {
 					case '%':
 						suff='%';
+						type='percent';
+						break;
+					default:
+						pref=symb;
 						break;
 				}
-				$('#' + $(this).attr('id') + '-value').val(pref + ui.value.toLocaleString() + suff);
+				$('#' + $(this).attr('id') + '-value').val(locNumber(ui.value, type, undefined, 0));
+				//$('#' + $(this).attr('id') + '-value').val(pref + ui.value.toLocaleString() + suff);
 				updateChart();
 			}
 		});
@@ -84,15 +88,19 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		// testnum = testnum.toLocaleString();
 		var pref = '';
 		var suff = '';
-		switch ($(this).data('symbol')) {
-			case '$':
-				pref='$';
-				break;
+		var type = 'currency';
+		var symb = $(this).data('symbol');
+		switch (symb) {
 			case '%':
 				suff='%';
+				type='percent';
+				break;
+			default:
+				pref=symb;
 				break;
 		}
-		$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
+		$(this).val(locNumber($('#' + $(this).data('slider-ref')).slider('value'), type, undefined, 0));
+		//$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
 			var val = $(this).val();
 			var valFloat = parseFloat(val.replace(/[^0-9-.]/g, '')); 
