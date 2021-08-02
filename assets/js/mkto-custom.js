@@ -58,6 +58,10 @@ function formSubmissionComplete(pixelEvent, gtmEvent) {
     goog_report_conversion();*/
 
     (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"21000157"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+
+	//Hotjar recording tag
+	window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
+	hj('tagRecording', ['Form fill - Complete']);
 }
 
 function getParam(p) {
@@ -606,6 +610,10 @@ function showMenuHack(engagementId) {
 			var emailField = $('#mktoForm_' + formID + ' #Email');
 			var emailVal = emailField.val();
 			//var vals, leadRef, leadSource, gclId, msclkId;
+
+			//Hotjar recording tag
+			window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
+			hj('tagRecording', ['Form fill - Attempt']);
 
 			if (emailVal !== undefined) {
 				$('input[name=console]').val($('input[name=console]').val() + '*Email value is defined* ');
