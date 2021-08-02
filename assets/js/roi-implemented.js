@@ -65,7 +65,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			slide: function (event, ui) {
 				var pref = '';
 				var suff = '';
-				var type = 'currency';
+				var type = $('#' + $(this).attr('id') + '-value').data('numtype') || 'integer';
 				var symb = $('#' + $(this).attr('id') + '-value').data('symbol');
 				switch (symb) {
 					case '%':
@@ -88,7 +88,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		// testnum = testnum.toLocaleString();
 		var pref = '';
 		var suff = '';
-		var type = 'currency';
+		var type = $(this).data('numtype') || 'integer';
 		var symb = $(this).data('symbol');
 		switch (symb) {
 			case '%':
