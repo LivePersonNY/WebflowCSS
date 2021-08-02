@@ -67,18 +67,22 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 				var suff = '';
 				var type = $('#' + $(this).attr('id') + '-value').data('numtype') || 'integer';
 				var symb = $('#' + $(this).attr('id') + '-value').data('symbol');
+				var maxDec = 0;
+				var minDec = 0;
 				var value = ui.value;
 				switch (type) {
 					case 'percent':
 						suff='%';
-						type='percent';
 						value = value / 100;
 						break;
+					case 'currency':
+						maxDec = 2;
+						minDec = 2;
 					default:
 						pref=symb;
 						break;
 				}
-				$('#' + $(this).attr('id') + '-value').val(locNumber(value, type, undefined, 0, 2));
+				$('#' + $(this).attr('id') + '-value').val(locNumber(value, type, undefined, minDec, maxDec));
 				//$('#' + $(this).attr('id') + '-value').val(pref + ui.value.toLocaleString() + suff);
 				updateChart();
 			}
@@ -90,6 +94,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		// testnum = testnum.toLocaleString();
 		var pref = '';
 		var suff = '';
+		var maxDec = 0;
+		var minDec = 0;
 		var type = $(this).data('numtype') || 'integer';
 		var symb = $(this).data('symbol');
 		var value = $('#' + $(this).data('slider-ref')).slider('value');
@@ -99,11 +105,14 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 				type='percent';
 				value = value / 100;
 				break;
+			case 'currency':
+				maxDec = 2;
+				minDec = 2;
 			default:
 				pref=symb;
 				break;
 		}
-		$(this).val(locNumber(value, type, undefined, 0, 2));
+		$(this).val(locNumber(value, type, undefined, minDec, maxDec));
 		//$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
 			var val = $(this).val();
