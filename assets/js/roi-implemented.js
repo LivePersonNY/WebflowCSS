@@ -54,7 +54,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		var sliderMin = $(this).data('min');
 		var sliderMax = $(this).data('max');
 		var sliderStep = $(this).data('step');
-		var sliderValue = $(this).data('value');
+		var sliderValue = $(this).data('value') || '';
 		
 		$(this).slider({
 			range: 'min',
