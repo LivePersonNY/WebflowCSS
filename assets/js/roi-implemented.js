@@ -68,8 +68,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 				var type = $('#' + $(this).attr('id') + '-value').data('numtype') || 'integer';
 				var symb = $('#' + $(this).attr('id') + '-value').data('symbol');
 				var value = ui.value;
-				switch (symb) {
-					case '%':
+				switch (type) {
+					case 'percent':
 						suff='%';
 						type='percent';
 						value = value / 100;
@@ -93,8 +93,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		var type = $(this).data('numtype') || 'integer';
 		var symb = $(this).data('symbol');
 		var value = $('#' + $(this).data('slider-ref')).slider('value');
-		switch (symb) {
-			case '%':
+		switch (type) {
+			case 'percent':
 				suff='%';
 				type='percent';
 				value = value / 100;
