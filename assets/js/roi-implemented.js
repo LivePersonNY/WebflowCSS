@@ -19,11 +19,9 @@ function numberShort(value, precision) {
 if (value < 1000) return numberShortFormat(locNumber(value, 'currency', undefined, 0, 0), '');
 if (value < 1000000) return numberShortFormat(locNumber(value / 1000, 'currency', undefined, precision, precision), 'K');
 if (value < 10000000) return numberShortFormat(locNumber(value / 1000000, 'currency', undefined, precision, precision), 'M');
-//if (value < 1000000) return numberShortFormat((value / 1000).toFixed(precision), 'K');
-//if (value < 10000000) return numberShortFormat((value / 1000000).toFixed(precision), 'M');
-if (value < 1000000000) return numberShortFormat((value / 1000000).toFixed(precision), 'M');
-if (value < 10000000000) return numberShortFormat((value / 1000000000).toFixed(precision), 'B');
-if (value < 1000000000000) return numberShortFormat((value / 1000000000).toFixed(precision), 'B');
+if (value < 1000000000) return numberShortFormat(locNumber(value / 1000000, 'currency', undefined, precision, precision), 'M');
+if (value < 10000000000) return numberShortFormat(locNumber(value / 1000000000, 'currency', undefined, precision, precision), 'B');
+if (value < 1000000000000) return numberShortFormat(locNumber(value / 1000000000, 'currency', undefined, precision, precision), 'B');
 return numberShortFormat(value, '');
 }
 
@@ -175,15 +173,15 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		setProgress(((circle4val / totalBenefit)*100).toFixed(), '#circle4', numberShort(circle4val), 'Savings');
 		setProgress(((circle5val / totalBenefit)*100).toFixed(), '#circle5', numberShort(circle5val), 'Savings');
 		
-		$('#text_total_benefit').text("$" + numberShort(totalBenefit));
-		$('#text_year1').text("$" + numberShort(ROICalc.results.totals.total_benefit.year1));
-		$('#text_year2').text("$" + numberShort(ROICalc.results.totals.total_benefit.year2));
-		$('#text_year3').text("$" + numberShort(ROICalc.results.totals.total_benefit.year3));
-		$('#text-incr').text("$" + numberShort(circle1val));
-		$('#text-ai-savings').text("$" + numberShort(circle4val));
-		$('#text-efficiency').text("$" + numberShort(circle5val));
-		$('#cost-per-convo-phone').text("$" + numberShort(ROICalc.model.inputs['care-cost-per-call'].toFixed()));
-		$('#cost-per-convo-mess').text("$" + numberShort((ROICalc.model.inputs['care-cost-per-call'] / ROICalc.model.calculate.care.increments.year3.eff_ratio).toFixed()));
+		$('#text_total_benefit').text(numberShort(totalBenefit));
+		$('#text_year1').text(numberShort(ROICalc.results.totals.total_benefit.year1));
+		$('#text_year2').text(numberShort(ROICalc.results.totals.total_benefit.year2));
+		$('#text_year3').text(numberShort(ROICalc.results.totals.total_benefit.year3));
+		$('#text-incr').text(numberShort(circle1val));
+		$('#text-ai-savings').text(numberShort(circle4val));
+		$('#text-efficiency').text(numberShort(circle5val));
+		$('#cost-per-convo-phone').text(numberShort(ROICalc.model.inputs['care-cost-per-call'].toFixed()));
+		$('#cost-per-convo-mess').text(numberShort((ROICalc.model.inputs['care-cost-per-call'] / ROICalc.model.calculate.care.increments.year3.eff_ratio).toFixed()));
 		
 		var conv_rate = ROICalc.model.inputs['sales-conv-rate']/100;
 		updateTableCells("#rev", ROICalc.results.sales.increase, 'currency', undefined, '0', '0');
@@ -235,9 +233,9 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		updateTableCells("#mess", ROICalc.results.care.ai_scale, 'currency', undefined, '0', '0');
 		updateTableCells("#eff", ROICalc.results.care.efficiency, 'currency', undefined, '0', '0');
 		
-		$('#totals-year1').text("$" + numberShort(ROICalc.results.totals.total_benefit.year1));
-		$('#totals-year2').text("$" + numberShort(ROICalc.results.totals.total_benefit.year2));
-		$('#totals-year3').text("$" + numberShort(ROICalc.results.totals.total_benefit.year3));
+		$('#totals-year1').text(numberShort(ROICalc.results.totals.total_benefit.year1));
+		$('#totals-year2').text(numberShort(ROICalc.results.totals.total_benefit.year2));
+		$('#totals-year3').text(numberShort(ROICalc.results.totals.total_benefit.year3));
 		//
 		setTimeout(function () {
 			$('#two .bar').each(function (index) {
@@ -267,9 +265,9 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			$('#two .total-year-benefit').each(function (year) {
 				estimatedTotalBenefit += oneObj.element[0].totals[year];
 				//var numberAlter = (oneObj.element[0].totals[year] / 1000000).toFixed(2);
-				$(this).text('$' + numberShort(oneObj.element[0].totals[year], 2));
+				$(this).text(numberShort(oneObj.element[0].totals[year], 2));
 				//var estimatedTotalBenefitAlter = (estimatedTotalBenefit / 1000000).toFixed(2);
-				$('#two .estimated-total-benefit').text('$' + numberShort(estimatedTotalBenefit, 2));
+				$('#two .estimated-total-benefit').text(numberShort(estimatedTotalBenefit, 2));
 			});
 
 			
