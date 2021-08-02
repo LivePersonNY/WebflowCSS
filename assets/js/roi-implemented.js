@@ -122,7 +122,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			var val = $(this).val();
 			var valFloat = parseFloat(val.replace(/[^0-9-.]/g, '')); 
 			$('#' + $(this).data('slider-ref')).slider('value', valFloat);
-			$(this).val(pref + valFloat.toLocaleString() + suff);
+			//$(this).val(pref + valFloat.toLocaleString() + suff);
+			$(this).val(locNumber(valFloat, type, undefined, minDec, maxDec));
 			updateChart();
 		})
 	})
