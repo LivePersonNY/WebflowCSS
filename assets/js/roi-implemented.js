@@ -30,7 +30,7 @@ function numberShortFormat(value, appender) {
 }
 
 function locNumber(value, type, curr, accuracy, accuracyMax, loc) {
-	if (type == 'integer') return value.toLocaleString();
+	if (type == 'integer') return value.toLocaleString(loc || window.showLoc || 'en-US');
 	return value.toLocaleString(loc || window.showLoc || 'en-US', {style: type || 'currency', currency: curr || window.showCurrency || 'USD', minimumFractionDigits: (accuracy>=0) ? accuracy : 2, maximumFractionDigits: (accuracyMax>=0) ? accuracyMax : 2});
 }
 
