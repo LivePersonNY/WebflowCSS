@@ -258,7 +258,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 					'height': calcHeight + '%'
 				});
 				// Create tooltip
-				$(this).find('.tooltip').text('$' + numberShort(oneObj.element[0].numbers[index], 2));
+				$(this).find('.tooltip').text(numberShort(oneObj.element[0].numbers[index], 2));
 				// $('<span class="tooltip">' + oneObj.element[0].numbers[index] + 'M</span>')
 				//     .prependTo(this);
 			});
