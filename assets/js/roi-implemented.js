@@ -67,16 +67,18 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 				var suff = '';
 				var type = $('#' + $(this).attr('id') + '-value').data('numtype') || 'integer';
 				var symb = $('#' + $(this).attr('id') + '-value').data('symbol');
+				var value = ui.value;
 				switch (symb) {
 					case '%':
 						suff='%';
 						type='percent';
+						value = value / 100;
 						break;
 					default:
 						pref=symb;
 						break;
 				}
-				$('#' + $(this).attr('id') + '-value').val(locNumber(ui.value, type, undefined, 0, 0));
+				$('#' + $(this).attr('id') + '-value').val(locNumber(value, type, undefined, 0, 0));
 				//$('#' + $(this).attr('id') + '-value').val(pref + ui.value.toLocaleString() + suff);
 				updateChart();
 			}
@@ -90,16 +92,18 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		var suff = '';
 		var type = $(this).data('numtype') || 'integer';
 		var symb = $(this).data('symbol');
+		var value = $('#' + $(this).data('slider-ref')).slider('value');
 		switch (symb) {
 			case '%':
 				suff='%';
 				type='percent';
+				value = value / 100;
 				break;
 			default:
 				pref=symb;
 				break;
 		}
-		$(this).val(locNumber($('#' + $(this).data('slider-ref')).slider('value'), type, undefined, 0, 0));
+		$(this).val(locNumber(value, type, undefined, 0, 0));
 		//$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
 			var val = $(this).val();
