@@ -74,10 +74,12 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 					case 'percent':
 						suff='%';
 						value = value / 100;
+						maxDec = 1;
 						break;
 					case 'currency':
 						maxDec = 2;
 						minDec = 2;
+						break;
 					default:
 						pref=symb;
 						break;
@@ -103,11 +105,13 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			case 'percent':
 				suff='%';
 				type='percent';
+				maxDec = 1;
 				value = value / 100;
 				break;
 			case 'currency':
 				maxDec = 2;
 				minDec = 2;
+				break;
 			default:
 				pref=symb;
 				break;
