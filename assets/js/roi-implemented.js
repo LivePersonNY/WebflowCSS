@@ -78,7 +78,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 						pref=symb;
 						break;
 				}
-				$('#' + $(this).attr('id') + '-value').val(locNumber(value, type, undefined, 0, 0));
+				$('#' + $(this).attr('id') + '-value').val(locNumber(value, type, undefined, 0, 1));
 				//$('#' + $(this).attr('id') + '-value').val(pref + ui.value.toLocaleString() + suff);
 				updateChart();
 			}
@@ -103,7 +103,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 				pref=symb;
 				break;
 		}
-		$(this).val(locNumber(value, type, undefined, 0, 0));
+		$(this).val(locNumber(value, type, undefined, 0, 1));
 		//$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
 			var val = $(this).val();
