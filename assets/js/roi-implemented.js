@@ -31,7 +31,7 @@ function numberShortFormat(value, appender) {
 
 function locNumber(value, type, curr, accuracy, accuracyMax) {
 	if (type == 'integer') return value.toLocaleString();
-	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || window.showCurrency || 'USD', minimumFractionDigits: accuracy || 2, maximumFractionDigits: (accuracyMax>=0) ? accuracyMax : 2});
+	return value.toLocaleString(undefined, {style: type || 'currency', currency: curr || window.showCurrency || 'USD', minimumFractionDigits: (accuracy>=0) ? accuracy : 2, maximumFractionDigits: (accuracyMax>=0) ? accuracyMax : 2});
 }
 
 function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accuracyMax) {
