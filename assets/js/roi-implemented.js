@@ -181,8 +181,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		$('#text-incr').text(numberShort(circle1val));
 		$('#text-ai-savings').text(numberShort(circle4val));
 		$('#text-efficiency').text(numberShort(circle5val));
-		$('#cost-per-convo-phone').text(numberShort(ROICalc.model.inputs['care-cost-per-call'].toFixed()));
-		$('#cost-per-convo-mess').text(numberShort((ROICalc.model.inputs['care-cost-per-call'] / ROICalc.model.calculate.care.increments.year3.eff_ratio).toFixed()));
+		$('#cost-per-convo-phone').text(locNumber(ROICalc.model.inputs['care-cost-per-call'], 'currency'));
+		$('#cost-per-convo-mess').text(locNumber((ROICalc.model.inputs['care-cost-per-call'] / ROICalc.model.calculate.care.increments.year3.eff_ratio), 'currency'));
 		
 		var conv_rate = ROICalc.model.inputs['sales-conv-rate']/100;
 		updateTableCells("#rev", ROICalc.results.sales.increase, 'currency', undefined, '0', '0');
