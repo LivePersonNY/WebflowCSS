@@ -363,6 +363,9 @@ function updateLpTags() {
 	lpTag.events.bind("LP_OFFERS", "OFFER_CLICK", function(e) {
 		console.log(e);
 		ga('send', 'event', 'Website chat', 'Engagement clicked', 'Engagement');
+		//Hotjar recording tag
+		window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
+		hj('tagRecording', ['Engagement clicked']);
 		if (e.engagementId == 1864678630 || e.engagementId == 2455213230 || e.engagementId == 2499891030 || e.engagementId == 2499863530){
 			ga('send', 'event', 'Website chat', 'Engagement clicked', 'Meeting Bot - SELF');
 			console.log('Hero engagement clicked');

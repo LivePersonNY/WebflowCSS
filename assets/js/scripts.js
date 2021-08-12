@@ -206,3 +206,9 @@ if (el) {
 	observer.observe(el);
 
 }
+
+$('.nav-menu + a').click(function(){
+	//Hotjar recording tag
+	window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
+	hj('tagRecording', ['Sign in button clicked']);
+});
