@@ -16,6 +16,9 @@ function formSubmissionComplete(pixelEvent, gtmEvent) {
 	if (downloads.indexOf(pixelEvent) >= 0) {
 		dataLayer.push({'event' : 'resource-download-form'});
 	}
+	if (pixelEvent === 'request consultation') {
+		dataLayer.push({'event' : 'request-consultation-form'});
+	}
     ga('send', 'event', 'form', 'submit', pixelEvent);
     dataLayer.push({'event' : gtmEvent || 'form-submitted'});
     var capterra_vkey = '2204790610e633c11ee2cfb2140ab50a',
