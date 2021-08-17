@@ -123,6 +123,9 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			var valFloat = parseFloat(val.replace(/[^0-9-.]/g, '')); 
 			$('#' + $(this).data('slider-ref')).slider('value', valFloat);
 			//$(this).val(pref + valFloat.toLocaleString() + suff);
+			if(type == 'percent'){
+				valFloat = valFloat / 100;
+			}
 			console.log(`value is: ${valFloat}`);
 			console.log('locNumber return is: ' + locNumber(valFloat, type, undefined, minDec, maxDec));
 			$(this).val(locNumber(valFloat, type, undefined, minDec, maxDec));
