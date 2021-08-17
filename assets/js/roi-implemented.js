@@ -116,8 +116,6 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 				pref=symb;
 				break;
 		}
-		console.log(`value is: ${value}`);
-		console.log('locNumber return is: ' + locNumber(value, type, undefined, minDec, maxDec));
 		$(this).val(locNumber(value, type, undefined, minDec, maxDec));
 		//$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
@@ -125,6 +123,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			var valFloat = parseFloat(val.replace(/[^0-9-.]/g, '')); 
 			$('#' + $(this).data('slider-ref')).slider('value', valFloat);
 			//$(this).val(pref + valFloat.toLocaleString() + suff);
+			console.log(`value is: ${valFloat}`);
+			console.log('locNumber return is: ' + locNumber(valFloat, type, undefined, minDec, maxDec));
 			$(this).val(locNumber(valFloat, type, undefined, minDec, maxDec));
 			updateChart();
 		})
