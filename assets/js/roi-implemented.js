@@ -116,6 +116,8 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 				pref=symb;
 				break;
 		}
+		console.log(`value is: ${value}`);
+		console.log('locNumber return is: ' + locNumber(value, type, undefined, minDec, maxDec));
 		$(this).val(locNumber(value, type, undefined, minDec, maxDec));
 		//$(this).val(pref + $('#' + $(this).data('slider-ref')).slider('value').toLocaleString() + suff);
 		$(this).on('input', function () {
