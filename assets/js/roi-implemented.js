@@ -126,6 +126,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			if(type == 'percent'){
 				valFloat = valFloat / 100;
 			}
+			valFloat = valFloat || 0;
 			$(this).val(locNumber(valFloat, type, undefined, minDec, maxDec));
 			updateChart();
 		})
