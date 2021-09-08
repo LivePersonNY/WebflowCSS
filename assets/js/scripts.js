@@ -213,6 +213,6 @@ $('.nav-menu + a').click(function(){
 	hj('tagRecording', ['Sign in button clicked']);
 });
 
-hj('identify', null, {
+window.hj('identify', null, {
     'test3': 'yes'
 });
