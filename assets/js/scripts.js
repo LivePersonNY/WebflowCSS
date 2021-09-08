@@ -212,3 +212,7 @@ $('.nav-menu + a').click(function(){
 	window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
 	hj('tagRecording', ['Sign in button clicked']);
 });
+
+hj('identify', null, {
+    'test3': 'yes'
+});
