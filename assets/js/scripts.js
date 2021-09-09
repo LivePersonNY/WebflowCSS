@@ -215,3 +215,6 @@ $('.nav-menu + a').click(function(){
 hj('identify', null, {
     'test3': 'yes'
 });
+hj('identify', '123', {
+    'test3': 'yes2'
+});
