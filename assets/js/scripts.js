@@ -221,6 +221,6 @@ hj('identify', null, {
 hj('identify', null, {
     'test3': 'yes3'
 });
-hj('identify', 456, {
-    'test3': 'yes4'
-});
+// hj('identify', 456, {
+//     'test3': 'yes4'
+// });
