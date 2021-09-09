@@ -215,6 +215,12 @@ $('.nav-menu + a').click(function(){
 hj('identify', null, {
     'test3': 'yes'
 });
-hj('identify', '123', {
-    'test3': 'yes2'
+// hj('identify', '123', {
+//     'test3': 'yes2'
+// });
+hj('identify', null, {
+    'test3': 'yes3'
+});
+hj('identify', 456, {
+    'test3': 'yes4'
 });
