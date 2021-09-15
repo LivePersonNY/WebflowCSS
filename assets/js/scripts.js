@@ -214,7 +214,7 @@ $('.nav-menu + a').click(function(){
 
 var timeOnSite = sessionStorage.getItem('timeOnSite') || Math.round(performance.now());
 var timerInterval = setInterval(function(){
-  timeOnSite = parseInt(sessionStorage.getItem('timeOnSite'))? parseInt(sessionStorage.getItem('timeOnSite')) + 20000 : Math.round(performance.now()) + 20000;
+  timeOnSite = parseInt(sessionStorage.getItem('timeOnSite'))? parseInt(sessionStorage.getItem('timeOnSite')) + 15000 : Math.round(performance.now()) + 15000;
   sessionStorage.setItem('timeOnSite', timeOnSite);
   hj('identify', null, {
     'timeOnSite': timeOnSite
@@ -222,4 +222,4 @@ var timerInterval = setInterval(function(){
   if(timeOnSite > 240000){
     clearInterval(timerInterval);
   }
-}, 20000);
+}, 15000);
