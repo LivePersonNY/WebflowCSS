@@ -212,15 +212,14 @@ $('.nav-menu + a').click(function(){
 	hj('tagRecording', ['Sign in button clicked']);
 });
 
-hj('identify', null, {
-    'test3': 'yes'
-});
-// hj('identify', '123', {
-//     'test3': 'yes2'
-// });
-hj('identify', null, {
-    'test3': 'yes3'
-});
-// hj('identify', 456, {
-//     'test3': 'yes4'
-// });
+var timeOnSite = sessionStorage.getItem('timeOnSite') || Math.round(performance.now());
+var timerInterval = setInterval(function(){
+  timeOnSite = parseInt(sessionStorage.getItem('timeOnSite'))? parseInt(sessionStorage.getItem('timeOnSite')) + 20000 : Math.round(performance.now()) + 20000;
+  sessionStorage.setItem('timeOnSite', timeOnSite);
+  hj('identify', null, {
+    'timeOnSite': timeOnSite
+  });
+  if(timeOnSite > 240000){
+    clearInterval(timerInterval);
+  }
+}, 20000);
