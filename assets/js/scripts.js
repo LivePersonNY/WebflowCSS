@@ -219,7 +219,7 @@ var timerInterval = setInterval(function(){
   hj('identify', null, {
     'timeOnSite': timeOnSite
   });
-  if(timeOnSite > 240000){
+  if(timeOnSite > 30000){
     clearInterval(timerInterval);
   }
 }, 15000);
