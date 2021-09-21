@@ -2,12 +2,5 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import 'variables';
-@import 'layout';
-@import 'global';
-@import 'resources';
-@import 'policies';
-@import 'custom';
-@import 'form';
-@import 'mychatbot';
-@import 'blog';
+@import 'bella-health/variables';
+@import 'bella-health/layout';
