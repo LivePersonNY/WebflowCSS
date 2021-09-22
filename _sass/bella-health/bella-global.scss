@@ -1,5 +1,5 @@
 .legal-document-link{
-    &:before{
+    &:hover:before{
         content: "";
         background: linear-gradient( 
     90deg , rgba(52,60,113,0) 0%, rgba(52,60,113,1) 45%, rgba(52,60,113,1) 55%, rgba(52,60,113,0) 100%);
@@ -13,5 +13,7 @@
         -ms-transition: all .7s ease;
         -o-transition: all .7s ease;
         transition: all .7s ease;
+        width: 100%;
+        left: 0%;
     }
 }
