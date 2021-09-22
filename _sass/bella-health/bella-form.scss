@@ -291,7 +291,7 @@ body.locked {
 	z-index: 999999999;
 }
 .form--horizontal {
-	padding: 2rem 0;
+	// padding: 2rem 0;
 	.mktoForm {
 		width: 100% !important;
 		margin: 0 auto;
@@ -362,7 +362,7 @@ body.locked {
 	.mktoButtonWrap.mktoSimple {
 		.mktoButton {
 			border-radius: 9px;
-			padding: 17px 1.25rem !important;
+			padding: 12px 1.25rem !important;
 			text-decoration: none;
 			cursor: pointer;
 			font-weight: 600;
@@ -370,7 +370,7 @@ body.locked {
 			background-image: none !important;
 			border: 0 !important;
 			background: linear-gradient(90deg, #D7398E 0%, #993DA3 100%) !important;
-			font-size: 13px !important;
+			font-size: 16px !important;
 			font-family: 'Rubik';
 			width: 296px;
 			&:hover {
@@ -477,6 +477,8 @@ body.locked {
 	.form--sticky {
 		.container {
 			display: block !important;
+			max-width:1280px;
+			margin:auto;
 		}
 	}
 	.form--dropdown {
