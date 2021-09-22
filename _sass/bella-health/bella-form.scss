@@ -135,7 +135,7 @@
 		background-color: #005ef4 !important;
 		font-size: 16px !important;
 		font-family: Roboto, Helvetica;
-		width: 296px;
+		width: 276px;
 	}
 	.mktoFieldWrap {
 		width: 100%;
@@ -251,7 +251,7 @@ label {
 		background-color: #005ef4 !important;
 		font-size: 16px !important;
 		font-family: Roboto, Helvetica;
-		width: 296px;
+		width: 276px;
 		&:hover {
 			background: #0040d6 !important;
 		}
@@ -302,7 +302,7 @@ body.locked {
 		padding-right: 0;
 		input {
 			margin-right: 2rem !important;
-			width: 296px !important;
+			width: 276px !important;
 			&:focus {
 				border: 1px solid rgba(52, 60, 113, 0.8);
 				outline-color: transparent;
@@ -326,7 +326,7 @@ body.locked {
 			background-color: #005ef4 !important;
 			font-size: 16px !important;
 			font-family: "Roboto", "Helvetica";
-			width: 296px;
+			width: 276px;
 		}
 		select {
 			&:focus {
@@ -374,7 +374,7 @@ body.locked {
 			background: linear-gradient(90deg, #D7398E 0%, #993DA3 100%) !important;
 			font-size: 16px !important;
 			font-family: 'Rubik';
-			width: 296px;
+			width: 276px;
 			&:hover {
 				box-shadow: 0.5px 0.5px 0px rgba(255, 255, 255, 0.2), 0px 0px 16px rgba(255, 255, 255, 0.6);
 			}
@@ -479,7 +479,7 @@ body.locked {
 	.form--sticky {
 		.container {
 			display: block !important;
-			max-width:1280px;
+			max-width:1200px;
 			margin:auto;
 		}
 	}
