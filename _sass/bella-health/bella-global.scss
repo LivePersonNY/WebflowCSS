@@ -15,3 +15,32 @@
         transition: all .7s ease;
     }
 }
+
+.legal-container{
+    .subprocessor-column{
+        h2{
+            text-align: center;
+            margin-bottom: 32px;
+            margin-top: 60px;
+            font-size:24px;
+            &.sub-heading-title{
+                font-weight: 600;
+            }
+        }
+    }
+    table {
+        margin-bottom: 20px;
+        border-collapse: collapse;
+        width: 100%;
+        td, th {
+            border-bottom: 2px solid rgba(52, 60, 113, 0.4);
+            background: none!important;
+            text-align: left;
+            padding: 8px;
+            strong{
+                font-weight:900;
+            }
+        }
+    }
+}
+
