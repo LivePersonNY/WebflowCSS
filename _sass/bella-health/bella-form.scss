@@ -278,6 +278,8 @@ body.locked {
 	position: sticky;
 	z-index: 100;
 	display: block !important;
+	top: 0;
+    backdrop-filter: blur(50px);
 	.mobileForm {
 		.span1 {
 			display: none;
@@ -293,7 +295,7 @@ body.locked {
 	z-index: 999999999;
 }
 .form--horizontal {
-	// padding: 2rem 0;
+	padding: 2rem 0;
 	.mktoForm {
 		width: 100% !important;
 		margin: 0 auto;
