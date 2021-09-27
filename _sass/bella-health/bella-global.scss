@@ -55,3 +55,31 @@
     }
 }
 
+#onetrust-consent-sdk{
+    #onetrust-banner-sdk {
+        background-color: #090e2c;
+        #onetrust-policy-text{
+            font-family: Rubik,sans-serif;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+        }
+        #onetrust-button-group{
+            #onetrust-accept-btn-handler, #onetrust-reject-all-handler{
+                background: #07ffed;
+                color: #090e2c;
+                font-weight: 400 !important;
+                padding: 14px 20px !important;
+                height: auto;
+                border-radius: 8px;
+                border: 0;
+            }
+            #onetrust-pc-btn-handler{
+                background: 0;
+                border: 1px solid white;
+                border-radius: 8px;
+                color: white;
+            }
+        }
+    }
+}
