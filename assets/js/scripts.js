@@ -212,6 +212,12 @@ $('.nav-menu + a').click(function(){
 	hj('tagRecording', ['Sign in button clicked']);
 });
 
+var sixSenseData = JSON.parse(localStorage.getItem('_6senseCompanyDetails'));
+hj('identify', null, {
+    '6S_Company': sixSenseData.company.name,
+	'6S_Industry' : sixSenseData.company.industry
+});
+
 var timeOnSite = sessionStorage.getItem('timeOnSite') || Math.round(performance.now());
 var timerInterval = setInterval(function(){
   timeOnSite = parseInt(sessionStorage.getItem('timeOnSite'))? parseInt(sessionStorage.getItem('timeOnSite')) + 15000 : 15000;
