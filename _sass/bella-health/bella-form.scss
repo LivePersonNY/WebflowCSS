@@ -280,6 +280,7 @@ body.locked {
 	display: block !important;
 	top: 0;
     backdrop-filter: blur(50px);
+	-webkit-backdrop-filter: blur(50px);
 	.mobileForm {
 		.span1 {
 			display: none;
