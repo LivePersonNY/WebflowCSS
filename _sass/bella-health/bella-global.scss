@@ -1,0 +1,103 @@
+.legal-document-link{
+    &:hover:before{
+        content: "";
+        background: linear-gradient( 
+    90deg , rgba(52,60,113,0) 0%, rgba(52,60,113,1) 45%, rgba(52,60,113,1) 55%, rgba(52,60,113,0) 100%);
+        position: absolute;
+        bottom: -4px;
+        left: 0%;
+        width: 100%;
+        height: 1px;
+        -webkit-transition: all .7s ease;
+        -moz-transition: all .7s ease;
+        -ms-transition: all .7s ease;
+        -o-transition: all .7s ease;
+        transition: all .7s ease;
+    }
+}
+
+.legal-container{
+    .subprocessor-column{
+        h2{
+            text-align: center;
+            margin-bottom: 32px;
+            margin-top: 60px;
+            font-size:24px;
+            &.sub-heading-title{
+                font-weight: 600;
+            }
+        }
+    }
+    table {
+        margin-bottom: 20px;
+        border-collapse: collapse;
+        width: 100%;
+        td, th {
+            border-bottom: 2px solid rgba(52, 60, 113, 0.4);
+            background: none!important;
+            text-align: left;
+            padding: 16px;
+            padding-left:0;
+            strong{
+                font-weight:900;
+            }
+        }
+        thead{
+            background: linear-gradient(
+274.06deg, #C9B84E -9.42%, #D15366 5.45%, #AC2A6E 19.19%, #8F3286 35.09%, #85358E 51.56%, #6043AD 71.84%, #6043AD 90.27%, #4E55C8 107.68%);
+            background-repeat: no-repeat;
+            background-size: auto 4px;
+            background-position: bottom;
+            th{
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+#onetrust-consent-sdk{
+    #onetrust-banner-sdk {
+        background-color: #090e2c;
+        #onetrust-policy-text{
+            font-family: Rubik,sans-serif;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+            color:white;
+        }
+        #onetrust-button-group{
+            #onetrust-accept-btn-handler, #onetrust-reject-all-handler{
+                background: #07ffed;
+                color: #090e2c;
+                font-weight: 400 !important;
+                padding: 14px 20px !important;
+                height: auto;
+                border-radius: 8px;
+                border: 0;
+            }
+            #onetrust-pc-btn-handler{
+                background: 0;
+                border: 1px solid white;
+                font-weight: 400 !important;
+                padding: 14px 20px !important;
+                border-radius: 8px;
+                color: white;
+            }
+        }
+    }
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    embed, iframe, object {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
