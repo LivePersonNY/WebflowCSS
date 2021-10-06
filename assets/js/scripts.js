@@ -212,11 +212,13 @@ $('.nav-menu + a').click(function(){
 	hj('tagRecording', ['Sign in button clicked']);
 });
 
-var sixSenseData = JSON.parse(localStorage.getItem('_6senseCompanyDetails'));
-hj('identify', null, {
-    '6S_Company': sixSenseData.company.name,
-	'6S_Industry' : sixSenseData.company.industry
-});
+setTimeout(function(){
+	var sixSenseData = JSON.parse(localStorage.getItem('_6senseCompanyDetails'));
+	hj('identify', null, {
+		'6S_Company': sixSenseData.company.name,
+		'6S_Industry' : sixSenseData.company.industry
+	});
+}, 5000);
 
 var timeOnSite = sessionStorage.getItem('timeOnSite') || Math.round(performance.now());
 var timerInterval = setInterval(function(){
