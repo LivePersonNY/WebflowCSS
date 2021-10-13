@@ -208,7 +208,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		updateTableCells("#mas", ROICalc.results.sales.raw, 'currency', 'mess_assisted_sales');
 		updateTableCells("#avg", ROICalc.results.sales.raw, 'currency', 'avg_order_value');
 		//updateTableCells("#total_convos", ROICalc.results.sales.raw, 'integer', 'total_convos');
-		updatetableCells("#total_convos", {
+		updateTableCells("#total_convos", {
 			baseline: ROICalc.model.inputs['care-call-volume'],
 			year1:ROICalc.model.inputs['care-call-volume'],
 			year2:ROICalc.model.inputs['care-call-volume'],
