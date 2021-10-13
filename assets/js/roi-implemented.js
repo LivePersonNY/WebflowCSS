@@ -123,10 +123,6 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			var valFloat = parseFloat(val.replace(/[^0-9-.]/g, '')); 
 			$('#' + $(this).data('slider-ref')).slider('value', valFloat);
 			//$(this).val(pref + valFloat.toLocaleString() + suff);
-			if(type == 'percent'){
-				valFloat = valFloat / 100;
-			}
-			valFloat = valFloat || 0;
 			$(this).val(locNumber(valFloat, type, undefined, minDec, maxDec));
 			updateChart();
 		})
@@ -211,7 +207,13 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		}, 'percent');
 		updateTableCells("#mas", ROICalc.results.sales.raw, 'currency', 'mess_assisted_sales');
 		updateTableCells("#avg", ROICalc.results.sales.raw, 'currency', 'avg_order_value');
-		updateTableCells("#total_convos", ROICalc.results.sales.raw, 'integer', 'total_convos');
+		//updateTableCells("#total_convos", ROICalc.results.sales.raw, 'integer', 'total_convos');
+		updatetableCells("#total_convos", {
+			baseline: ROICalc.model.inputs['care-call-volume'],
+			year1:ROICalc.model.inputs['care-call-volume'],
+			year2:ROICalc.model.inputs['care-call-volume'],
+			year3:ROICalc.model.inputs['care-call-volume']
+		}, 'integer');
 		updateTableCells("#shift", ROICalc.model.calculate.care.increments, 'percent', 'shift_rate');
 		updateTableCells("#convos_shifted", ROICalc.results.care.raw, 'integer', 'conversations_shifted');
 		updateTableCells("#fcr-perc", ROICalc.results.care.raw, 'percent', 'messaging_fcr');
