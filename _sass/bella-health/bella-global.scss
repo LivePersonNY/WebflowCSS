@@ -16,6 +16,18 @@
     }
 }
 
+.bella-faq-div{
+    &:before{
+        content: "";
+        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, #343c71 45%, #343c71 55%, rgba(255,255,255,0) 100%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+    }
+}
+
 .legal-container{
     .subprocessor-column{
         h2{
