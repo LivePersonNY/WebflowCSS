@@ -187,7 +187,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 		var conv_rate = ROICalc.model.inputs['sales-conv-rate']/100;
 		updateTableCells("#rev", ROICalc.results.sales.increase, 'currency', undefined, '0', '0');
 		$('.annual_traffic').text(ROICalc.model.inputs['sales-traffic'].toLocaleString());
-		$('.conv_rate').text(locNumber(ROICalc.model.inputs['sales-conv-rate']/100, 'percent', null, 1));
+		$('.conv_rate').text(locNumber(ROICalc.model.inputs['sales-conv-rate']/100, 'percent', null, 2));
 		var web_orders = ROICalc.model.inputs['sales-traffic'] * conv_rate;
 		$('.digi_orders').text(web_orders.toLocaleString());
 		var started_convos = (ROICalc.model.inputs['sales-traffic'] - web_orders);
