@@ -105,7 +105,7 @@ function updateTableCells(cellName, valueObj, valueStyle, subKey, accuracy, accu
 			case 'percent':
 				suff='%';
 				type='percent';
-				maxDec = 1;
+				maxDec = 2;
 				value = value / 100;
 				break;
 			case 'currency':
