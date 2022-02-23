@@ -80,7 +80,6 @@
     width: 59%;
     margin-left: 80px;
     padding: 32px;
-    background: #090C43;
     display: inline-block;
     border-radius: 16px;
 }
@@ -93,8 +92,9 @@
     margin-bottom: 0;
     margin-top: 30px;
     font-weight: 700;
-    font-family: 'Roboto', 'Helvetica';
-    font-size: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .slide-container .industry-select {
@@ -124,7 +124,7 @@
 }
 
 .jqslider-styles.ui-slider .ui-slider-range {
-    background: #ff6900;
+    background: linear-gradient(90deg, #3863E5 0%, #8D46EB 43.18%, #E849B7 86.36%);
 }
 
 .jqslider-styles.ui-slider .ui-slider-handle {
@@ -146,8 +146,9 @@
     font-weight: 300;
     font-size: 36px;
     line-height: 44px;
-    font-family: 'Roboto Mono', 'monospace';
+    font-family: 'Space Grotesk', sans-serif;
     padding-left: 0;
+    color: #1c1d22;
 }
 
 .contain {
@@ -215,7 +216,7 @@
 
     .bar-chart .x-axis .year .col .bar {
         /* flex: 1; */
-        background-color: #005EF4;
+        background-color: #95CBE5;
         /* align-self: flex-end; */
         position: relative;
         /* margin: 0 25%; */
@@ -230,7 +231,7 @@
     }
 
     .bar-chart .x-axis .year .col .bar+.bar {
-        background-color: #ff6900;
+        background-color: #F5A77A;
     }
 
     .bar-chart .x-axis .label {
@@ -241,11 +242,12 @@
     }
 
     .bar-chart .x-axis .label:not(.number) {
-        color: #fcfcfd;
+        color: #1C1D22;
         padding-top: 12px;
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
+        font-family: 'Inter', sans-serif;
     }
 
     .bar-chart .x-axis .year .col .bar .tooltip,
@@ -262,9 +264,9 @@
 
     .bar-chart .x-axis .year .col .bar .tooltip {
         font-size: 20px;
-        color: #fcfcfd;
+        color: #1C1D22;
         padding: 0;
-        font-family: 'Roboto Mono', 'monospace';
+        font-family: 'Inter', sans-serif;
         text-align: center;
         font-weight: 400;
     }
@@ -281,6 +283,8 @@
         display: inline-block;
         padding: .25em 1em;
         line-height: 1em;
+        font-family: 'Inter', sans-serif;
+        color: #1C1D22;
     }
 
     .bar-chart .legend li:before {
@@ -289,22 +293,22 @@
         display: inline-block;
         width: 20px;
         height: 20px;
-        background-color: #ff6900;
+        background-color: #F5A77A;
         border-radius: 100px;
         top: 5px;
         position: relative;
     }
 
     .bar-chart .legend li:nth-child(2):before {
-        background-color: #005EF4;
+        background-color: #95CBE5;
     }
 
     .bar-chart .estimated-total-benefit {
-        font-family: 'Roboto Mono', 'monospace';
+        font-family: 'Space Grotesk', sans-serif;
         font-weight: 700;
         font-size: 56px;
         line-height: 40px;
-        color: #ff6900;
+        color: #1C1D22;
         margin-bottom: 20px;
     }
 
@@ -315,10 +319,10 @@
     }
 
     .bar-chart .total-year-benefit {
-        font-family: 'Roboto Mono', 'monospace';
-        font-size: 32px;
-        line-height: 32px;
-        font-weight: 400;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 21px;
+        line-height: 28px;
+        font-weight: bold;
         margin-bottom: 12px;
     }
 }
