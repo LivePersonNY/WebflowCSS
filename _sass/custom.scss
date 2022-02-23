@@ -69,11 +69,20 @@
     padding: 32px;
     border-radius: 32px;
     display: flex;
+    flex-flow: column;
+
+    @media(max-width:$screen-max-lg) {
+        flex-flow: initial;
+    }
 }
 
 .calc-left {
     width: 34%;
     display: inline-block;
+
+    @media(max-width:$screen-max-lg) {
+        width: 100%;
+    }
 }
 
 .calc-right {
@@ -82,6 +91,11 @@
     padding: 32px;
     display: inline-block;
     border-radius: 16px;
+
+    @media(max-width:$screen-max-lg) {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 .slide-container {
