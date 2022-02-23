@@ -69,10 +69,10 @@
     padding: 32px;
     border-radius: 32px;
     display: flex;
-    flex-flow: column;
+    flex-flow: initial;
 
     @media(max-width:$screen-max-lg) {
-        flex-flow: initial;
+        flex-flow: column;
     }
 }
 
