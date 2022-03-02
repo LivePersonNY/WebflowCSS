@@ -66,7 +66,7 @@
     margin: auto;
     height: 100%;
     background: #F4F4F6;
-    padding: 32px;
+    padding: 8px;
     border-radius: 32px;
     display: flex;
     flex-flow: initial;
@@ -109,6 +109,9 @@
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
     line-height: 24px;
+    width: auto;
+    float: left;
+    display: inline;
 }
 
 .slide-container .industry-select {
@@ -153,16 +156,18 @@
 .slider-value {
     -webkit-appearance: none;
     appearance: none;
-    background: none;
+    background: #FCFCFC;
     border: 0;
-    margin-bottom: 6px;
-    margin-top: 5px;
+    border-radius: 4px;
     font-weight: 300;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 18px;
+    line-height: 28px;
     font-family: 'Space Grotesk', sans-serif;
     padding-left: 0;
-    color: #1c1d22;
+    color: #363944;
+    float: right;
+    width: 156px;
+    padding: 2px 12px;
 }
 
 .contain {
