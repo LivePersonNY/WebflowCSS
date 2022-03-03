@@ -112,6 +112,10 @@
     width: auto;
     float: left;
     display: inline;
+
+    @media(max-width:$screen-max-lg) {
+        margin-bottom: 8px;
+    }
 }
 
 .slide-container .industry-select {
@@ -168,6 +172,12 @@
     float: right;
     width: 156px;
     padding: 2px 12px;
+
+    @media(max-width:$screen-max-lg) {
+        float: left;
+        width: 100%;
+        margin-bottom: 12px;
+    }
 }
 
 .contain {
