@@ -19,6 +19,22 @@
         }
     }
 
+    .circle-amount {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 66px;
+        letter-spacing: -2px;
+        background: linear-gradient(90deg, #3863E5 0%, #8D46EB 43.18%, #E849B7 86.36%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .circle-text {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
     .progress-ring__circle {
         transition: 0.35s stroke-dashoffset;
         // axis compensation
