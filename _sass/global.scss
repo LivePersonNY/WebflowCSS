@@ -38,17 +38,27 @@
 .circle-amount {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: 66px;
     letter-spacing: -2px;
     background: linear-gradient(90deg, #3863E5 0%, #8D46EB 43.18%, #E849B7 86.36%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 56px;
+    position: absolute;
+    line-height: 84px;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 127px;
 }
 
 .circle-text {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 21px;
+    line-height: 28px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 211px;
 }
 
 p {
