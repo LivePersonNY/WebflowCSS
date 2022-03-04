@@ -381,11 +381,10 @@
                 padding-right: 10px;
                 padding-left: 1px;
                 float: right;
+                overflow: scroll;
 
-                &.w-col-4 {
-
+                .w-col-4 {
                     display: none;
-
                 }
             }
         }
