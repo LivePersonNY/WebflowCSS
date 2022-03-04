@@ -199,6 +199,11 @@
         max-width: 100%;
     }
 
+    .columns.reverse-margin,
+    .columns.bc-table-col {
+        flex-wrap: nowrap !important;
+    }
+
     .bar-chart {
         height: 100%;
     }
