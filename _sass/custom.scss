@@ -393,6 +393,10 @@
     @media(max-width:$screen-max-lg) {
         .bc-table-wrapper {
             overflow: scroll;
+
+            .bc-table-container {
+                width: 900px;
+            }
         }
     }
 }
