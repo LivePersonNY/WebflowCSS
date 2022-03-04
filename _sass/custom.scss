@@ -396,6 +396,15 @@
 
             .bc-table-container {
                 width: 900px;
+
+                .column.w-col.w-col-4 {
+                    padding-right: 20px;
+
+                    .row-heading,
+                    .heading-31 {
+                        margin-left: 0;
+                    }
+                }
             }
         }
     }
