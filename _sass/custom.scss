@@ -371,6 +371,26 @@
         font-weight: bold;
         margin-bottom: 12px;
     }
+
+    @media(max-width:$screen-max-lg) {
+        .bc-table-wrapper {
+            width: 50%;
+            padding-right: 1px;
+
+            &:first-of-type {
+                padding-right: 10px;
+                padding-left: 1px;
+                float: right;
+
+                &.w-col-4 {
+
+                    display: none;
+
+                }
+            }
+        }
+    }
+
 }
 
 ._hj_feedback_container>div>div {
