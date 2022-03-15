@@ -408,6 +408,40 @@
             }
         }
     }
+
+    .mktoForm {
+        input {
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus {
+                -webkit-text-fill-color: #363944;
+                -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+                box-shadow: 0 0 0px 1000px transparent inset;
+                transition: background-color 5000s ease-in-out 0s;
+                font-size: 16px !important;
+            }
+
+            border:0;
+            border-radius:4px;
+            padding: 12px 40px 12px 12px !important;
+            font-size: 16px !important;
+            line-height: 24px !important;
+            width: 100% !important;
+            color: #363944;
+            background:#fcfcfc;
+        }
+
+        .mktoField {
+            &::placeholder {
+                color: #363944;
+            }
+
+            &::-webkit-input-placeholder {
+                color: #363944;
+            }
+        }
+    }
 }
 
 ._hj_feedback_container>div>div {
